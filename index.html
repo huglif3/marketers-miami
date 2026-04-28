@@ -471,5 +471,19 @@
   <a href="https://luma.com/sfbkbfqb" target="_blank" class="footer-link">Apply → luma.com/sfbkbfqb</a>
 </footer>
 
+
+<script>
+  (function() {
+    const grid = document.querySelector('.spk-grid');
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.spk-card'));
+    for (let i = cards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      grid.appendChild(cards[j]);
+      cards.splice(j, 1);
+      cards.splice(i, 0, grid.lastChild);
+    }
+  })();
+</script>
 </body>
 </html>
