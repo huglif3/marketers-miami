@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stellar House Mexico — Event Retrospective</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--y:#E8EF5A;--bl:#6B7CC4;--bk:#0A0A0A;--gr:#B8B8B4;--wh:#FFFFFF;--border:2px solid #1e1e1e}
+  html{scroll-behavior:smooth}
+  body{font-family:'Barlow',sans-serif;background:var(--bk);color:var(--wh);overflow-x:hidden}
+
+  .label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+  .sec-title{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;text-transform:uppercase;line-height:.9}
+  .sec-header{background:var(--bk);padding:28px 38px 18px;border-bottom:var(--border);display:flex;justify-content:space-between;align-items:flex-end}
+  .photo-placeholder{background:#0f0f0f;border:1px dashed #2a2a2a;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.15);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+
+  .ticker-wrap{background:var(--y);overflow:hidden;height:36px;display:flex;align-items:center;border-bottom:var(--border)}
+  .ticker{display:flex;animation:tick 30s linear infinite;white-space:nowrap}
+  .ticker span{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--bk);padding:0 24px}
+  .ticker .dot{opacity:.35;padding:0 6px}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  nav{display:grid;grid-template-columns:1fr 1fr;height:54px;border-bottom:var(--border)}
+  .nav-l{display:flex;align-items:center;padding:0 22px;gap:10px;border-right:var(--border)}
+  .nav-l a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
+  .nav-l span{color:rgba(255,255,255,.12)}
+  .nav-l strong{color:var(--wh)}
+  .nav-r{display:flex;align-items:center;justify-content:flex-end;padding:0 22px}
+  .nav-r span{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+
+  .hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
+  .hero-l{background:var(--bl);padding:52px 42px;border-right:var(--border);display:flex;flex-direction:column;justify-content:space-between}
+  .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(0,0,0,.4);margin-bottom:14px}
+  .hero-l h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(46px,6vw,70px);font-weight:900;line-height:.88;text-transform:uppercase;color:var(--bk)}
+  .hero-l h1 span{color:var(--wh)}
+  .hero-dates{display:flex;gap:28px;margin-top:36px}
+  .hd-item{display:flex;flex-direction:column;gap:3px}
+  .hd-label{font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)}
+  .hd-val{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;text-transform:uppercase;color:var(--bk)}
+  .hero-r{padding:44px 42px;display:flex;flex-direction:column;gap:18px;justify-content:center}
+  .hero-r p{font-size:14px;line-height:1.8;color:var(--gr);max-width:440px}
+  .hero-r p strong{color:var(--wh);font-weight:600}
+
+  .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:var(--border)}
+  .stat{padding:32px 28px;border-right:var(--border);display:flex;flex-direction:column;gap:6px}
+  .stat:last-child{border-right:none}
+  .stat-num{font-family:'Barlow Condensed',sans-serif;font-size:clamp(44px,5vw,64px);font-weight:900;line-height:1;color:var(--y)}
+  .stat-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  .stat-sub{font-size:11px;color:rgba(255,255,255,.2);margin-top:2px}
+
+  .sec-day{border-bottom:var(--border)}
+  .day-header{display:grid;grid-template-columns:220px 1fr;border-bottom:var(--border)}
+  .day-date{background:var(--y);padding:28px 30px;border-right:var(--border);display:flex;flex-direction:column;justify-content:center;gap:4px}
+  .day-date .dd-label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(0,0,0,.4)}
+  .day-date .dd-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:var(--bk);line-height:1}
+  .day-title-block{background:var(--bk);padding:28px 38px;display:flex;align-items:center;justify-content:space-between}
+  .day-title-block h2{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;text-transform:uppercase;color:var(--wh);line-height:.95}
+  .day-title-block h2 span{color:var(--y)}
+  .day-body{display:grid;grid-template-columns:1fr 1fr}
+  .day-copy{padding:38px;border-right:var(--border);display:flex;flex-direction:column;gap:16px}
+  .day-copy p{font-size:13.5px;line-height:1.8;color:var(--gr)}
+  .day-copy p strong{color:var(--wh);font-weight:600}
+
+  .sec-guests{border-bottom:var(--border)}
+  .guests-body{display:grid;grid-template-columns:1fr 1fr}
+  .guests-l{padding:38px;border-right:var(--border);display:flex;flex-direction:column;gap:14px}
+  .guests-l p{font-size:13.5px;line-height:1.8;color:var(--gr)}
+  .guests-r{padding:38px;display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}
+  .guest-chip{background:#111;border:1px solid #222;padding:10px 16px;border-radius:2px;display:flex;flex-direction:column;gap:2px}
+  .gc-name{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;text-transform:uppercase;color:var(--wh)}
+  .gc-co{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.04em}
+  .guest-chip.placeholder-chip{border-style:dashed;opacity:.4}
+  .guest-chip.placeholder-chip .gc-name{color:rgba(255,255,255,.3)}
+
+  .sec-highlights{border-bottom:var(--border)}
+  .highlights-grid{display:grid;grid-template-columns:1fr 1fr 1fr}
+  .hl-card{padding:36px 30px;border-right:var(--border);display:flex;flex-direction:column;gap:12px}
+  .hl-card:last-child{border-right:none}
+  .hl-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;color:rgba(255,255,255,.2)}
+  .hl-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
+  .hl-title span{color:var(--y)}
+  .hl-body{font-size:13px;line-height:1.75;color:var(--gr)}
+
+  .sec-quote{border-bottom:var(--border);background:var(--bl)}
+  .quote-inner{padding:56px 42px;max-width:900px}
+  .quote-inner blockquote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3.5vw,42px);font-weight:900;line-height:1.05;color:var(--bk);margin-bottom:20px}
+  .quote-attr{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(0,0,0,.45)}
+
+  .sec-workshop{border-bottom:var(--border)}
+  .workshop-body{display:grid;grid-template-columns:2fr 1fr}
+  .ws-copy{padding:38px;border-right:var(--border);display:flex;flex-direction:column;gap:16px}
+  .ws-copy h3{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;text-transform:uppercase;color:var(--y)}
+  .ws-copy p{font-size:13.5px;line-height:1.8;color:var(--gr)}
+  .ws-copy p strong{color:var(--wh);font-weight:600}
+  .ws-participants{padding:38px;display:flex;flex-direction:column;gap:10px}
+  .ws-participants h4{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:6px}
+  .ws-chip{background:#111;border:1px solid #1e1e1e;padding:9px 14px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;color:rgba(255,255,255,.5)}
+  .ws-chip.placeholder{border-style:dashed;opacity:.4}
+
+  .photo-grid{display:grid;border-bottom:var(--border)}
+  .photo-grid.cols-3{grid-template-columns:1fr 1fr 1fr}
+  .photo-grid.cols-2{grid-template-columns:1fr 1fr}
+  .pg-cell{overflow:hidden;border-right:var(--border);height:300px}
+  .pg-cell:last-child{border-right:none}
+  .pg-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+  .pg-cell:hover img{transform:scale(1.03)}
+
+  .sec-forward{border-bottom:var(--border);display:grid;grid-template-columns:1fr 1fr}
+  .fwd-l{background:var(--y);padding:46px 38px;border-right:var(--border);display:flex;flex-direction:column;gap:14px}
+  .fwd-l h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4vw,50px);font-weight:900;text-transform:uppercase;line-height:.9;color:var(--bk)}
+  .fwd-l p{font-size:13.5px;line-height:1.75;color:rgba(0,0,0,.6);max-width:340px}
+  .fwd-r{background:var(--bk);padding:46px 38px;display:flex;flex-direction:column;gap:20px;justify-content:center}
+  .fwd-point{display:flex;gap:14px;align-items:flex-start}
+  .fwd-arrow{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:var(--y);flex-shrink:0;margin-top:1px}
+  .fwd-text{font-size:13px;line-height:1.7;color:var(--gr)}
+  .fwd-text strong{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;text-transform:uppercase;color:var(--wh);display:block;margin-bottom:2px}
+
+  footer{padding:20px 28px;display:flex;align-items:center;justify-content:space-between;border-top:2px solid #1e1e1e}
+  .footer-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--wh)}
+  .footer-right{display:flex;gap:24px;align-items:center}
+  .footer-link{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
+  .footer-link:hover{color:var(--y)}
+</style>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>STELLAR HOUSE MEXICO</span><span class="dot">✦</span><span>APRIL 20–22, 2025</span><span class="dot">✦</span><span>MEXICO CITY</span><span class="dot">✦</span><span>EVENT RETROSPECTIVE</span><span class="dot">✦</span><span>MYOSIN × STELLAR</span><span class="dot">✦</span><span>STELLAR HOUSE MEXICO</span><span class="dot">✦</span><span>APRIL 20–22, 2025</span><span class="dot">✦</span><span>MEXICO CITY</span><span class="dot">✦</span><span>EVENT RETROSPECTIVE</span><span class="dot">✦</span><span>MYOSIN × STELLAR</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-l">
+    <a href="/">Marketers in the Arena</a>
+    <span>/</span>
+    <strong>Stellar House Mexico</strong>
+  </div>
+  <div class="nav-r">
+    <span>Event Retrospective · April 2025</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-l">
+    <div>
+      <div class="hero-eyebrow">Event Retrospective · Prepared for Stellar Foundation & Myosin</div>
+      <h1>STELLAR<br>HOUSE<br><span>MEXICO</span></h1>
+    </div>
+    <div class="hero-dates">
+      <div class="hd-item">
+        <span class="hd-label">Dates</span>
+        <span class="hd-val">April 20–22, 2025</span>
+      </div>
+      <div class="hd-item">
+        <span class="hd-label">Location</span>
+        <span class="hd-val">Mexico City</span>
+      </div>
+      <div class="hd-item">
+        <span class="hd-label">Format</span>
+        <span class="hd-val">3-Day Programming</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <p>A three-day programming experience that brought together the Stellar ecosystem with the Mexican builder and founder community — spanning an intimate ecosystem dinner, a community-forward day of open programming, and a high-caliber institutional day with major organizations.</p>
+    <p>Our role was <strong>strategic, not operational</strong>: we curated content, shaped programming with an education-first lens, and served as a connector between the Stellar Foundation and the local ecosystem.</p>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stat">
+    <span class="stat-num">3</span>
+    <span class="stat-label">Days of Programming</span>
+    <span class="stat-sub">Apr 20–22, 2025</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">2</span>
+    <span class="stat-label">Workshops</span>
+    <span class="stat-sub">Education-first sessions</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">12</span>
+    <span class="stat-label">Ecosystem Dinner Guests</span>
+    <span class="stat-sub">Intimate, curated table</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num" style="color:rgba(255,255,255,.15);font-size:32px">—</span>
+    <span class="stat-label">Total Attendees</span>
+    <span class="stat-sub" style="font-style:italic">← Add post-event</span>
+  </div>
+</section>
+
+<!-- DAY 1 -->
+<section class="sec-day" id="day1">
+  <div class="day-header">
+    <div class="day-date">
+      <span class="dd-label">Day 01 · April 20</span>
+      <span class="dd-title">Ecosystem<br>Dinner</span>
+    </div>
+    <div class="day-title-block">
+      <h2>Twelve Friends.<br><span>One Table.</span></h2>
+      <span class="label">Intimate Pre-Event Dinner</span>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="day-copy">
+      <p>The week opened with an intimate table. We hosted <strong>twelve of our closest builder friends</strong> for a deliberate pre-dinner — a choice to create genuine connection before the broader event began. The format was conversational, the atmosphere relaxed, and the conversation substantive.</p>
+      <p>This was not a networking function in the conventional sense. It was a deliberate gathering of people who are building in parallel, and who benefit from knowing each other. The dinner created the relational foundation that made the next two days more meaningful for everyone in attendance.</p>
+    </div>
+    <div class="photo-placeholder" style="height:100%;min-height:280px">← Dinner photos coming</div>
+  </div>
+</section>
+
+<!-- GUEST LIST -->
+<section class="sec-guests">
+  <div class="sec-header">
+    <h2 class="sec-title">WHO WAS <span style="color:var(--y)">IN THE ROOM</span></h2>
+    <span class="label">April 20 · Ecosystem Dinner · 12 Guests</span>
+  </div>
+  <div class="guests-body">
+    <div class="guests-l">
+      <p>Attendees represented some of the most active organizations building in the Mexican and LATAM web3 and fintech space. A table of people building in parallel — who benefit from knowing each other.</p>
+      <p style="font-size:11px;color:rgba(255,255,255,.2);font-style:italic;margin-top:8px">← Full guest list with names and roles coming</p>
+    </div>
+    <div class="guests-r">
+      <div class="guest-chip"><span class="gc-name">Etherfuse</span><span class="gc-co">Stablecoin Infrastructure · LATAM</span></div>
+      <div class="guest-chip"><span class="gc-name">Syklo</span><span class="gc-co">Web3 / DeFi</span></div>
+      <div class="guest-chip"><span class="gc-name">Base LATAM</span><span class="gc-co">Ecosystem</span></div>
+      <div class="guest-chip"><span class="gc-name">Blockchain Foro</span><span class="gc-co">Community</span></div>
+      <div class="guest-chip"><span class="gc-name">Opportuniti</span><span class="gc-co">Fintech</span></div>
+      <div class="guest-chip placeholder-chip"><span class="gc-name">+ 7 More Guests</span><span class="gc-co">← Add from guest list</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 2 -->
+<section class="sec-day" id="day2">
+  <div class="day-header">
+    <div class="day-date">
+      <span class="dd-label">Day 02 · April 21</span>
+      <span class="dd-title">Community<br>Day</span>
+    </div>
+    <div class="day-title-block">
+      <h2>Open.<br><span>Exploratory. Real.</span></h2>
+      <span class="label">Developers · Founders · Operators</span>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="day-copy">
+      <p>The first full day was oriented toward the broader community: developers, founders, operators, and builders exploring or already embedded within the Stellar ecosystem. The energy was open and exploratory, with a strong emphasis on learning and dialogue.</p>
+      <p>Presentations from <strong>Victor Hernandez and Brandon Rodriguez</strong> grounded the day with clear technical and strategic context. Talks from Alfred and the teams at <strong>Bitso, Stellar, and Etherfuse</strong> brought depth across multiple perspectives — from established infrastructure players to emerging protocol-level builders.</p>
+      <p>What stood out was the coherence across speakers: <strong>a shared belief in Stellar as serious, and reliable.</strong> New projects entering the ecosystem added a distinct layer of energy — builders working within guardrails, building compliant rails, products built with real users in mind.</p>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div class="photo-placeholder" style="height:50%;min-height:200px">← Community Day photos coming</div>
+      <div class="photo-placeholder" style="height:50%;min-height:200px;border-top:var(--border)">← Workshop / session photo coming</div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 3 -->
+<section class="sec-day" id="day3">
+  <div class="day-header">
+    <div class="day-date" style="background:var(--bk);border-right:var(--border)">
+      <span class="dd-label" style="color:rgba(255,255,255,.3)">Day 03 · April 22</span>
+      <span class="dd-title" style="color:var(--y)">Institutional<br>Day</span>
+    </div>
+    <div class="day-title-block">
+      <h2>The Room<br><span>Changed.</span></h2>
+      <span class="label">Institutions · Capital · Senior Decision-Makers</span>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="day-copy">
+      <p>Day three shifted the register significantly. The room changed composition — institutional organizations, serious capital, and senior decision-makers filled the space, reflecting Stellar's positioning as a platform that has moved well beyond its early adopter phase.</p>
+      <p>The defining moment of the day — and arguably of the week — was listening to <strong>Denelle Dixon</strong> speak. Her clarity, composure, and genuine optimism about the trajectory of Stellar were reassuring. She spoke from conviction and deep institutional knowledge.</p>
+      <p>What resonated most was the <strong>accessibility of Stellar's executive team</strong>. There was no performance of distance or hierarchy — just a team genuinely engaged with the ecosystem they're building. They closed with an executive lineup open for questions from the room. For a LATAM founder deciding where to build, the signal that leadership is present, reachable, and invested is not a small thing.</p>
+    </div>
+    <div class="photo-placeholder" style="height:100%;min-height:280px">← Institutional Day photos coming</div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="sec-quote">
+  <div class="quote-inner">
+    <blockquote>"There was no performance of distance or hierarchy. Just a team that is genuinely engaged with the ecosystem they're building."</blockquote>
+    <span class="quote-attr">On Denelle Dixon & the Stellar Executive Team · Institutional Day, April 22</span>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="sec-highlights">
+  <div class="sec-header">
+    <h2 class="sec-title">KEY <span style="color:var(--y)">TAKEAWAYS</span></h2>
+  </div>
+  <div class="highlights-grid">
+    <div class="hl-card">
+      <span class="hl-num">01</span>
+      <div class="hl-title">Marketing Education<br><span>for Founders</span></div>
+      <p class="hl-body">Helping builders in the Stellar ecosystem understand how to communicate their products, position themselves, and grow their communities. This was our core mandate across all three days.</p>
+    </div>
+    <div class="hl-card">
+      <span class="hl-num">02</span>
+      <div class="hl-title">Ecosystem<br><span>Connectivity</span></div>
+      <p class="hl-body">Facilitating introductions and relationships that outlast the event itself. The pre-dinner was the clearest expression of this intent — twelve people, a shared meal, conversations that continued through the rest of the week.</p>
+    </div>
+    <div class="hl-card">
+      <span class="hl-num">03</span>
+      <div class="hl-title">LATAM Isn't<br><span>Emerging</span></div>
+      <p class="hl-body">The founders are serious and the appetite for what Stellar enables is genuine. The trust being placed in Stellar — by builders, institutions, and teams choosing to embed themselves in this ecosystem — is not incidental.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOP -->
+<section class="sec-workshop">
+  <div class="sec-header">
+    <h2 class="sec-title">OUR <span style="color:var(--y)">WORKSHOP</span></h2>
+    <span class="label">← Add participant list when confirmed</span>
+  </div>
+  <div class="workshop-body">
+    <div class="ws-copy">
+      <h3>Education-First Programming</h3>
+      <p>We ran <strong>2 workshops</strong> across the three days with an education-first lens — grounding builders in the fundamentals of marketing, GTM, and community growth within the Stellar ecosystem context.</p>
+      <p>Our focus was practical: not theory, but the frameworks and decisions that founders face when they're actively building. The goal was to leave every participant with something they could use the next day.</p>
+      <p style="font-size:11px;color:rgba(255,255,255,.2);font-style:italic;margin-top:4px">← Add workshop content / session details when ready</p>
+    </div>
+    <div class="ws-participants">
+      <h4>Workshop Participants</h4>
+      <div class="ws-chip placeholder">← Participant 1</div>
+      <div class="ws-chip placeholder">← Participant 2</div>
+      <div class="ws-chip placeholder">← Participant 3</div>
+      <div class="ws-chip placeholder">← Participant 4</div>
+      <div class="ws-chip placeholder">← Add full list</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GRID PLACEHOLDERS -->
+<section class="photo-grid cols-3">
+  <div class="pg-cell photo-placeholder">← Event photo</div>
+  <div class="pg-cell photo-placeholder">← Event photo</div>
+  <div class="pg-cell photo-placeholder">← Event photo</div>
+</section>
+<section class="photo-grid cols-2" style="border-bottom:2px solid #1e1e1e">
+  <div class="pg-cell photo-placeholder" style="height:360px">← Event photo</div>
+  <div class="pg-cell photo-placeholder" style="height:360px">← Event photo</div>
+</section>
+
+<!-- LOOKING FORWARD -->
+<section class="sec-forward">
+  <div class="fwd-l">
+    <h2>LOOKING<br>FORWARD</h2>
+    <p>Stellar House Mexico confirmed what we had suspected: the LATAM ecosystem is not emerging. It's been here. And there's a natural next step.</p>
+  </div>
+  <div class="fwd-r">
+    <div class="fwd-point">
+      <span class="fwd-arrow">→</span>
+      <div class="fwd-text">
+        <strong>Marketers in the Arena — CDMX</strong>
+        The trust built at Stellar House Mexico creates a direct runway for a deeper, more focused event: a curated room where the builders in this ecosystem get real marketing feedback and high-signal connections. June 17th, 2026.
+      </div>
+    </div>
+    <div class="fwd-point">
+      <span class="fwd-arrow">→</span>
+      <div class="fwd-text">
+        <strong>Deepening the Ecosystem</strong>
+        The relationships seeded at the dinner, the workshops, and the institutional day are the foundation. The next event builds on top of them — not from scratch.
+      </div>
+    </div>
+    <div class="fwd-point">
+      <span class="fwd-arrow">→</span>
+      <div class="fwd-text">
+        <strong>LATAM as a Strategic Priority</strong>
+        With $60B+ in annual remittances and stablecoin rails being built in real-time by teams like Etherfuse, Mexico City is not a regional outpost. It's a strategic centre.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-title">Stellar House Mexico · April 2025</span>
+  <div class="footer-right">
+    <a href="/cdmx" class="footer-link">CDMX Edition →</a>
+    <a href="/" class="footer-link">All Editions</a>
+    <a href="mailto:stef@growwithguava.com" class="footer-link">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
