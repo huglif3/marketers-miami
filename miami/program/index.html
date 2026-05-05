@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program & Speakers — Marketers in the Arena Miami</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--y:#E8EF5A;--bl:#6B7CC4;--bk:#0A0A0A;--gr:#B8B8B4;--wh:#FFFFFF;--border:2px solid #1e1e1e}
+  html{scroll-behavior:smooth}
+  body{font-family:'Barlow',sans-serif;background:var(--bk);color:var(--wh);overflow-x:hidden}
+
+  /* SHARED */
+  .label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+  .sec-title{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;text-transform:uppercase;line-height:.9}
+
+  /* TICKER */
+  .ticker-wrap{background:var(--y);overflow:hidden;height:36px;display:flex;align-items:center;border-bottom:var(--border)}
+  .ticker{display:flex;animation:tick 32s linear infinite;white-space:nowrap}
+  .ticker span{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--bk);padding:0 24px}
+  .ticker .dot{opacity:.35;padding:0 6px}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* NAV */
+  nav{display:grid;grid-template-columns:1fr 1fr;height:54px;border-bottom:var(--border)}
+  .nav-l{display:flex;align-items:center;padding:0 22px;gap:12px;border-right:var(--border)}
+  .nav-l a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
+  .nav-l span{color:rgba(255,255,255,.15)}
+  .nav-l strong{color:var(--wh)}
+  .nav-r{display:flex;align-items:center;justify-content:flex-end;padding:0 22px}
+  .nav-r span{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+
+  /* HERO */
+  .hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
+  .hero-l{background:var(--y);padding:52px 42px;border-right:var(--border);display:flex;flex-direction:column;justify-content:space-between}
+  .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(0,0,0,.4);margin-bottom:12px}
+  .hero-l h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(48px,6vw,72px);font-weight:900;line-height:.88;text-transform:uppercase;color:var(--bk)}
+  .hero-meta{display:flex;gap:32px;margin-top:32px}
+  .hm-item{display:flex;flex-direction:column;gap:3px}
+  .hm-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;text-transform:uppercase;color:var(--bk)}
+  .hero-r{padding:40px 42px;display:flex;flex-direction:column;justify-content:center;gap:20px}
+  .hero-r p{font-size:14px;line-height:1.75;color:var(--gr);max-width:400px}
+
+  /* PROGRAM SECTION */
+  .sec-program{border-bottom:var(--border)}
+  .program-category{border-bottom:var(--border)}
+  .program-header{padding:36px 38px 20px;border-bottom:1px solid #1e1e1e}
+  .program-header h2{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;color:var(--y);margin-bottom:8px}
+  .program-header p{font-size:13px;color:var(--gr);line-height:1.6}
+
+  .speaker-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
+  .speaker-card{padding:36px 38px;border-right:var(--border);border-bottom:var(--border);display:flex;flex-direction:column;gap:16px}
+  .speaker-card:nth-child(2n){border-right:none}
+  .speaker-card:nth-last-child(-n+2){border-bottom:none}
+
+  .speaker-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  .speaker-name{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:var(--wh)}
+  .speaker-format{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--y);display:inline-block;background:rgba(232,239,90,.1);padding:4px 8px;border-radius:2px}
+
+  .speaker-company{font-size:13px;color:var(--bl);font-weight:500}
+  .speaker-desc{font-size:13px;line-height:1.6;color:var(--gr);margin:8px 0}
+
+  .presentation-block{background:rgba(232,239,90,.05);border:1px solid rgba(232,239,90,.15);padding:14px 16px;border-radius:3px;display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}
+  .presentation-title{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--y);flex:1}
+  .presentation-link{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--y);text-decoration:none;padding:6px 12px;border:1px solid var(--y);border-radius:2px;white-space:nowrap;transition:all .2s}
+  .presentation-link:hover{background:var(--y);color:var(--bk)}
+
+  .no-presentation{font-size:12px;color:rgba(255,255,255,.3);font-style:italic}
+
+  /* RESOURCES SECTION */
+  .sec-resources{border-bottom:var(--border)}
+  .resources-header{padding:36px 38px 24px}
+  .resources-header h2{color:var(--wh)}
+  .resources-header h2 span{color:var(--y)}
+
+  .resources-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:var(--border)}
+  .resource-card{padding:32px 28px;border-right:var(--border);display:flex;flex-direction:column;gap:12px}
+  .resource-card:last-child{border-right:none}
+  .resource-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;text-transform:uppercase;color:var(--wh);line-height:1.3}
+  .resource-link{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--y);text-decoration:none;display:inline-block;margin-top:auto}
+  .resource-link:hover{text-decoration:underline}
+
+  /* FOOTER */
+  footer{padding:20px 28px;display:flex;align-items:center;justify-content:space-between;border-top:2px solid #1e1e1e}
+  .footer-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--wh)}
+  .footer-right{display:flex;gap:24px;align-items:center}
+  .footer-link{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
+  .footer-link:hover{color:var(--y)}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>PROGRAM & SPEAKERS</span><span class="dot">✦</span><span>MIAMI EVENT</span><span class="dot">✦</span><span>PRESENTATIONS</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>PROGRAM & SPEAKERS</span><span class="dot">✦</span><span>MIAMI EVENT</span><span class="dot">✦</span><span>PRESENTATIONS</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-l">
+    <a href="/">Marketers in the Arena</a>
+    <span>/</span>
+    <a href="/miami/recap">Miami Impact Report</a>
+    <span>/</span>
+    <strong>Program & Speakers</strong>
+  </div>
+  <div class="nav-r">
+    <span>May 4, 2026 · The Loft Miami</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-l">
+    <div>
+      <div class="hero-eyebrow">May 4, 2026</div>
+      <h1>PROGRAM<br>& SPEAKERS</h1>
+    </div>
+    <div class="hero-meta">
+      <div class="hm-item">
+        <span class="label">Speakers</span>
+        <span class="hm-val">18 Total</span>
+      </div>
+      <div class="hm-item">
+        <span class="label">Format</span>
+        <span class="hm-val">Mixed</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <p>Full speaker lineup from the Miami edition of Marketers in the Arena. Each speaker brought insights on crypto marketing, GTM strategy, and ecosystem growth. Access their presentations below.</p>
+  </div>
+</section>
+
+<!-- KEYNOTE -->
+<section class="sec-program">
+  <div class="program-category">
+    <div class="program-header">
+      <h2>Keynote</h2>
+      <p>Opening address setting the tone for the event and ecosystem context.</p>
+    </div>
+    <div class="speaker-grid" style="grid-template-columns:1fr">
+      <div class="speaker-card" style="border-right:none">
+        <div class="speaker-header">
+          <div>
+            <div class="speaker-name">Matt Bond</div>
+            <div class="speaker-company">Hivemind</div>
+          </div>
+          <span class="speaker-format">Keynote</span>
+        </div>
+        <div class="speaker-desc">Opened the event with insights on the state of crypto marketing and the role of community-driven go-to-market strategies.</div>
+        <div class="presentation-block">
+          <span class="presentation-title">Opening Remarks</span>
+          <a href="#" class="presentation-link">Available Soon</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TALKS -->
+<section class="program-category">
+  <div class="program-header">
+    <h2>Talks</h2>
+    <p>Individual speaker presentations covering marketing frameworks, growth strategies, and ecosystem insights.</p>
+  </div>
+  <div class="speaker-grid">
+    <div class="speaker-card">
+      <div class="speaker-header">
+        <div>
+          <div class="speaker-name">Dan Rodman</div>
+          <div class="speaker-company">Co/Unity CEO</div>
+        </div>
+        <span class="speaker-format">Talk</span>
+      </div>
+      <div class="speaker-desc">Go-To-Community Strategy: Building sustainable community-driven growth models for crypto projects.</div>
+      <div class="presentation-block">
+        <span class="presentation-title">GTC Strategy</span>
+        <a href="/presentations/Miami-GTC-Deck.pdf" class="presentation-link">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="speaker-card">
+      <div class="speaker-header">
+        <div>
+          <div class="speaker-name">Brandon Rodriguez</div>
+          <div class="speaker-company">Etherfuse</div>
+        </div>
+        <span class="speaker-format">Talk</span>
+      </div>
+      <div class="speaker-desc">Marketing principles for product-first builders: How to market to engineers and operators in crypto.</div>
+      <div class="presentation-block">
+        <span class="presentation-title">Marketing for Builders</span>
+        <a href="/presentations/Marketing-Principles-for-Builders-2026.pdf" class="presentation-link">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="speaker-card">
+      <div class="speaker-header">
+        <div>
+          <div class="speaker-name">Crypto Strategy Speaker</div>
+          <div class="speaker-company">TBA</div>
+        </div>
+        <span class="speaker-format">Talk</span>
+      </div>
+      <div class="speaker-desc">Stablecoins and the future of on-chain commerce: Market opportunities and adoption drivers.</div>
+      <div class="presentation-block">
+        <span class="presentation-title">Stablecoins Strategy</span>
+        <a href="/presentations/Miami-Stablecoins-Presentation.pdf" class="presentation-link">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="speaker-card">
+      <div class="speaker-header">
+        <div>
+          <div class="speaker-name">Virality & Growth Speaker</div>
+          <div class="speaker-company">TBA</div>
+        </div>
+        <span class="speaker-format">Talk</span>
+      </div>
+      <div class="speaker-desc">Virality 101: Creating shareable moments and organic growth loops in crypto communities.</div>
+      <div class="presentation-block">
+        <span class="presentation-title">Virality 101</span>
+        <a href="/presentations/Virality-101.pdf" class="presentation-link">Download PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PANELS & DISCUSSIONS -->
+<section class="program-category">
+  <div class="program-header">
+    <h2>Panels & Discussions</h2>
+    <p>Multi-speaker panels covering hot topics, market trends, and ecosystem challenges.</p>
+  </div>
+  <div class="speaker-grid" style="grid-template-columns:1fr">
+    <div class="speaker-card" style="border-right:none">
+      <div class="speaker-header">
+        <div>
+          <div class="speaker-name">Myosin & Ecosystem Leaders Panel</div>
+          <div class="speaker-company">Multiple Speakers</div>
+        </div>
+        <span class="speaker-format">Panel</span>
+      </div>
+      <div class="speaker-desc">Moderated discussion on market dynamics, regulatory landscape, and opportunities for new entrants in crypto marketing.</div>
+      <div class="presentation-block">
+        <span class="presentation-title">Panel Discussion Notes</span>
+        <a href="/presentations/Miami-Myosin-Events-Miami-Speakers.pdf" class="presentation-link">Download PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROASTS & FEEDBACK -->
+<section class="program-category">
+  <div class="program-header">
+    <h2>Roasts & Live Feedback</h2>
+    <p>Interactive sessions where the audience shared marketing strategies and received real-time feedback from operators.</p>
+  </div>
+  <div class="speaker-grid" style="grid-template-columns:1fr">
+    <div class="speaker-card" style="border-right:none">
+      <div class="speaker-header">
+        <div>
+          <div class="speaker-name">Open Mic Roasts</div>
+          <div class="speaker-company">All Attendees</div>
+        </div>
+        <span class="speaker-format">Interactive</span>
+      </div>
+      <div class="speaker-desc">Community members pitched GTM strategies and received candid feedback from founding teams and ecosystem leaders. A unique feature of Marketers in the Arena events.</div>
+      <div style="margin-top:12px">
+        <span class="no-presentation">Roasts were recorded but not transcribed. Video recap available separately.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="sec-resources">
+  <div class="resources-header">
+    <h2>ALL <span>PRESENTATIONS</span></h2>
+  </div>
+  <div class="resources-grid">
+    <a href="/presentations/Miami-GTC-Deck.pdf" style="text-decoration:none;color:inherit">
+      <div class="resource-card">
+        <div class="resource-title">Go-To-Community Strategy</div>
+        <p style="font-size:12px;color:var(--gr)">Dan Rodman / Co/Unity</p>
+        <span class="resource-link">Download →</span>
+      </div>
+    </a>
+
+    <a href="/presentations/Marketing-Principles-for-Builders-2026.pdf" style="text-decoration:none;color:inherit">
+      <div class="resource-card">
+        <div class="resource-title">Marketing for Builders</div>
+        <p style="font-size:12px;color:var(--gr)">Brandon Rodriguez / Etherfuse</p>
+        <span class="resource-link">Download →</span>
+      </div>
+    </a>
+
+    <a href="/presentations/Miami-Stablecoins-Presentation.pdf" style="text-decoration:none;color:inherit">
+      <div class="resource-card">
+        <div class="resource-title">Stablecoins & Commerce</div>
+        <p style="font-size:12px;color:var(--gr)">Crypto Strategy Track</p>
+        <span class="resource-link">Download →</span>
+      </div>
+    </a>
+
+    <a href="/presentations/Virality-101.pdf" style="text-decoration:none;color:inherit">
+      <div class="resource-card">
+        <div class="resource-title">Virality 101</div>
+        <p style="font-size:12px;color:var(--gr)">Growth Strategy Track</p>
+        <span class="resource-link">Download →</span>
+      </div>
+    </a>
+
+    <a href="/presentations/Miami-Myosin-Events-Miami-Speakers.pdf" style="text-decoration:none;color:inherit">
+      <div class="resource-card">
+        <div class="resource-title">Panel Discussion Notes</div>
+        <p style="font-size:12px;color:var(--gr)">Myosin & Partners</p>
+        <span class="resource-link">Download →</span>
+      </div>
+    </a>
+
+    <a href="/presentations/Crypto-Goes-Prada.pdf" style="text-decoration:none;color:inherit">
+      <div class="resource-card">
+        <div class="resource-title">Crypto Goes Prada</div>
+        <p style="font-size:12px;color:var(--gr)">Brand Strategy Track</p>
+        <span class="resource-link">Download →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-title">Marketers in the Arena — Miami Program</span>
+  <div class="footer-right">
+    <a href="/miami/recap" class="footer-link">Impact Report</a>
+    <a href="/recap" class="footer-link">All Editions</a>
+    <a href="mailto:stef@growwithguava.com" class="footer-link">Questions? →</a>
+  </div>
+</footer>
+
+</body>
+</html>
