@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impact Report — Marketers in the Arena</title>
+<title>Case Studies — Marketers in the Arena</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -13,14 +13,11 @@
 
   /* SHARED */
   .label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.3)}
-  .label-dark{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(0,0,0,.35)}
   .sec-title{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;text-transform:uppercase;line-height:.9}
-  .placeholder{background:#111;border:1px dashed #2a2a2a;color:rgba(255,255,255,.2);font-size:12px;font-style:italic;padding:12px 16px;border-radius:2px;text-align:center}
-  .placeholder-dark{background:rgba(0,0,0,.08);border:1px dashed rgba(0,0,0,.2);color:rgba(0,0,0,.3);font-size:12px;font-style:italic;padding:12px 16px;border-radius:2px;text-align:center}
 
   /* TICKER */
   .ticker-wrap{background:var(--y);overflow:hidden;height:36px;display:flex;align-items:center;border-bottom:var(--border)}
-  .ticker{display:flex;animation:tick 28s linear infinite;white-space:nowrap}
+  .ticker{display:flex;animation:tick 32s linear infinite;white-space:nowrap}
   .ticker span{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--bk);padding:0 24px}
   .ticker .dot{opacity:.35;padding:0 6px}
   @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -44,101 +41,32 @@
   .hm-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;text-transform:uppercase;color:var(--bk)}
   .hero-r{padding:40px 42px;display:flex;flex-direction:column;justify-content:center;gap:20px}
   .hero-r p{font-size:14px;line-height:1.75;color:var(--gr);max-width:400px}
-  .hero-tag{display:inline-block;background:#111;border:1px solid #2a2a2a;font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);padding:6px 12px;border-radius:3px}
 
-  /* METRICS BAR */
-  .metrics-bar{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:var(--border)}
-  .metric{padding:32px 28px;border-right:var(--border);display:flex;flex-direction:column;gap:8px}
-  .metric:last-child{border-right:none}
-  .metric-num{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,4vw,56px);font-weight:900;line-height:1;color:var(--y)}
-  .metric-num.tbd{color:rgba(255,255,255,.15);font-size:32px}
-  .metric-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4)}
-  .metric-sub{font-size:11px;color:rgba(255,255,255,.2);margin-top:2px}
+  /* EDITIONS GRID */
+  .sec-editions{border-bottom:var(--border)}
+  .editions-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
+  .edition-card{border-right:var(--border);padding:40px 38px;display:flex;flex-direction:column;gap:24px;cursor:pointer;transition:background .2s}
+  .edition-card:nth-child(even){border-right:none}
+  .edition-card:hover{background:rgba(232,239,90,.05)}
+  .edition-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+  .edition-title{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;text-transform:uppercase;color:var(--wh)}
+  .edition-date{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);min-width:80px}
+  .edition-desc{font-size:13px;line-height:1.7;color:var(--gr)}
+  .edition-stats{display:flex;gap:24px;flex-wrap:wrap}
+  .edition-stat{display:flex;flex-direction:column;gap:4px}
+  .edition-stat-num{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:900;color:var(--y)}
+  .edition-stat-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+  .edition-link{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--y);text-decoration:none;margin-top:auto;display:inline-block}
+  .edition-link:hover{text-decoration:underline}
 
-  /* CONTENT ENGINE */
-  .sec-content{border-bottom:var(--border)}
-  .sec-header{background:var(--bk);padding:28px 38px 18px;border-bottom:var(--border);display:flex;justify-content:space-between;align-items:flex-end}
-  .sec-header h2{color:var(--wh)}
-  .sec-header h2 span{color:var(--y)}
-  .content-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:var(--border)}
-  .content-card{padding:32px 30px;border-right:var(--border);display:flex;flex-direction:column;gap:14px}
-  .content-card:last-child{border-right:none}
-  .content-icon{font-size:22px;margin-bottom:4px}
-  .content-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;color:var(--wh)}
-  .content-body{font-size:12.5px;line-height:1.7;color:var(--gr)}
-  .content-stat{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--y);margin-top:8px}
-  .content-stat.tbd{color:rgba(255,255,255,.12);font-size:22px}
-  .content-stat-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25)}
-
-  /* AUDIENCE */
-  .sec-audience{border-bottom:var(--border)}
-  .audience-grid{display:grid;grid-template-columns:1fr 1fr}
-  .audience-l{padding:40px 38px;border-right:var(--border);display:flex;flex-direction:column;gap:20px}
-  .audience-r{padding:40px 38px;display:flex;flex-direction:column;gap:16px}
-  .profile-row{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid #1e1e1e}
-  .profile-row:last-child{border-bottom:none}
-  .pr-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);min-width:140px}
-  .pr-bar-wrap{flex:1;height:4px;background:#1e1e1e;border-radius:2px}
-  .pr-bar{height:4px;background:var(--y);border-radius:2px}
-  .pr-pct{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;color:var(--wh);min-width:40px;text-align:right}
-  .pr-pct.tbd{color:rgba(255,255,255,.2)}
-  .rsvp-funnel{display:flex;flex-direction:column;gap:0}
-  .funnel-row{display:grid;grid-template-columns:160px 1fr 60px;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #1e1e1e}
-  .funnel-row:last-child{border-bottom:none}
-  .funnel-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4)}
-  .funnel-bar-wrap{height:6px;background:#111;border-radius:3px}
-  .funnel-bar{height:6px;border-radius:3px}
-  .funnel-bar.applications{background:var(--y)}
-  .funnel-bar.accepted{background:var(--bl)}
-  .funnel-bar.attended{background:var(--wh)}
-  .funnel-num{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;color:var(--wh);text-align:right}
-  .funnel-num.tbd{color:rgba(255,255,255,.2);font-size:13px}
-
-  /* SPEAKERS */
-  .sec-speakers{border-bottom:var(--border)}
-  .speakers-intro{display:grid;grid-template-columns:1fr 2fr;border-bottom:var(--border)}
-  .spk-intro-l{padding:36px 38px;border-right:var(--border);display:flex;flex-direction:column;justify-content:center;gap:12px}
-  .spk-intro-l p{font-size:13px;line-height:1.7;color:var(--gr)}
-  .spk-intro-r{padding:28px 38px;display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start;align-items:flex-start}
-  .spk-chip{display:inline-flex;flex-direction:column;gap:2px;background:#111;border:1px solid #1e1e1e;padding:10px 14px;border-radius:3px}
-  .spk-chip-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:800;text-transform:uppercase;color:var(--wh)}
-  .spk-chip-role{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.04em}
-
-  /* COMPANIES */
-  .sec-companies{border-bottom:var(--border)}
-  .companies-body{padding:36px 38px;display:flex;flex-direction:column;gap:20px}
-  .companies-grid{display:flex;flex-wrap:wrap;gap:10px}
-  .company-tag{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#111;border:1px solid #222;color:rgba(255,255,255,.6);padding:8px 16px;border-radius:999px}
-  .company-tag.stellar{border-color:#6B7CC4;color:var(--bl)}
-
-  /* QUOTES */
-  .sec-quotes{border-bottom:var(--border)}
-  .quotes-grid{display:grid;grid-template-columns:1fr 1fr 1fr}
-  .quote-card{padding:36px 30px;border-right:var(--border);display:flex;flex-direction:column;justify-content:space-between;min-height:240px}
-  .quote-card:last-child{border-right:none}
-  .quote-card.y{background:var(--y)}
-  .quote-card.bl{background:var(--bl)}
-  .quote-card.bk{background:#111}
-  .quote-text{font-family:'Barlow Condensed',sans-serif;font-size:clamp(18px,2vw,24px);font-weight:900;line-height:1.1;color:var(--bk)}
-  .quote-card.bk .quote-text{color:var(--wh)}
-  .quote-text.tbd{color:rgba(0,0,0,.2);font-style:italic;font-size:16px}
-  .quote-card.bk .quote-text.tbd{color:rgba(255,255,255,.15)}
-  .quote-attr{font-size:11px;font-weight:600;margin-top:20px}
-  .quote-card.y .quote-attr,.quote-card.bl .quote-attr{color:rgba(0,0,0,.45)}
-  .quote-card.bk .quote-attr{color:rgba(255,255,255,.35)}
-
-  /* STELLAR PARTNERSHIPS */
-  .sec-stellar{border-bottom:var(--border)}
-  .stellar-body{display:grid;grid-template-columns:1fr 2fr}
-  .stellar-l{background:var(--bl);padding:40px 38px;border-right:var(--border);display:flex;flex-direction:column;gap:14px}
-  .stellar-l h3{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--bk)}
-  .stellar-l p{font-size:13px;line-height:1.7;color:rgba(0,0,0,.6)}
-  .stellar-r{padding:40px 38px;display:flex;flex-wrap:wrap;gap:12px;align-content:flex-start}
-  .intro-card{background:#111;border:1px solid #1e1e1e;padding:16px 20px;border-radius:3px;display:flex;flex-direction:column;gap:6px;width:calc(50% - 6px)}
-  .intro-card-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;text-transform:uppercase;color:var(--y)}
-  .intro-card-body{font-size:11.5px;line-height:1.6;color:var(--gr)}
-  .intro-card.tbd .intro-card-title{color:rgba(255,255,255,.15)}
-  .intro-card.tbd .intro-card-body{color:rgba(255,255,255,.1);font-style:italic}
+  /* AGGREGATE STATS */
+  .sec-aggregate{border-bottom:var(--border)}
+  .aggregate-header{padding:28px 38px;border-bottom:var(--border)}
+  .aggregate-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr}
+  .agg-stat{padding:32px 28px;border-right:var(--border);display:flex;flex-direction:column;gap:8px}
+  .agg-stat:last-child{border-right:none}
+  .agg-num{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,4vw,56px);font-weight:900;line-height:1;color:var(--y)}
+  .agg-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4)}
 
   /* FOOTER */
   footer{padding:20px 28px;display:flex;align-items:center;justify-content:space-between;border-top:2px solid #1e1e1e}
@@ -153,7 +81,7 @@
 <!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker">
-    <span>IMPACT REPORT</span><span class="dot">✦</span><span>MIAMI EDITION</span><span class="dot">✦</span><span>MAY 4TH 2026</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>EVENTS AS A CONTENT ENGINE</span><span class="dot">✦</span><span>IMPACT REPORT</span><span class="dot">✦</span><span>MIAMI EDITION</span><span class="dot">✦</span><span>MAY 4TH 2026</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>EVENTS AS A CONTENT ENGINE</span><span class="dot">✦</span>
+    <span>CASE STUDIES</span><span class="dot">✦</span><span>ALL EDITIONS</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>IMPACT REPORTS</span><span class="dot">✦</span><span>CASE STUDIES</span><span class="dot">✦</span><span>ALL EDITIONS</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>IMPACT REPORTS</span><span class="dot">✦</span>
   </div>
 </div>
 
@@ -162,12 +90,10 @@
   <div class="nav-l">
     <a href="/">Marketers in the Arena</a>
     <span>/</span>
-    <a href="/miami">Miami</a>
-    <span>/</span>
-    <strong>Impact Report</strong>
+    <strong>Case Studies</strong>
   </div>
   <div class="nav-r">
-    <span>Post-Event Report · May 2026</span>
+    <span>All Event Editions · 2024–2026</span>
   </div>
 </nav>
 
@@ -175,297 +101,150 @@
 <section class="hero">
   <div class="hero-l">
     <div>
-      <div class="hero-eyebrow">Post-Event Impact Report</div>
-      <h1>MARKETERS<br>IN THE<br>ARENA<br>MIAMI</h1>
+      <div class="hero-eyebrow">Global Event Series</div>
+      <h1>CASE<br>STUDIES</h1>
     </div>
     <div class="hero-meta">
       <div class="hm-item">
-        <span class="label-dark">Date</span>
-        <span class="hm-val">May 4th, 2026</span>
+        <span class="label">Editions</span>
+        <span class="hm-val">4 Events</span>
       </div>
       <div class="hm-item">
-        <span class="label-dark">Location</span>
-        <span class="hm-val">The Loft, Miami</span>
+        <span class="label">Period</span>
+        <span class="hm-val">2024–2026</span>
       </div>
       <div class="hm-item">
-        <span class="label-dark">Presented by</span>
-        <span class="hm-val">Myosin × Stellar</span>
+        <span class="label">Reach</span>
+        <span class="hm-val">1000+</span>
       </div>
     </div>
   </div>
   <div class="hero-r">
-    <span class="hero-tag">Events as a Content Engine</span>
-    <p>A curated, single-day summit bringing CMOs, founders, and operators together for live marketing feedback, real GTM frameworks, and high-signal networking. This report documents the reach, audience, and partnerships generated.</p>
-    <p style="font-size:12px;color:rgba(255,255,255,.2);font-style:italic;">← Fill in post-event summary copy here</p>
+    <p>Marketers in the Arena is a global summit series bringing together operators, founders, and CMOs for live marketing feedback, GTM frameworks, and high-signal networking. Explore impact reports from each edition.</p>
   </div>
 </section>
 
-<!-- METRICS BAR -->
-<section class="metrics-bar">
-  <div class="metric">
-    <span class="metric-num tbd">—</span>
-    <span class="metric-label">Attendees</span>
-    <span class="metric-sub">In the room</span>
+<!-- AGGREGATE STATS -->
+<section class="sec-aggregate">
+  <div class="aggregate-header">
+    <h2 class="sec-title">ALL EDITIONS <span style="color:var(--y)">AT A GLANCE</span></h2>
   </div>
-  <div class="metric">
-    <span class="metric-num tbd">—</span>
-    <span class="metric-label">RSVPs / Applications</span>
-    <span class="metric-sub">Total submitted</span>
-  </div>
-  <div class="metric">
-    <span class="metric-num tbd">—</span>
-    <span class="metric-label">Emails Collected</span>
-    <span class="metric-sub">Via Luma + form</span>
-  </div>
-  <div class="metric">
-    <span class="metric-num tbd">—</span>
-    <span class="metric-label">Companies</span>
-    <span class="metric-sub">Represented</span>
-  </div>
-  <div class="metric">
-    <span class="metric-num tbd">—</span>
-    <span class="metric-label">Speakers</span>
-    <span class="metric-sub">On stage</span>
-  </div>
-</section>
-
-<!-- CONTENT ENGINE -->
-<section class="sec-content">
-  <div class="sec-header">
-    <h2 class="sec-title">EVENTS AS A <span>CONTENT ENGINE</span></h2>
-  </div>
-  <div class="content-grid">
-    <div class="content-card">
-      <div class="content-icon">📸</div>
-      <div class="content-title">Photo Content</div>
-      <p class="content-body">Professional photography captured from the day — speaker portraits, crowd shots, roast sessions, and candid networking moments. Distributed across channels by attendees, speakers, and partners.</p>
-      <div class="content-stat tbd">— photos</div>
-      <div class="content-stat-label">← Add count post-event</div>
+  <div class="aggregate-grid">
+    <div class="agg-stat">
+      <span class="agg-num">1000+</span>
+      <span class="agg-label">Total Attendees</span>
     </div>
-    <div class="content-card">
-      <div class="content-icon">🎥</div>
-      <div class="content-title">Video Content</div>
-      <p class="content-body">Talk recordings, roast highlights, and recap reels produced for distribution. Repurposed as short-form clips for X, LinkedIn, and partner channels.</p>
-      <div class="content-stat tbd">— clips</div>
-      <div class="content-stat-label">← Add count post-event</div>
+    <div class="agg-stat">
+      <span class="agg-num">50+</span>
+      <span class="agg-label">Speakers & Judges</span>
     </div>
-    <div class="content-card">
-      <div class="content-icon">📣</div>
-      <div class="content-title">Organic Reach</div>
-      <p class="content-body">Social posts by speakers, attendees, and partners. Mentions, reposts, and tags across X and LinkedIn from people who were in the room.</p>
-      <div class="content-stat tbd">— posts</div>
-      <div class="content-stat-label">← Track mentions + tags</div>
+    <div class="agg-stat">
+      <span class="agg-num">1500+</span>
+      <span class="agg-label">Emails Collected</span>
+    </div>
+    <div class="agg-stat">
+      <span class="agg-num">1000+</span>
+      <span class="agg-label">Companies Represented</span>
     </div>
   </div>
 </section>
 
-<!-- AUDIENCE -->
-<section class="sec-audience">
-  <div class="sec-header">
-    <h2 class="sec-title">AUDIENCE <span>PROFILE</span></h2>
-  </div>
-  <div class="audience-grid">
+<!-- EDITIONS -->
+<section class="sec-editions">
+  <div class="editions-grid">
 
-    <div class="audience-l">
-      <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:4px">Who Was in the Room</h3>
-      <p style="font-size:12.5px;line-height:1.7;color:var(--gr);margin-bottom:16px">Breakdown by seniority, sector, and function. Add data from Luma form responses and attendee list post-event.</p>
-
-      <div class="profile-row">
-        <span class="pr-label">CMO / VP Marketing</span>
-        <div class="pr-bar-wrap"><div class="pr-bar" style="width:0%"></div></div>
-        <span class="pr-pct tbd">—%</span>
-      </div>
-      <div class="profile-row">
-        <span class="pr-label">Founder / CEO</span>
-        <div class="pr-bar-wrap"><div class="pr-bar" style="width:0%"></div></div>
-        <span class="pr-pct tbd">—%</span>
-      </div>
-      <div class="profile-row">
-        <span class="pr-label">Growth / GTM Lead</span>
-        <div class="pr-bar-wrap"><div class="pr-bar" style="width:0%"></div></div>
-        <span class="pr-pct tbd">—%</span>
-      </div>
-      <div class="profile-row">
-        <span class="pr-label">Web3 / Crypto</span>
-        <div class="pr-bar-wrap"><div class="pr-bar" style="width:0%"></div></div>
-        <span class="pr-pct tbd">—%</span>
-      </div>
-      <div class="profile-row">
-        <span class="pr-label">Fintech / Payments</span>
-        <div class="pr-bar-wrap"><div class="pr-bar" style="width:0%"></div></div>
-        <span class="pr-pct tbd">—%</span>
-      </div>
-      <div class="profile-row">
-        <span class="pr-label">Other</span>
-        <div class="pr-bar-wrap"><div class="pr-bar" style="width:0%"></div></div>
-        <span class="pr-pct tbd">—%</span>
-      </div>
-    </div>
-
-    <div class="audience-r">
-      <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:4px">RSVP Funnel</h3>
-      <p style="font-size:12.5px;line-height:1.7;color:var(--gr);margin-bottom:16px">Applications received → accepted → attended. This ratio signals event selectivity and demand.</p>
-      <div class="rsvp-funnel">
-        <div class="funnel-row">
-          <span class="funnel-label">Applications</span>
-          <div class="funnel-bar-wrap"><div class="funnel-bar applications" style="width:100%"></div></div>
-          <span class="funnel-num tbd">—</span>
+    <a href="/miami/recap" style="text-decoration:none;color:inherit">
+      <div class="edition-card">
+        <div class="edition-header">
+          <h3 class="edition-title">Miami</h3>
+          <span class="edition-date">May 2026</span>
         </div>
-        <div class="funnel-row">
-          <span class="funnel-label">Accepted</span>
-          <div class="funnel-bar-wrap"><div class="funnel-bar accepted" style="width:70%"></div></div>
-          <span class="funnel-num tbd">—</span>
+        <p class="edition-desc">Marketers in the Arena returned to Miami for its third edition, bringing together crypto and fintech operators for live feedback sessions, GTM talks, and ecosystem roasts.</p>
+        <div class="edition-stats">
+          <div class="edition-stat">
+            <span class="edition-stat-num">129</span>
+            <span class="edition-stat-label">Check-ins</span>
+          </div>
+          <div class="edition-stat">
+            <span class="edition-stat-num">519</span>
+            <span class="edition-stat-label">Emails</span>
+          </div>
+          <div class="edition-stat">
+            <span class="edition-stat-num">408</span>
+            <span class="edition-stat-label">Companies</span>
+          </div>
+          <div class="edition-stat">
+            <span class="edition-stat-num">18</span>
+            <span class="edition-stat-label">Speakers</span>
+          </div>
         </div>
-        <div class="funnel-row">
-          <span class="funnel-label">Attended</span>
-          <div class="funnel-bar-wrap"><div class="funnel-bar attended" style="width:55%"></div></div>
-          <span class="funnel-num tbd">—</span>
+        <span class="edition-link">View Report →</span>
+      </div>
+    </a>
+
+    <a href="/newyork/recap" style="text-decoration:none;color:inherit">
+      <div class="edition-card">
+        <div class="edition-header">
+          <h3 class="edition-title">New York</h3>
+          <span class="edition-date">TBA</span>
         </div>
+        <p class="edition-desc">The second edition of Marketers in the Arena brought together 250+ attendees in New York for intensive GTM sessions and ecosystem networking. Impact report coming soon.</p>
+        <div class="edition-stats">
+          <div class="edition-stat">
+            <span class="edition-stat-num">250+</span>
+            <span class="edition-stat-label">Attendees</span>
+          </div>
+          <div class="edition-stat">
+            <span class="edition-stat-num" style="color:rgba(255,255,255,.2)">—</span>
+            <span class="edition-stat-label">Coming</span>
+          </div>
+        </div>
+        <span class="edition-link">View Report →</span>
       </div>
-      <p style="font-size:11px;color:rgba(255,255,255,.2);font-style:italic;margin-top:20px">← Fill in numbers from Luma post-event dashboard</p>
-    </div>
-  </div>
-</section>
+    </a>
 
-<!-- SPEAKERS -->
-<section class="sec-speakers">
-  <div class="sec-header">
-    <h2 class="sec-title">SPEAKERS <span>& JUDGES</span></h2>
-    <span class="label">18 Confirmed · Miami Edition</span>
-  </div>
-  <div class="speakers-intro">
-    <div class="spk-intro-l">
-      <p>A curated lineup of senior marketing operators, CMOs, and founders — all active builders in web3 and fintech. Each speaker brought either a talk, a panel seat, or a roast judgement.</p>
-      <p style="font-size:11px;color:rgba(255,255,255,.2);font-style:italic;margin-top:4px">← Add talk titles or session outcomes post-event</p>
-    </div>
-    <div class="spk-intro-r">
-      <div class="spk-chip"><span class="spk-chip-name">Matt Bond</span><span class="spk-chip-role">Myosin · Keynote</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Brandon Rodriguez</span><span class="spk-chip-role">Etherfuse · Marketing 101</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Tori Pastore</span><span class="spk-chip-role">Soup · Virality 101</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Gloria Kimbwala</span><span class="spk-chip-role">Optimism · Crypto Wears Prada</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Dan Rodman</span><span class="spk-chip-role">Co/Unity · GTC Strategy</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Jake Salerno</span><span class="spk-chip-role">0G Labs · B2B Panel</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Amar Ravi</span><span class="spk-chip-role">Meta · B2B Panel</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Mashal Waqar</span><span class="spk-chip-role">Octant · B2C Panel</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Zayi Reyes</span><span class="spk-chip-role">Chainlink · B2C Panel</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Valeria Salazar</span><span class="spk-chip-role">Wonderland · B2C Moderator</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Nick Fouriezos</span><span class="spk-chip-role">Scalable Storytelling · Roast</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Rachael Sacks</span><span class="spk-chip-role">Stratosphere · Roast</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Leandro Schlottchauer</span><span class="spk-chip-role">Fuul · Roast</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Sofia</span><span class="spk-chip-role">Piggy Wallet</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Rachel Girardin</span><span class="spk-chip-role">Exodus</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Ramon</span><span class="spk-chip-role">GAIB</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Elizabeth McFaul</span><span class="spk-chip-role">Solana Foundation</span></div>
-      <div class="spk-chip"><span class="spk-chip-name">Jorge Ruiz</span><span class="spk-chip-role">Syklo</span></div>
-    </div>
-  </div>
-</section>
+    <a href="/seoul/recap" style="text-decoration:none;color:inherit">
+      <div class="edition-card">
+        <div class="edition-header">
+          <h3 class="edition-title">Seoul</h3>
+          <span class="edition-date">2025</span>
+        </div>
+        <p class="edition-desc">The Seoul edition brought Asian crypto operators and founders together for marketing talks and live roasts. A showcase of the region's strongest builders in fintech.</p>
+        <div class="edition-stats">
+          <div class="edition-stat">
+            <span class="edition-stat-num" style="color:rgba(255,255,255,.2)">—</span>
+            <span class="edition-stat-label">Coming</span>
+          </div>
+        </div>
+        <span class="edition-link">View Report →</span>
+      </div>
+    </a>
 
-<!-- COMPANIES IN ATTENDANCE -->
-<section class="sec-companies">
-  <div class="sec-header">
-    <h2 class="sec-title">COMPANIES <span>IN ATTENDANCE</span></h2>
-    <span class="label">← Fill in from attendee list post-event</span>
-  </div>
-  <div class="companies-body">
-    <p style="font-size:12.5px;color:rgba(255,255,255,.3);margin-bottom:8px">Speaker organisations confirmed. Attendee company list to be added post-event.</p>
-    <div class="companies-grid">
-      <span class="company-tag stellar">Stellar Development Foundation</span>
-      <span class="company-tag">Myosin</span>
-      <span class="company-tag">Etherfuse</span>
-      <span class="company-tag">Meta / WhatsApp</span>
-      <span class="company-tag">Optimism / OP Labs</span>
-      <span class="company-tag">Chainlink Labs</span>
-      <span class="company-tag">0G Labs</span>
-      <span class="company-tag">Wonderland</span>
-      <span class="company-tag">Soup</span>
-      <span class="company-tag">Co/Unity</span>
-      <span class="company-tag">Scalable Storytelling</span>
-      <span class="company-tag">Stratosphere</span>
-      <span class="company-tag">Fuul.xyz</span>
-      <span class="company-tag">Piggy Wallet</span>
-      <span class="company-tag">Exodus</span>
-      <span class="company-tag">GAIB</span>
-      <span class="company-tag">Solana Foundation</span>
-      <span class="company-tag">Syklo</span>
-      <span class="company-tag" style="opacity:.3;border-style:dashed">+ attendee companies TBA</span>
-    </div>
-  </div>
-</section>
+    <a href="/argentina/recap" style="text-decoration:none;color:inherit">
+      <div class="edition-card">
+        <div class="edition-header">
+          <h3 class="edition-title">Argentina</h3>
+          <span class="edition-date">2024</span>
+        </div>
+        <p class="edition-desc">The inaugural edition of Marketers in the Arena launched in Buenos Aires, establishing the format and bringing together LATAM's leading crypto and fintech marketers.</p>
+        <div class="edition-stats">
+          <div class="edition-stat">
+            <span class="edition-stat-num" style="color:rgba(255,255,255,.2)">—</span>
+            <span class="edition-stat-label">Coming</span>
+          </div>
+        </div>
+        <span class="edition-link">View Report →</span>
+      </div>
+    </a>
 
-<!-- QUOTES -->
-<section class="sec-quotes">
-  <div class="sec-header">
-    <h2 class="sec-title">WHAT PEOPLE <span>SAID</span></h2>
-    <span class="label">From applications + post-event feedback</span>
-  </div>
-  <div class="quotes-grid">
-    <div class="quote-card y">
-      <p class="quote-text tbd">"← Add standout quote from application form or post-event feedback here"</p>
-      <span class="quote-attr">Name, Role · Company</span>
-    </div>
-    <div class="quote-card bk">
-      <p class="quote-text tbd">"← Add standout quote from application form or post-event feedback here"</p>
-      <span class="quote-attr">Name, Role · Company</span>
-    </div>
-    <div class="quote-card bl">
-      <p class="quote-text tbd">"← Add standout quote from application form or post-event feedback here"</p>
-      <span class="quote-attr">Name, Role · Company</span>
-    </div>
-    <div class="quote-card bk">
-      <p class="quote-text tbd">"← Add standout quote from application form or post-event feedback here"</p>
-      <span class="quote-attr">Name, Role · Company</span>
-    </div>
-    <div class="quote-card bl">
-      <p class="quote-text tbd">"← Add standout quote from application form or post-event feedback here"</p>
-      <span class="quote-attr">Name, Role · Company</span>
-    </div>
-    <div class="quote-card y">
-      <p class="quote-text tbd">"← Add standout quote from application form or post-event feedback here"</p>
-      <span class="quote-attr">Name, Role · Company</span>
-    </div>
-  </div>
-</section>
-
-<!-- STELLAR PARTNERSHIPS -->
-<section class="sec-stellar">
-  <div class="sec-header">
-    <h2 class="sec-title">INTROS & PARTNERSHIPS <span>— STELLAR ECO</span></h2>
-    <span class="label">← Fill in post-event</span>
-  </div>
-  <div class="stellar-body">
-    <div class="stellar-l">
-      <h3>Connections<br>That Move</h3>
-      <p>One of the core goals of Marketers in the Arena is generating meaningful introductions within the Stellar ecosystem — between builders, funders, and operators who wouldn't have met otherwise.</p>
-      <p style="font-size:11px;color:rgba(0,0,0,.4);font-style:italic;margin-top:8px">← Document specific intros and follow-ups after the event</p>
-    </div>
-    <div class="stellar-r">
-      <div class="intro-card tbd">
-        <span class="intro-card-title">Partnership / Intro #1</span>
-        <span class="intro-card-body">← Describe the connection made, who was introduced, and what came of it</span>
-      </div>
-      <div class="intro-card tbd">
-        <span class="intro-card-title">Partnership / Intro #2</span>
-        <span class="intro-card-body">← Describe the connection made, who was introduced, and what came of it</span>
-      </div>
-      <div class="intro-card tbd">
-        <span class="intro-card-title">Partnership / Intro #3</span>
-        <span class="intro-card-body">← Describe the connection made, who was introduced, and what came of it</span>
-      </div>
-      <div class="intro-card tbd">
-        <span class="intro-card-title">Partnership / Intro #4</span>
-        <span class="intro-card-body">← Describe the connection made, who was introduced, and what came of it</span>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-title">Marketers in the Arena — Miami Impact Report</span>
+  <span class="footer-title">Marketers in the Arena — Case Studies</span>
   <div class="footer-right">
-    <a href="/miami" class="footer-link">← Event Page</a>
-    <a href="/" class="footer-link">All Editions</a>
+    <a href="/" class="footer-link">← Home</a>
     <a href="mailto:stef@growwithguava.com" class="footer-link">Partner with us →</a>
   </div>
 </footer>
