@@ -95,6 +95,18 @@
   .challenge-name{font-size:12px;color:var(--wh);flex:1}
   .challenge-count{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--y)}
 
+  /* SATISFACTION SECTION */
+  .satisfaction-content{padding:40px 38px;border-bottom:var(--border);display:grid;grid-template-columns:1fr 1fr;gap:60px}
+  .satisfaction-score{display:flex;flex-direction:column;gap:24px}
+  .score-block{display:flex;gap:20px;align-items:flex-start}
+  .score-big{font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:var(--y);line-height:1}
+  .score-label{display:flex;flex-direction:column;gap:6px}
+  .score-label-title{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--wh)}
+  .score-label-sub{font-size:13px;color:var(--gr);line-height:1.5}
+  .feedback-block{display:flex;flex-direction:column;gap:16px}
+  .feedback-title{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.5);margin-bottom:4px}
+  .feedback-word{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--y);padding:16px;background:#111;border-radius:2px;text-align:center}
+
   /* SOCIAL */
   .social-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:var(--border)}
   .social-card{padding:32px 28px;border-right:var(--border);display:flex;flex-direction:column;gap:12px;background:#111}
@@ -314,6 +326,33 @@
         </div>
       </div>
       <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:16px;line-height:1.5">Bucket Hats (10 claimed) and Myosin Fan badges (2 claimed) distributed to top engagers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SATISFACTION & FEEDBACK -->
+<section class="section">
+  <div class="satisfaction-content">
+    <div class="satisfaction-score">
+      <div class="score-block">
+        <div class="score-big">4.0</div>
+        <div class="score-label">
+          <span class="score-label-title">Workshop Rating</span>
+          <span class="score-label-sub">Average score out of 5 from attendee feedback</span>
+        </div>
+      </div>
+      <div class="score-block">
+        <div class="score-big">100%</div>
+        <div class="score-label">
+          <span class="score-label-title">Stellar Interest</span>
+          <span class="score-label-sub">Respondents interested in Stellar opportunities</span>
+        </div>
+      </div>
+    </div>
+    <div class="feedback-block">
+      <span class="feedback-title">How Attendees Described It</span>
+      <div class="feedback-word">Coffee</div>
+      <p style="font-size:12px;color:rgba(255,255,255,.5);line-height:1.6;margin-top:8px">Strong satisfaction across all respondents with high conversion intent. The informal, collegial vibe resonated—attendees felt at home in the ecosystem community.</p>
     </div>
   </div>
 </section>
