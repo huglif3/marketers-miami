@@ -83,6 +83,18 @@
   .awareness-item-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;display:block}
   .awareness-prose{font-size:14px;line-height:1.75;color:var(--gr);max-width:100%}
 
+  /* ENGAGEMENT STATS */
+  .engagement-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:40px 38px;border-bottom:var(--border)}
+  .engagement-col{display:flex;flex-direction:column;gap:20px}
+  .engagement-stat{display:flex;gap:20px;align-items:flex-start}
+  .engagement-num{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:var(--y);min-width:80px}
+  .engagement-label{font-size:13px;line-height:1.6;color:var(--gr);flex:1}
+  .engagement-label-title{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;color:var(--wh);letter-spacing:.08em;margin-bottom:4px;display:block}
+  .challenge-item{padding:12px 0;border-bottom:1px solid #1e1e1e;display:flex;justify-content:space-between;align-items:center}
+  .challenge-item:last-child{border-bottom:none}
+  .challenge-name{font-size:12px;color:var(--wh);flex:1}
+  .challenge-count{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--y)}
+
   /* SOCIAL */
   .social-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:var(--border)}
   .social-card{padding:32px 28px;border-right:var(--border);display:flex;flex-direction:column;gap:12px;background:#111}
@@ -243,6 +255,65 @@
     <div class="awareness-prose">
       <p style="margin-bottom:14px"><strong>Attendees ranged from Stellar-curious to active ecosystem participants,</strong> with the strongest engagement coming from builders already familiar with the ecosystem. A significant portion of attendees also identified as understanding Stellar but not yet building on it—highlighting strong potential for future developer conversion and ecosystem growth.</p>
       <p>The audience appeared fairly balanced across awareness levels, with the largest concentration in the "already in ecosystem" category. The middle segment of people who understand Stellar but haven't yet built represents the highest-conversion opportunity, suggesting strong PMF and demand for developer onboarding. The "heard of Stellar but haven't explored it" group indicates continued room for educational content and beginner pathways to drive awareness further.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STELLAR PASSPORT ENGAGEMENT -->
+<section class="section">
+  <div class="engagement-grid">
+    <div class="engagement-col">
+      <div class="engagement-stat">
+        <div class="engagement-num">22</div>
+        <div class="engagement-label">
+          <span class="engagement-label-title">Participants Engaged</span>
+          Active participants in Stellar Passport challenges
+        </div>
+      </div>
+      <div class="engagement-stat">
+        <div class="engagement-num">47</div>
+        <div class="engagement-label">
+          <span class="engagement-label-title">Challenge Completions</span>
+          Total completions across all challenges
+        </div>
+      </div>
+      <div class="engagement-stat">
+        <div class="engagement-num">2.14</div>
+        <div class="engagement-label">
+          <span class="engagement-label-title">Avg Per User</span>
+          Average completions per participant
+        </div>
+      </div>
+    </div>
+    <div class="engagement-col">
+      <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:4px;letter-spacing:.08em">Top Challenges</h3>
+      <div>
+        <div class="challenge-item">
+          <span class="challenge-name">Myosin Marketing Juice: Coffee Station</span>
+          <span class="challenge-count">14</span>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-name">Record Content in Studio</span>
+          <span class="challenge-count">11</span>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-name">Event Attendance</span>
+          <span class="challenge-count">7</span>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-name">Post to Twitter</span>
+          <span class="challenge-count">7</span>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-name">Stellar Photo Booth</span>
+          <span class="challenge-count">4</span>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-name">Event Feedback</span>
+          <span class="challenge-count">4</span>
+        </div>
+      </div>
+      <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:16px;line-height:1.5">Bucket Hats (10 claimed) and Myosin Fan badges (2 claimed) distributed to top engagers.</p>
     </div>
   </div>
 </section>
