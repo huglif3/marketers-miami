@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marketers in the Arena — Mexico City Edition</title>
+<title>Marketers in the Arena — Mexico City · June 17, 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -20,60 +20,47 @@
 
   /* NAV */
   nav{display:grid;grid-template-columns:1fr 1fr;height:54px;border-bottom:var(--border)}
-  .nav-logo{display:flex;align-items:center;padding:0 22px;border-right:var(--border);gap:12px}
-  .nav-logo a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
-  .nav-logo span{color:rgba(255,255,255,.15)}
-  .nav-logo strong{color:var(--wh)}
-  .nav-right{display:flex;align-items:center;justify-content:flex-end;padding:0 22px;gap:20px}
-  .nav-right a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gr);text-decoration:none}
-  .nav-cta{background:var(--y)!important;color:var(--bk)!important;padding:8px 18px;border-radius:999px}
+  .nav-l{display:flex;align-items:center;padding:0 22px;border-right:var(--border);gap:12px}
+  .nav-l a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
+  .nav-l span{color:rgba(255,255,255,.15)}
+  .nav-l strong{color:var(--wh)}
+  .nav-r{display:flex;align-items:center;justify-content:flex-end;padding:0 22px;gap:20px}
+  .nav-r a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gr);text-decoration:none}
+  .nav-cta{background:var(--y)!important;color:var(--bk)!important;padding:8px 20px;border-radius:999px}
 
   /* HERO */
-  .hero-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;border-bottom:var(--border)}
-  .cell-hl{background:var(--y);padding:50px 38px 44px;display:flex;flex-direction:column;justify-content:flex-end;border-right:var(--border);border-bottom:var(--border)}
-  .cell-hl .ey{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(0,0,0,.4);margin-bottom:10px}
-  .cell-hl h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(50px,6vw,74px);font-weight:900;line-height:.88;text-transform:uppercase;color:var(--bk);letter-spacing:-.01em}
-  .cell-repeat{background:var(--bl);overflow:hidden;padding:14px 16px;border-bottom:var(--border)}
-  .rl{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--y);line-height:1.55}
-  .cell-det{background:var(--bk);padding:30px 28px;display:flex;flex-direction:column;gap:18px;border-right:var(--border)}
-  .dl{font-size:8px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gr)}
-  .dv{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;text-transform:uppercase;color:var(--wh)}
-  .dv.y{color:var(--y)}
-  .cell-qt{background:var(--bl);padding:34px 28px;display:flex;align-items:center}
-  .cell-qt blockquote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:900;line-height:1;color:var(--bk)}
+  .hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
+  .hero-l{background:var(--y);padding:52px 42px;border-right:var(--border);display:flex;flex-direction:column;justify-content:space-between;min-height:460px}
+  .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(0,0,0,.4);margin-bottom:12px}
+  .hero-l h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,6.5vw,80px);font-weight:900;line-height:.86;text-transform:uppercase;color:var(--bk);letter-spacing:-.01em}
+  .hero-details{display:flex;gap:32px;margin-top:32px}
+  .hd-item{display:flex;flex-direction:column;gap:3px}
+  .hd-label{font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)}
+  .hd-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;text-transform:uppercase;color:var(--bk)}
+  .hero-r{padding:0;display:flex;flex-direction:column}
+  .hero-rt{padding:40px 42px;flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;border-bottom:var(--border)}
+  .hero-rt p{font-size:14px;line-height:1.8;color:var(--gr);max-width:420px}
+  .hero-rt p strong{color:var(--wh);font-weight:600}
+  .hero-rb{background:var(--bk);padding:32px 42px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .hero-rb blockquote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(18px,2.4vw,28px);font-weight:900;line-height:1.05;color:var(--wh);max-width:340px}
+  .hero-rb blockquote span{color:var(--y)}
 
-  /* BUTTONS */
-  .btn{display:inline-flex;align-items:center;background:var(--y);color:var(--bk);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:12px 22px;border-radius:999px;border:none;text-decoration:none;width:fit-content}
+  /* REGISTER BTN */
+  .reg-btn{display:inline-flex;align-items:center;background:var(--y);color:var(--bk);font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:14px 26px;border-radius:999px;text-decoration:none;white-space:nowrap;flex-shrink:0}
 
-  /* WHY SECTION */
-  .sec-why{border-bottom:var(--border)}
-  .why-header{background:var(--bk);padding:32px 38px 20px;border-bottom:var(--border);display:flex;justify-content:space-between;align-items:flex-end}
-  .why-header h2{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;text-transform:uppercase;line-height:.9;color:var(--wh)}
-  .why-header h2 span{color:var(--y)}
-  .why-grid{display:grid;grid-template-columns:1fr 1fr}
-  .why-card{padding:36px 38px;border-right:var(--border);border-bottom:var(--border);display:flex;flex-direction:column;gap:12px}
-  .why-card:nth-child(2n){border-right:none}
-  .why-card:nth-last-child(-n+2){border-bottom:none}
-  .why-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.2)}
-  .why-title{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
-  .why-title span{color:var(--y)}
-  .why-body{font-size:13px;line-height:1.75;color:var(--gr);max-width:420px}
-  .why-body a{color:var(--y);text-decoration:none}
-  .why-body a:hover{text-decoration:underline}
-  .why-tag{display:inline-block;background:#111;border:1px solid #2a2a2a;font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);padding:5px 11px;border-radius:3px;margin-top:4px;width:fit-content}
-
-  /* VENUE VIDEO */
-  .sec-venue{border-bottom:var(--border)}
-  .venue-header{background:var(--bk);padding:32px 38px 20px;border-bottom:var(--border);display:flex;justify-content:space-between;align-items:flex-end}
-  .venue-header h2{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;text-transform:uppercase;line-height:.9;color:var(--wh)}
-  .venue-header h2 span{color:var(--y)}
-  .venue-body{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
-  .venue-copy{padding:40px 38px;border-right:var(--border);display:flex;flex-direction:column;justify-content:center;gap:16px}
-  .venue-copy h3{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
-  .venue-copy h3 span{color:var(--y)}
-  .venue-copy p{font-size:13.5px;line-height:1.75;color:var(--gr);max-width:360px}
-  .venue-video{background:#000;display:flex;align-items:stretch}
-  .venue-video iframe{width:100%;min-height:360px;border:none;display:block}
+  /* FORMAT — WHAT TO EXPECT */
+  .sec-format{border-bottom:var(--border)}
+  .sec-header{padding:28px 38px 20px;border-bottom:var(--border);display:flex;justify-content:space-between;align-items:flex-end}
+  .sec-header h2{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;text-transform:uppercase;line-height:.9;color:var(--wh)}
+  .sec-header h2 span{color:var(--y)}
+  .sec-header .label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+  .format-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+  .fmt-card{padding:36px 32px;border-right:var(--border);display:flex;flex-direction:column;gap:12px}
+  .fmt-card:last-child{border-right:none}
+  .fmt-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.2)}
+  .fmt-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
+  .fmt-title span{color:var(--y)}
+  .fmt-body{font-size:13px;line-height:1.75;color:var(--gr)}
 
   /* CONFERENCE STRIP */
   .sec-conf{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
@@ -85,24 +72,47 @@
   .cs{display:flex;flex-direction:column;gap:2px}
   .cs-num{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:var(--bk);line-height:1}
   .cs-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.45)}
-  .conf-r{background:var(--bk);padding:46px 38px;display:flex;flex-direction:column;justify-content:center;gap:20px}
+  .conf-r{background:var(--bk);padding:46px 38px;display:flex;flex-direction:column;justify-content:center;gap:24px}
   .conf-r h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:var(--y);margin-bottom:4px}
   .conf-r p{font-size:13px;line-height:1.7;color:var(--gr);max-width:340px}
   .conf-link{display:inline-flex;align-items:center;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none;margin-top:4px}
   .conf-link:hover{color:var(--y)}
 
-  /* CTA */
-  .sec-cta{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
-  .cta-l{background:var(--bk);padding:50px 38px;border-right:var(--border);display:flex;flex-direction:column;gap:16px}
-  .cta-l h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:.88;color:var(--wh)}
-  .cta-l h2 span{color:var(--y)}
-  .cta-l p{font-size:13px;color:var(--gr);max-width:320px;line-height:1.65}
-  .cta-r{background:var(--y);padding:50px 38px;display:flex;flex-direction:column;justify-content:center;gap:22px}
-  .cta-r h3{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.4)}
-  .contact-item{display:flex;flex-direction:column;gap:3px}
-  .ci-label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.35)}
-  .ci-val{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--bk)}
-  .ci-val a{color:var(--bk);text-decoration:none;border-bottom:2px solid rgba(0,0,0,.2)}
+  /* WHY */
+  .sec-why{border-bottom:var(--border)}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr}
+  .why-card{padding:36px 38px;border-right:var(--border);border-bottom:var(--border);display:flex;flex-direction:column;gap:12px}
+  .why-card:nth-child(2n){border-right:none}
+  .why-card:nth-last-child(-n+2){border-bottom:none}
+  .why-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.2)}
+  .why-title{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
+  .why-title span{color:var(--y)}
+  .why-body{font-size:13px;line-height:1.75;color:var(--gr);max-width:420px}
+  .why-body a{color:var(--y);text-decoration:none}
+  .why-tag{display:inline-block;background:#111;border:1px solid #2a2a2a;font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);padding:5px 11px;border-radius:3px;margin-top:4px;width:fit-content}
+
+  /* VENUE */
+  .sec-venue{border-bottom:var(--border)}
+  .venue-body{display:grid;grid-template-columns:1fr 1fr}
+  .venue-copy{padding:40px 38px;border-right:var(--border);display:flex;flex-direction:column;justify-content:center;gap:16px}
+  .venue-copy h3{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
+  .venue-copy h3 span{color:var(--y)}
+  .venue-copy p{font-size:13.5px;line-height:1.75;color:var(--gr);max-width:360px}
+  .venue-video{background:#000;display:flex;align-items:stretch}
+  .venue-video iframe{width:100%;min-height:360px;border:none;display:block}
+
+  /* REGISTER SECTION */
+  .sec-register{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
+  .reg-l{background:var(--bk);padding:56px 42px;border-right:var(--border);display:flex;flex-direction:column;gap:20px}
+  .reg-l h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(44px,6vw,72px);font-weight:900;text-transform:uppercase;line-height:.86;color:var(--wh)}
+  .reg-l h2 span{color:var(--y)}
+  .reg-l p{font-size:13.5px;line-height:1.75;color:var(--gr);max-width:340px}
+  .reg-r{background:var(--y);padding:56px 42px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+  .reg-r .rl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)}
+  .reg-detail{display:flex;flex-direction:column;gap:3px}
+  .rd-label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+  .rd-val{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--bk)}
+  .luma-checkout--button{display:inline-flex!important;align-items:center!important;background:var(--bk)!important;color:var(--wh)!important;font-family:'Barlow Condensed',sans-serif!important;font-size:13px!important;font-weight:800!important;letter-spacing:.16em!important;text-transform:uppercase!important;padding:16px 32px!important;border-radius:2px!important;text-decoration:none!important;border:none!important;width:fit-content!important;margin-top:8px!important}
 
   /* TAGLINES */
   .sec-tags{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:var(--border)}
@@ -114,7 +124,7 @@
   .tlb{font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.3}
 
   /* FOOTER */
-  .footer{background:var(--bk);border-top:2px solid #222;display:flex;align-items:center;justify-content:space-between;padding:18px 26px}
+  footer{background:var(--bk);border-top:2px solid #222;display:flex;align-items:center;justify-content:space-between;padding:18px 26px}
   .footer-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--wh)}
   .footer-link{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--y);text-decoration:none}
 </style>
@@ -124,95 +134,90 @@
 <!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker">
-    <span>MEXICO CITY EDITION</span><span class="dot">✦</span><span>JUNE 17TH, 2026</span><span class="dot">✦</span><span>CDMX</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>AFTER STABLECOIN CONFERENCE LATAM</span><span class="dot">✦</span><span>MEXICO CITY EDITION</span><span class="dot">✦</span><span>JUNE 17TH, 2026</span><span class="dot">✦</span><span>CDMX</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>AFTER STABLECOIN CONFERENCE LATAM</span><span class="dot">✦</span>
+    <span>MEXICO CITY EDITION</span><span class="dot">✦</span><span>JUNE 17TH, 2026</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>SPOTS ARE LIMITED</span><span class="dot">✦</span><span>APPLICATION ONLY</span><span class="dot">✦</span><span>AFTER STABLECOIN CONFERENCE LATAM</span><span class="dot">✦</span><span>MEXICO CITY EDITION</span><span class="dot">✦</span><span>JUNE 17TH, 2026</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>SPOTS ARE LIMITED</span><span class="dot">✦</span><span>APPLICATION ONLY</span><span class="dot">✦</span><span>AFTER STABLECOIN CONFERENCE LATAM</span><span class="dot">✦</span>
   </div>
 </div>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">
+  <div class="nav-l">
     <a href="/">Marketers in the Arena</a>
     <span>/</span>
     <strong>Mexico City</strong>
   </div>
-  <div class="nav-right">
-    <a href="#why">Why CDMX</a>
+  <div class="nav-r">
+    <a href="#format">Format</a>
     <a href="#venue">Venue</a>
-    <a href="mailto:stef@growwithguava.com" class="nav-cta">Partner with us →</a>
+    <a href="#register" class="nav-cta">Register →</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section>
-  <div class="hero-grid">
-    <div class="cell-hl">
-      <div class="ey">Mexico City Edition &nbsp;·&nbsp; June 17th, 2026</div>
+<section class="hero">
+  <div class="hero-l">
+    <div>
+      <div class="hero-eyebrow">Mexico City Edition · June 17th, 2026</div>
       <h1>MARKETERS<br>IN THE<br>ARENA</h1>
     </div>
-    <div class="cell-repeat">
-      <div class="rl">MEXICO CITY</div><div class="rl">JUNE 17TH</div>
-      <div class="rl">MEXICO CITY</div><div class="rl">JUNE 17TH</div>
-      <div class="rl">MEXICO CITY</div><div class="rl">JUNE 17TH</div>
-      <div class="rl">MEXICO CITY</div><div class="rl">JUNE 17TH</div>
-      <div class="rl">MEXICO CITY</div><div class="rl">JUNE 17TH</div>
+    <div class="hero-details">
+      <div class="hd-item">
+        <span class="hd-label">Date</span>
+        <span class="hd-val">June 17, 2026</span>
+      </div>
+      <div class="hd-item">
+        <span class="hd-label">City</span>
+        <span class="hd-val">Mexico City</span>
+      </div>
+      <div class="hd-item">
+        <span class="hd-label">Format</span>
+        <span class="hd-val">1-Day Summit</span>
+      </div>
     </div>
-    <div class="cell-det">
-      <div><div class="dl">Date</div><div class="dv y">June 17th, 2026</div></div>
-      <div><div class="dl">City</div><div class="dv">Mexico City, MX</div></div>
-      <div><div class="dl">Venue</div><div class="dv">Universidad de la Libertad</div></div>
-      <div><div class="dl">Format</div><div class="dv">1-Day Summit</div></div>
-      <a href="mailto:stef@growwithguava.com" class="btn" style="margin-top:6px">Partner with us →</a>
+  </div>
+  <div class="hero-r">
+    <div class="hero-rt">
+      <p>A curated, single-day summit for the builders, marketers, and operators shaping the future of finance in Latin America. <strong>Live marketing roasts. Real GTM playbooks. High-signal rooms.</strong></p>
+      <p>This is the intimate follow-up the Stablecoin Conference LATAM crowd has been waiting for — the day after the main stage, when the conversations are already warm and the right people are still in the city.</p>
+      <a href="#register" class="reg-btn" style="margin-top:4px">Apply to attend →</a>
     </div>
-    <div class="cell-qt">
-      <blockquote>LATAM isn't emerging. It's already here.</blockquote>
+    <div class="hero-rb">
+      <blockquote>LATAM isn't <span>emerging.</span><br>It's already here.</blockquote>
+      <a href="#register" class="reg-btn" style="background:var(--y);color:var(--bk)">Register →</a>
     </div>
   </div>
 </section>
 
-<!-- WHY MEXICO CITY -->
-<section class="sec-why" id="why">
-  <div class="why-header">
-    <h2>WHY <span>MEXICO CITY</span></h2>
+<!-- WHAT TO EXPECT -->
+<section class="sec-format" id="format">
+  <div class="sec-header">
+    <h2>WHAT TO <span>EXPECT</span></h2>
+    <span class="label">Based on the Miami Edition · May 4th, 2026</span>
   </div>
-  <div class="why-grid">
-
-    <div class="why-card">
-      <div class="why-num">01</div>
-      <div class="why-title">The <span>Builders</span><br>Are Already Here</div>
-      <p class="why-body">Mexico City has one of the most active crypto and fintech ecosystems in LATAM. <a href="https://www.etherfuse.com" target="_blank" rel="noopener">Etherfuse</a> is building the rails for the Mexican peso stablecoin (MXNe) and tokenized CETES bonds on Stellar — cutting cross-border payment costs from 7% to under 0.04%. This is where the infrastructure is being written. The room belongs here.</p>
-      <span class="why-tag">Etherfuse · MXNe · CETES Stablebonds on Stellar</span>
+  <div class="format-grid">
+    <div class="fmt-card">
+      <span class="fmt-num">01</span>
+      <div class="fmt-title">Live Marketing <span>Roasts</span></div>
+      <p class="fmt-body">A panel of senior operators tears apart a real company's marketing strategy — live, in front of the room. Brutal, specific, and genuinely useful. The company gets real feedback; the room gets a masterclass.</p>
     </div>
-
-    <div class="why-card">
-      <div class="why-num">02</div>
-      <div class="why-title">Stacked <span>Timing</span></div>
-      <p class="why-body">The Stablecoin Conference LATAM runs June 15–16 in Mexico City — 2,500 attendees, 100+ speakers, 50+ countries, backed by Bitso, Circle, Mastercard, and Ripple. Marketers in the Arena on June 17th is the intimate, high-signal follow-up the conference audience actually wants. We show up when the builders are already in town.</p>
-      <span class="why-tag">Stablecoin Conference LATAM · June 15–16 · CDMX</span>
+    <div class="fmt-card">
+      <span class="fmt-num">02</span>
+      <div class="fmt-title">Founder <span>Playbooks</span></div>
+      <p class="fmt-body">Talks from operators who've actually done it — GTM strategy, community building, distribution, virality. No fluff. The kind of frameworks you can use the next day.</p>
     </div>
-
-    <div class="why-card">
-      <div class="why-num">03</div>
-      <div class="why-title">Institutional <span>Backing</span><br>& Collaboration</div>
-      <p class="why-body">With support from and in collaboration with <strong style="color:var(--wh)">Catalaxia Ventures</strong> and <strong style="color:var(--wh)">Fundación Ricardo Salinas Pliego</strong> — bringing institutional weight, local reach, and a shared belief that the next generation of builders in LATAM deserves a room like this.</p>
-      <span class="why-tag">Catalaxia Ventures · Fundación Ricardo Salinas Pliego</span>
+    <div class="fmt-card">
+      <span class="fmt-num">03</span>
+      <div class="fmt-title">The <span>Room</span></div>
+      <p class="fmt-body">Application-gated. Curated for quality over size. CMOs, founders, growth leads, and builders from the Stellar and broader LATAM web3 and fintech ecosystem — all in one room for a full day.</p>
     </div>
-
-    <div class="why-card">
-      <div class="why-num">04</div>
-      <div class="why-title">The <span>Remittance</span><br>Capital of the World</div>
-      <p class="why-body">Mexico received over $60 billion in remittances in 2024 — nearly 4% of GDP. For millions of families, cross-border money movement is not a use case, it's survival. Stablecoins built on Stellar are cutting those costs in real-time. The marketers in this room are shaping how that story gets told.</p>
-      <span class="why-tag">#2 Global Remittance Recipient · $60B+ in 2024</span>
-    </div>
-
   </div>
 </section>
 
 <!-- CONFERENCE STRIP -->
 <section class="sec-conf">
   <div class="conf-l">
-    <div class="pre">Satellite Event</div>
+    <div class="pre">Context</div>
     <h2>Right After<br>Stablecoin<br>Conference<br>LATAM</h2>
-    <p>Latin America's landmark stablecoin summit. We come the day after — when the conversations are already warm and the right people are still in the city.</p>
+    <p>Latin America's landmark stablecoin summit runs June 15–16. We come the day after — when the conversations are already warm and the right people are still in the city.</p>
     <div class="conf-stats">
       <div class="cs"><span class="cs-num">2,500</span><span class="cs-label">Attendees</span></div>
       <div class="cs"><span class="cs-num">100+</span><span class="cs-label">Speakers</span></div>
@@ -227,24 +232,57 @@
       <a href="https://stablecoinconferencelatam.com" target="_blank" rel="noopener" class="conf-link">stablecoinconferencelatam.com ↗</a>
     </div>
     <div>
-      <h3>June 17th</h3>
-      <p>Marketers in the Arena — the intimate follow-up. A curated room for operators and builders to give real feedback and get real work done.</p>
+      <h3>June 17th ← We're here</h3>
+      <p>Marketers in the Arena CDMX — the intimate follow-up. A curated room for operators and builders to get real feedback and do real work.</p>
+      <a href="#register" class="conf-link" style="color:var(--y)">Register now →</a>
     </div>
   </div>
 </section>
 
-<!-- VENUE VIDEO -->
+<!-- WHY MEXICO CITY -->
+<section class="sec-why">
+  <div class="sec-header">
+    <h2>WHY <span>MEXICO CITY</span></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <div class="why-title">The <span>Builders</span><br>Are Already Here</div>
+      <p class="why-body">Mexico City has one of the most active crypto and fintech ecosystems in LATAM. <a href="https://www.etherfuse.com" target="_blank" rel="noopener">Etherfuse</a> is building the rails for the Mexican peso stablecoin (MXNe) and tokenized CETES bonds on Stellar — cutting cross-border payment costs from 7% to under 0.04%.</p>
+      <span class="why-tag">Etherfuse · MXNe · CETES Stablebonds on Stellar</span>
+    </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <div class="why-title">The <span>Remittance</span><br>Capital of the World</div>
+      <p class="why-body">Mexico received over $60 billion in remittances in 2024 — nearly 4% of GDP. For millions of families, cross-border money movement isn't a use case, it's survival. Stablecoins built on Stellar are cutting those costs in real-time. The marketers in this room are shaping how that story gets told.</p>
+      <span class="why-tag">#2 Global Remittance Recipient · $60B+ in 2024</span>
+    </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <div class="why-title">Institutional <span>Backing</span><br>& Collaboration</div>
+      <p class="why-body">With support from and in collaboration with <strong style="color:var(--wh)">Catalaxia Ventures</strong> and <strong style="color:var(--wh)">Fundación Ricardo Salinas Pliego</strong> — bringing institutional weight, local reach, and a shared belief that the next generation of builders in LATAM deserves a room like this.</p>
+      <span class="why-tag">Catalaxia Ventures · Fundación Ricardo Salinas Pliego</span>
+    </div>
+    <div class="why-card">
+      <div class="why-num">04</div>
+      <div class="why-title">We've <span>Done This</span><br>Before</div>
+      <p class="why-body">Miami was Edition 01. A curated room of 19 speakers, live roasts, and a sold-out day of programming. CDMX is Edition 02 — built on the same playbook, rooted in this market. The infrastructure is proven. The room is different.</p>
+      <span class="why-tag">Miami Edition · May 4th, 2026 · The Loft</span>
+    </div>
+  </div>
+</section>
+
+<!-- VENUE -->
 <section class="sec-venue" id="venue">
-  <div class="venue-header">
+  <div class="sec-header">
     <h2>THE <span>VENUE</span></h2>
-    <span style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)">Universidad de la Libertad · Innovation Hub · CDMX</span>
+    <span class="label">Universidad de la Libertad · Innovation Hub · CDMX</span>
   </div>
   <div class="venue-body">
     <div class="venue-copy">
       <h3>Universidad de<br>la <span>Libertad</span></h3>
-      <p>We have access to the innovation hub at Universidad de la Libertad — a purpose-built environment designed for exactly this kind of day. Ideas flow differently when the space is built for learning, collaboration, and focused work.</p>
-      <p>A perfect environment to discuss ideas, learn, cowork, and collaborate.</p>
-      <a href="https://t.me/nftmami" target="_blank" rel="noopener" class="btn" style="margin-top:8px">Inquire about partnership →</a>
+      <p>A purpose-built innovation environment designed for exactly this kind of day. Ideas flow differently when the space is built for learning, collaboration, and focused work.</p>
+      <p>A full day of talks, panels, roasts, and networking — in a room that earns the conversation.</p>
     </div>
     <div class="venue-video">
       <iframe src="https://www.youtube.com/embed/tptWaZvS6dQ?si=lBIYAkHAPRE1mrJj" title="Venue — Universidad de la Libertad" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -254,44 +292,56 @@
 
 <!-- TAGLINES -->
 <section class="sec-tags">
-  <div class="tc bk"><span class="tlb" style="color:rgba(255,255,255,.25)">Mexico City</span><blockquote>LATAM isn't emerging. It's here.</blockquote></div>
-  <div class="tc y"><span class="tlb" style="color:rgba(0,0,0,.3)">June 17th</span><blockquote>The day after the main stage.</blockquote></div>
-  <div class="tc bl"><span class="tlb" style="color:rgba(0,0,0,.3)">Marketers in the Arena</span><blockquote>Real feedback. Real work.</blockquote></div>
+  <div class="tc bk"><span class="tlb">Mexico City</span><blockquote>LATAM isn't emerging. It's here.</blockquote></div>
+  <div class="tc y"><span class="tlb">June 17th</span><blockquote>The day after the main stage.</blockquote></div>
+  <div class="tc bl"><span class="tlb">Marketers in the Arena</span><blockquote>Real feedback. Real work.</blockquote></div>
 </section>
 
-<!-- CTA -->
-<section class="sec-cta" id="contact">
-  <div class="cta-l">
-    <h2>APPLY TO<br><span>ATTEND</span></h2>
-    <p>Spots are limited and application-gated. If you want to be in the room — as an attendee, sponsor, or collaborator — register below or reach out directly.</p>
-    <p style="font-size:11px;color:rgba(255,255,255,.3);margin-top:4px">June 17th, 2026 · Mexico City</p>
-  </div>
-  <div class="cta-r" style="align-items:flex-start">
-    <h3>Register for the event</h3>
-    <div style="margin:12px 0 20px">
-      <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc"
-         class="luma-checkout--button"
-         data-luma-action="checkout"
-         data-luma-event-id="evt-QCtdTFSFmJA7EKc"
-         style="display:inline-block;background:var(--bk);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:14px 28px;border-radius:2px;text-decoration:none;border:2px solid var(--bk)">
-        Register for Event →
-      </a>
+<!-- REGISTER -->
+<section class="sec-register" id="register">
+  <div class="reg-l">
+    <h2>SECURE<br>YOUR <span>SPOT</span></h2>
+    <p>Spots are limited and application-gated. This isn't a conference — it's a curated room. Register now and we'll confirm your spot.</p>
+    <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+      <div style="display:flex;gap:10px;align-items:center">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)">→</span>
+        <span style="font-size:13px;color:var(--gr)">June 17th, 2026 · Mexico City</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)">→</span>
+        <span style="font-size:13px;color:var(--gr)">Universidad de la Libertad Innovation Hub</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)">→</span>
+        <span style="font-size:13px;color:var(--gr)">Day after Stablecoin Conference LATAM</span>
+      </div>
     </div>
-    <div class="contact-item">
-      <span class="ci-label">Partnerships</span>
-      <span class="ci-val"><a href="mailto:stef@growwithguava.com">stef@growwithguava.com</a></span>
+  </div>
+  <div class="reg-r">
+    <span class="rl">Register for the event</span>
+    <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc"
+       class="luma-checkout--button"
+       data-luma-action="checkout"
+       data-luma-event-id="evt-QCtdTFSFmJA7EKc">
+      Register for Event →
+    </a>
+    <div style="height:1px;background:rgba(0,0,0,.15);margin:8px 0"></div>
+    <div class="reg-detail">
+      <span class="rd-label">Partnerships & Sponsorships</span>
+      <span class="rd-val"><a href="mailto:stef@growwithguava.com" style="color:var(--bk);text-decoration:none;border-bottom:2px solid rgba(0,0,0,.2)">stef@growwithguava.com</a></span>
     </div>
   </div>
 </section>
 <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-title">MARKETERS IN THE ARENA</div>
-  <div style="display:flex;align-items:center;gap:12px">
-    <a href="/" style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none">← All Editions</a>
+<footer>
+  <div class="footer-title">Marketers in the Arena</div>
+  <div style="display:flex;align-items:center;gap:24px">
+    <a href="/miami" class="footer-link" style="color:rgba(255,255,255,.3)">Miami Edition ↗</a>
+    <a href="/" class="footer-link" style="color:rgba(255,255,255,.3)">← All Editions</a>
   </div>
-  <span style="font-size:9px;letter-spacing:.12em;color:rgba(255,255,255,1);text-transform:uppercase;font-family:'Barlow Condensed',sans-serif;">Produced by Grow With Guava</span>
+  <span style="font-size:9px;letter-spacing:.12em;color:rgba(255,255,255,.4);text-transform:uppercase;font-family:'Barlow Condensed',sans-serif">Produced by Grow With Guava</span>
 </footer>
 
 </body>
