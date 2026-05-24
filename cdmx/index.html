@@ -126,15 +126,12 @@
 
   /* LANGUAGE TOGGLE */
   .lang-toggle{display:flex;align-items:center;background:#111;border:1px solid #2a2a2a;border-radius:999px;padding:3px;gap:2px}
-  .lang-btn{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:5px 12px;border-radius:999px;border:none;cursor:pointer;transition:all .15s ease;background:transparent;color:rgba(255,255,255,.3)}
+  .lang-btn{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:999px;border:none;cursor:pointer;transition:all .15s ease;background:transparent;color:rgba(255,255,255,.4)}
   .lang-btn.active{background:var(--y);color:var(--bk)}
-  .t-en{display:none}
-  .t-es{display:block}
-  span.t-en,span.t-es{display:inline}
-  .lang-en .t-en{display:block}
-  .lang-en .t-es{display:none}
-  .lang-en span.t-en{display:inline}
-  .lang-en span.t-es{display:none}
+  .t-en{display:none!important}
+  .t-es{display:inline!important}
+  .lang-en .t-en{display:inline!important}
+  .lang-en .t-es{display:none!important}
 
   /* FOOTER */
   footer{background:var(--bk);border-top:2px solid #222;display:flex;align-items:center;justify-content:space-between;padding:18px 26px}
@@ -157,13 +154,13 @@
     <a href="/">Marketers in the Arena</a>
     <span>/</span>
     <strong>Mexico City</strong>
+    <div class="lang-toggle" style="margin-left:8px"><button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button></div>
   </div>
   <div class="nav-r">
-    <a href="#format"><span class="t-es">Formato</span><span class="t-en">Format</span></a>
-    <a href="#program"><span class="t-es">Programa</span><span class="t-en">Program</span></a>
-    <a href="#venue"><span class="t-es">Sede</span><span class="t-en">Venue</span></a>
-    <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button nav-cta" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc"><span class="t-es">Registrarse →</span><span class="t-en">Register →</span></a>
-    <div class="lang-toggle"><button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button></div>
+    <a href="#format">Formato</a>
+    <a href="#program">Programa</a>
+    <a href="#venue">Sede</a>
+    <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button nav-cta" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc">Register →</a>
   </div>
 </nav>
 
