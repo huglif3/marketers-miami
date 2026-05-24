@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marketers in the Arena — Mexico City · June 17, 2026</title>
+<title>Marketers in the Arena — Ciudad de México · 17 de Junio, 2026</title>
+<meta name="description" content="Un encuentro íntimo para founders, marketers y operadores de growth en crypto, fintech y tecnología emergente. Ciudad de México, 17 de Junio 2026.">
+<meta property="og:title" content="Marketers in the Arena — Ciudad de México">
+<meta property="og:description" content="Un encuentro íntimo para founders, marketers y operadores de growth. CDMX · 17 de Junio, 2026 · Organizado por Stellar × Myosin.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marketersarena.com/cdmx">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -11,132 +16,227 @@
   html{scroll-behavior:smooth}
   body{font-family:'Barlow',sans-serif;background:var(--bk);color:var(--wh);overflow-x:hidden}
 
-  /* TICKER */
-  .ticker-wrap{background:var(--y);overflow:hidden;height:36px;display:flex;align-items:center;border-bottom:var(--border)}
-  .ticker{display:flex;animation:tick 28s linear infinite;white-space:nowrap}
-  .ticker span{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--bk);padding:0 24px}
-  .ticker .dot{opacity:.35;padding:0 6px}
-  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-  /* NAV */
-  nav{display:grid;grid-template-columns:1fr 1fr;height:54px;border-bottom:var(--border)}
-  .nav-l{display:flex;align-items:center;padding:0 22px;border-right:var(--border);gap:12px}
-  .nav-l a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
-  .nav-l span{color:rgba(255,255,255,.15)}
-  .nav-l strong{color:var(--wh)}
-  .nav-r{display:flex;align-items:center;justify-content:flex-end;padding:0 22px;gap:20px}
-  .nav-r a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gr);text-decoration:none}
-  .nav-cta{background:var(--y)!important;color:var(--bk)!important;padding:8px 20px;border-radius:999px}
-
-  /* HERO */
-  .hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
-  .hero-l{background:var(--y);padding:52px 42px;border-right:var(--border);display:flex;flex-direction:column;justify-content:space-between;min-height:460px}
-  .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(0,0,0,.4);margin-bottom:12px}
-  .hero-l h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,6.5vw,80px);font-weight:900;line-height:.86;text-transform:uppercase;color:var(--bk);letter-spacing:-.01em}
-  .hero-details{display:flex;gap:32px;margin-top:32px}
-  .hd-item{display:flex;flex-direction:column;gap:3px}
-  .hd-label{font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)}
-  .hd-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;text-transform:uppercase;color:var(--bk)}
-  .hero-r{padding:0;display:flex;flex-direction:column}
-  .hero-rt{padding:40px 42px;flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px}
-  .hero-rt p{font-size:14px;line-height:1.8;color:var(--gr);max-width:420px}
-  .hero-rt p strong{color:var(--wh);font-weight:600}
-  .hero-rb{background:var(--bk);padding:32px 42px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-  .hero-rb blockquote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(18px,2.4vw,28px);font-weight:900;line-height:1.05;color:var(--wh);max-width:340px}
-  .hero-rb blockquote span{color:var(--y)}
-
-  /* REGISTER BTN */
-  .reg-btn{display:inline-flex;align-items:center;background:var(--y);color:var(--bk);font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:14px 26px;border-radius:999px;text-decoration:none;white-space:nowrap;flex-shrink:0}
-
-  /* FORMAT — WHAT TO EXPECT */
-  .sec-format{border-bottom:var(--border)}
-  .sec-header{padding:28px 38px 20px;border-bottom:var(--border);display:flex;justify-content:space-between;align-items:flex-end}
-  .sec-header h2{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;text-transform:uppercase;line-height:.9;color:var(--wh)}
-  .sec-header h2 span{color:var(--y)}
-  .sec-header .label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3)}
-  .format-grid{display:grid;grid-template-columns:repeat(3,1fr)}
-  .fmt-card{padding:36px 32px;border-right:var(--border);display:flex;flex-direction:column;gap:12px}
-  .fmt-card:last-child{border-right:none}
-  .fmt-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.2)}
-  .fmt-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
-  .fmt-title span{color:var(--y)}
-  .fmt-body{font-size:13px;line-height:1.75;color:var(--gr)}
-
-  /* CONFERENCE STRIP */
-  .sec-conf{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
-  .conf-l{background:var(--y);padding:46px 38px;border-right:var(--border)}
-  .conf-l .pre{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(0,0,0,.4);margin-bottom:10px}
-  .conf-l h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;text-transform:uppercase;line-height:.9;color:var(--bk);margin-bottom:16px}
-  .conf-l p{font-size:13px;line-height:1.7;color:rgba(0,0,0,.6);max-width:340px;margin-bottom:24px}
-  .conf-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
-  .cs{display:flex;flex-direction:column;gap:2px}
-  .cs-num{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:var(--bk);line-height:1}
-  .cs-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.45)}
-  .conf-r{background:var(--bk);padding:46px 38px;display:flex;flex-direction:column;justify-content:center;gap:24px}
-  .conf-r h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:var(--y);margin-bottom:4px}
-  .conf-r p{font-size:13px;line-height:1.7;color:var(--gr);max-width:340px}
-  .conf-link{display:inline-flex;align-items:center;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none;margin-top:4px}
-  .conf-link:hover{color:var(--y)}
-
-  /* WHY */
-  .sec-why{border-bottom:var(--border)}
-  .why-grid{display:grid;grid-template-columns:1fr 1fr}
-  .why-card{padding:36px 38px;border-right:var(--border);border-bottom:var(--border);display:flex;flex-direction:column;gap:12px}
-  .why-card:nth-child(2n){border-right:none}
-  .why-card:nth-last-child(-n+2){border-bottom:none}
-  .why-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.2)}
-  .why-title{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
-  .why-title span{color:var(--y)}
-  .why-body{font-size:13px;line-height:1.75;color:var(--gr);max-width:420px}
-  .why-body a{color:var(--y);text-decoration:none}
-  .why-tag{display:inline-block;background:#111;border:1px solid #2a2a2a;font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);padding:5px 11px;border-radius:3px;margin-top:4px;width:fit-content}
-
-  /* VENUE */
-  .sec-venue{border-bottom:var(--border)}
-  .venue-body{display:grid;grid-template-columns:1fr 1fr}
-  .venue-copy{padding:40px 38px;border-right:var(--border);display:flex;flex-direction:column;justify-content:center;gap:16px}
-  .venue-copy h3{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
-  .venue-copy h3 span{color:var(--y)}
-  .venue-copy p{font-size:13.5px;line-height:1.75;color:var(--gr);max-width:360px}
-  .venue-video{background:#000;display:flex;align-items:stretch}
-  .venue-video iframe{width:100%;min-height:360px;border:none;display:block}
-
-  /* REGISTER SECTION */
-  .sec-register{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
-  .reg-l{background:var(--bk);padding:56px 42px;border-right:var(--border);display:flex;flex-direction:column;gap:20px}
-  .reg-l h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(44px,6vw,72px);font-weight:900;text-transform:uppercase;line-height:.86;color:var(--wh)}
-  .reg-l h2 span{color:var(--y)}
-  .reg-l p{font-size:13.5px;line-height:1.75;color:var(--gr);max-width:340px}
-  .reg-r{background:var(--y);padding:56px 42px;display:flex;flex-direction:column;justify-content:center;gap:24px}
-  .reg-r .rl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)}
-  .reg-detail{display:flex;flex-direction:column;gap:3px}
-  .rd-label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.35)}
-  .rd-val{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--bk)}
-  .luma-checkout--button{display:inline-flex!important;align-items:center!important;background:var(--y)!important;color:var(--bk)!important;font-family:'Barlow Condensed',sans-serif!important;font-size:13px!important;font-weight:800!important;letter-spacing:.16em!important;text-transform:uppercase!important;padding:16px 32px!important;border-radius:2px!important;text-decoration:none!important;border:none!important;width:fit-content!important;margin-top:8px!important}
-
-  /* TAGLINES */
-  .sec-tags{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:var(--border)}
-  .tc{padding:38px 28px;border-right:var(--border);display:flex;flex-direction:column;justify-content:space-between;min-height:180px}
-  .tc:last-child{border-right:none}
-  .tc.bk{background:var(--bk)}.tc.y{background:var(--y)}.tc.bl{background:var(--bl)}
-  .tc blockquote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(20px,2.6vw,32px);font-weight:900;line-height:1}
-  .tc.bk blockquote{color:var(--wh)}.tc.y blockquote,.tc.bl blockquote{color:var(--bk)}
-  .tlb{font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.3}
-
-
-  /* LANGUAGE TOGGLE */
+  /* LANG TOGGLE */
   .lang-toggle{display:flex;align-items:center;background:#111;border:1px solid #2a2a2a;border-radius:999px;padding:3px;gap:2px}
-  .lang-btn{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:999px;border:none;cursor:pointer;transition:all .15s ease;background:transparent;color:rgba(255,255,255,.4)}
+  .lang-btn{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 14px;border-radius:999px;border:none;cursor:pointer;transition:all .15s;background:transparent;color:rgba(255,255,255,.4)}
   .lang-btn.active{background:var(--y);color:var(--bk)}
   .t-en{display:none!important}
   .t-es{display:inline!important}
   .lang-en .t-en{display:inline!important}
   .lang-en .t-es{display:none!important}
 
+  /* TICKER */
+  .ticker-wrap{background:var(--y);overflow:hidden;height:36px;display:flex;align-items:center;border-bottom:var(--border)}
+  .ticker{display:flex;animation:tick 28s linear infinite;white-space:nowrap}
+  .ticker span{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--bk);padding:0 24px}
+  .ticker .dot{opacity:.35}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* NAV */
+  nav{display:grid;grid-template-columns:1fr 1fr;height:54px;border-bottom:var(--border);position:sticky;top:0;background:var(--bk);z-index:100}
+  .nav-l{display:flex;align-items:center;padding:0 22px;border-right:var(--border);gap:10px}
+  .nav-l a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
+  .nav-l span{color:rgba(255,255,255,.12)}
+  .nav-l strong{color:var(--wh)}
+  .nav-r{display:flex;align-items:center;justify-content:flex-end;padding:0 22px;gap:18px}
+  .nav-r a{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gr);text-decoration:none}
+  .nav-r a:hover{color:var(--wh)}
+  .nav-cta{background:var(--y)!important;color:var(--bk)!important;padding:8px 20px;border-radius:999px}
+
+  /* BUTTONS */
+  .btn-y{display:inline-flex;align-items:center;background:var(--y);color:var(--bk);font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:14px 28px;border-radius:999px;text-decoration:none;border:none;cursor:pointer;white-space:nowrap}
+  .btn-ghost{display:inline-flex;align-items:center;background:transparent;color:rgba(255,255,255,.5);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:12px 22px;border-radius:999px;text-decoration:none;border:1px solid #333}
+
+  /* LUMA override */
+  .luma-checkout--button{background:var(--y)!important;color:var(--bk)!important;font-family:'Barlow Condensed',sans-serif!important;font-size:12px!important;font-weight:800!important;letter-spacing:.18em!important;text-transform:uppercase!important;padding:14px 28px!important;border-radius:999px!important;border:none!important}
+
+  /* SECTION SHARED */
+  .sec-hdr{padding:26px 38px 18px;border-bottom:var(--border);display:flex;justify-content:space-between;align-items:flex-end}
+  .sec-hdr h2{font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:900;text-transform:uppercase;line-height:.9;color:var(--wh)}
+  .sec-hdr h2 em{font-style:normal;color:var(--y)}
+  .sec-hdr .lbl{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+
+  /* HERO */
+  .hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
+  .hero-l{background:var(--y);padding:52px 42px;border-right:var(--border);display:flex;flex-direction:column;justify-content:space-between;min-height:420px}
+  .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(0,0,0,.4);margin-bottom:12px}
+  .hero-l h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,6.5vw,80px);font-weight:900;line-height:.86;text-transform:uppercase;color:var(--bk)}
+  .hero-meta{display:flex;gap:28px;margin-top:28px}
+  .hm{display:flex;flex-direction:column;gap:2px}
+  .hm-l{font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)}
+  .hm-v{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;color:var(--bk)}
+  .hero-r{display:flex;flex-direction:column}
+  .hero-copy{padding:40px 42px;flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px}
+  .hero-copy p{font-size:14px;line-height:1.8;color:var(--gr);max-width:420px}
+  .hero-copy p strong{color:var(--wh);font-weight:600}
+  .hero-cta{padding:28px 42px;border-top:var(--border);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+
+  /* TRUST STRIP */
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:var(--border)}
+  .ts-cell{padding:20px 28px;border-right:var(--border);display:flex;flex-direction:column;gap:4px}
+  .ts-cell:last-child{border-right:none}
+  .ts-label{font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+  .ts-val{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;text-transform:uppercase;color:var(--wh)}
+  .ts-sub{font-size:11px;color:rgba(255,255,255,.3)}
+
+  /* CONFERENCE CONTEXT */
+  .conf-strip{display:grid;grid-template-columns:1fr 2fr;border-bottom:var(--border)}
+  .conf-l{background:var(--y);padding:36px 38px;border-right:var(--border);display:flex;flex-direction:column;gap:10px}
+  .conf-l h3{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:900;text-transform:uppercase;line-height:.9;color:var(--bk)}
+  .conf-l p{font-size:12px;line-height:1.6;color:rgba(0,0,0,.55);max-width:280px}
+  .conf-r{display:grid;grid-template-columns:1fr 1fr}
+  .conf-day{padding:32px 32px;border-right:var(--border);display:flex;flex-direction:column;gap:10px}
+  .conf-day:last-child{border-right:none}
+  .conf-day-num{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--y)}
+  .conf-day h4{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;color:var(--wh);line-height:1}
+  .conf-day p{font-size:12px;line-height:1.6;color:var(--gr)}
+  .conf-day a{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none;margin-top:4px;display:inline-block}
+  .conf-day a:hover{color:var(--y)}
+
+  /* WHY ATTEND */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr 1fr}
+  .why-card{padding:36px 30px;border-right:var(--border);display:flex;flex-direction:column;gap:12px}
+  .why-card:last-child{border-right:none}
+  .why-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;color:rgba(255,255,255,.2)}
+  .why-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
+  .why-title em{font-style:normal;color:var(--y)}
+  .why-body{font-size:13px;line-height:1.75;color:var(--gr)}
+
+  /* FOR WHO */
+  .for-grid{display:grid;grid-template-columns:1fr 1fr}
+  .for-l{padding:40px 42px;border-right:var(--border);display:flex;flex-direction:column;gap:14px}
+  .for-l p{font-size:14px;line-height:1.75;color:var(--gr);max-width:420px}
+  .for-l p strong{color:var(--wh)}
+  .for-bullets{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+  .for-bullet{display:flex;gap:12px;align-items:flex-start}
+  .for-bullet-arrow{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:900;color:var(--y);flex-shrink:0;margin-top:2px}
+  .for-bullet-text{font-size:13px;line-height:1.6;color:var(--gr)}
+  .for-r{background:var(--bl);padding:40px 42px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+  .for-r h3{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;line-height:.92;color:var(--bk)}
+  .for-r p{font-size:13px;line-height:1.7;color:rgba(0,0,0,.6)}
+
+  /* FORMAT OVERVIEW */
+  .fmt-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .fmt-card{padding:32px 28px;border-right:var(--border);display:flex;flex-direction:column;gap:10px}
+  .fmt-card:last-child{border-right:none}
+  .fmt-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;color:rgba(255,255,255,.2)}
+  .fmt-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
+  .fmt-title em{font-style:normal;color:var(--y)}
+  .fmt-body{font-size:12.5px;line-height:1.7;color:var(--gr)}
+
+  /* HACKATHON */
+  .hack-grid{display:grid;grid-template-columns:1fr 2fr}
+  .hack-l{background:var(--y);padding:44px 38px;border-right:var(--border);display:flex;flex-direction:column;gap:12px}
+  .hack-l h3{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,46px);font-weight:900;text-transform:uppercase;line-height:.88;color:var(--bk)}
+  .hack-l p{font-size:13px;line-height:1.7;color:rgba(0,0,0,.6);max-width:320px}
+  .hack-r{padding:44px 38px;display:flex;flex-direction:column;gap:0}
+  .hack-sprint{padding:18px 0;border-bottom:1px solid #1e1e1e;display:flex;flex-direction:column;gap:4px}
+  .hack-sprint:last-child{border-bottom:none}
+  .hack-sprint-time{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+  .hack-sprint-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;color:var(--wh)}
+  .hack-sprint-title.y{color:var(--y)}
+  .hack-sprint-body{font-size:12px;color:var(--gr)}
+
+  /* PROGRAM */
+  .prog-r{display:grid;grid-template-columns:110px 1fr 1fr 1fr 1fr;border-bottom:1px solid #1a1a1a}
+  .prog-r:last-child{border-bottom:none}
+  .prog-time{padding:16px 14px;border-right:var(--border);display:flex;align-items:flex-start;padding-top:18px}
+  .prog-time span{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;color:rgba(255,255,255,.4)}
+  .prog-cell{padding:14px 18px;border-right:var(--border);display:flex;flex-direction:column;gap:4px;min-height:56px}
+  .prog-cell:last-child{border-right:none}
+  .prog-cell.main{background:#111}
+  .prog-cell.ws{background:#1a1a0a}
+  .prog-cell.st{background:#0d0d1a}
+  .prog-cell.cm{background:#0d0f0d}
+  .prog-cell.full{background:#0a0a0a;grid-column:2/-1;border-right:none}
+  .prog-cell.full-bl{background:var(--bl);grid-column:2/-1;border-right:none}
+  .prog-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .prog-lbl.main{color:rgba(255,255,255,.85)}
+  .prog-lbl.ws{color:var(--y)}
+  .prog-lbl.st{color:var(--bl)}
+  .prog-lbl.cm{color:var(--gr)}
+  .prog-lbl.break{color:rgba(255,255,255,.35)}
+  .prog-lbl.close{color:var(--bk)}
+  .prog-sub{font-size:11px;line-height:1.4;color:rgba(255,255,255,.28)}
+  .prog-sub.dark{color:rgba(0,0,0,.45)}
+
+  /* SPEAKERS */
+  .spk-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+  .spk-card{padding:36px 32px;border-right:var(--border);display:flex;flex-direction:column;gap:12px}
+  .spk-card:last-child{border-right:none}
+  .spk-role-tag{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+  .spk-name{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:var(--wh)}
+  .spk-co{font-size:12px;color:rgba(255,255,255,.4)}
+  .spk-placeholder{background:#0f0f0f;border:1px dashed #2a2a2a;border-radius:2px;padding:24px;display:flex;flex-direction:column;gap:8px;text-align:center;align-items:center}
+  .spk-placeholder-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2)}
+
+  /* VENUE */
+  .venue-grid{display:grid;grid-template-columns:1fr 1fr}
+  .venue-copy{padding:40px 38px;border-right:var(--border);display:flex;flex-direction:column;justify-content:center;gap:14px}
+  .venue-copy h3{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
+  .venue-copy h3 em{font-style:normal;color:var(--y)}
+  .venue-copy p{font-size:13px;line-height:1.75;color:var(--gr);max-width:360px}
+  .venue-addr{font-size:11.5px;color:rgba(255,255,255,.3);line-height:1.6;margin-top:4px}
+  .venue-video{background:#000;display:flex;align-items:stretch}
+  .venue-video iframe{width:100%;min-height:320px;border:none;display:block}
+
+  /* PARTNERS */
+  .partners-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+  .partner-card{padding:28px 32px;border-right:var(--border);display:flex;flex-direction:column;gap:8px}
+  .partner-card:last-child{border-right:none}
+  .partner-type{font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+  .partner-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;color:var(--wh)}
+  .partner-desc{font-size:12px;line-height:1.6;color:var(--gr)}
+
+  /* REGISTER */
+  .reg-grid{display:grid;grid-template-columns:1fr 1fr}
+  .reg-l{background:var(--bk);padding:52px 42px;border-right:var(--border);display:flex;flex-direction:column;gap:18px}
+  .reg-l h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(40px,5.5vw,66px);font-weight:900;text-transform:uppercase;line-height:.86;color:var(--wh)}
+  .reg-l h2 em{font-style:normal;color:var(--y)}
+  .reg-l p{font-size:13.5px;line-height:1.75;color:var(--gr);max-width:340px}
+  .reg-checklist{display:flex;flex-direction:column;gap:6px}
+  .reg-check{display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--gr)}
+  .reg-check-arrow{color:var(--y);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:12px}
+  .reg-r{background:var(--y);padding:52px 42px;display:flex;flex-direction:column;justify-content:center;gap:20px}
+  .reg-r-label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)}
+  .reg-detail{display:flex;flex-direction:column;gap:3px}
+  .rd-label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.35);font-family:'Barlow Condensed',sans-serif}
+  .rd-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--bk)}
+  .reg-divider{height:1px;background:rgba(0,0,0,.15)}
+
+  /* FAQ */
+  .faq-grid{display:grid;grid-template-columns:1fr 1fr}
+  .faq-item{padding:24px 32px;border-right:var(--border);border-bottom:1px solid #1a1a1a;display:flex;flex-direction:column;gap:8px}
+  .faq-item:nth-child(2n){border-right:none}
+  .faq-q{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;color:var(--wh)}
+  .faq-a{font-size:12.5px;line-height:1.7;color:var(--gr)}
+
+  /* FINAL CTA */
+  .final-cta{background:var(--bl);padding:56px 42px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;border-top:var(--border)}
+  .final-cta h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,60px);font-weight:900;text-transform:uppercase;line-height:.88;color:var(--bk)}
+  .final-cta p{font-size:13px;color:rgba(0,0,0,.55);max-width:400px;line-height:1.7}
+
+  /* TAGLINES */
+  .taglines{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:var(--border);border-bottom:var(--border)}
+  .tl{padding:34px 28px;border-right:var(--border);display:flex;flex-direction:column;justify-content:space-between;min-height:160px}
+  .tl:last-child{border-right:none}
+  .tl.bk{background:var(--bk)}.tl.y{background:var(--y)}.tl.bl{background:var(--bl)}
+  .tl blockquote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(18px,2.4vw,28px);font-weight:900;line-height:1.05}
+  .tl.bk blockquote{color:var(--wh)}.tl.y blockquote,.tl.bl blockquote{color:var(--bk)}
+  .tl-label{font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.3}
+
+  /* MOBILE STICKY CTA */
+  .sticky-cta{display:none}
+  @media(max-width:768px){
+    .sticky-cta{display:flex;position:fixed;bottom:0;left:0;right:0;background:var(--bk);border-top:2px solid #1e1e1e;padding:12px 16px;gap:8px;z-index:200}
+    .sticky-cta a{flex:1;text-align:center;justify-content:center}
+  }
+
   /* FOOTER */
-  footer{background:var(--bk);border-top:2px solid #222;display:flex;align-items:center;justify-content:space-between;padding:18px 26px}
-  .footer-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--wh)}
-  .footer-link{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--y);text-decoration:none}
+  footer{background:var(--bk);border-top:var(--border);display:flex;align-items:center;justify-content:space-between;padding:18px 26px}
+  .footer-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--wh)}
+  .footer-link{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
+  .footer-link:hover{color:var(--y)}
 </style>
 </head>
 <body>
@@ -144,7 +244,7 @@
 <!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker">
-    <span>MEXICO CITY EDITION</span><span class="dot">✦</span><span>JUNE 17TH, 2026</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>SPOTS ARE LIMITED</span><span class="dot">✦</span><span>APPLICATION ONLY</span><span class="dot">✦</span><span>AFTER STABLECOIN CONFERENCE LATAM</span><span class="dot">✦</span><span>MEXICO CITY EDITION</span><span class="dot">✦</span><span>JUNE 17TH, 2026</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>SPOTS ARE LIMITED</span><span class="dot">✦</span><span>APPLICATION ONLY</span><span class="dot">✦</span><span>AFTER STABLECOIN CONFERENCE LATAM</span><span class="dot">✦</span>
+    <span>CIUDAD DE MÉXICO</span><span class="dot">✦</span><span>17 DE JUNIO, 2026</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>LUGARES LIMITADOS</span><span class="dot">✦</span><span>SOLO POR APLICACIÓN</span><span class="dot">✦</span><span>DESPUÉS DE STABLECOIN CONFERENCE LATAM</span><span class="dot">✦</span><span>CIUDAD DE MÉXICO</span><span class="dot">✦</span><span>17 DE JUNIO, 2026</span><span class="dot">✦</span><span>MARKETERS IN THE ARENA</span><span class="dot">✦</span><span>LUGARES LIMITADOS</span><span class="dot">✦</span><span>SOLO POR APLICACIÓN</span><span class="dot">✦</span><span>DESPUÉS DE STABLECOIN CONFERENCE LATAM</span><span class="dot">✦</span>
   </div>
 </div>
 
@@ -153,511 +253,434 @@
   <div class="nav-l">
     <a href="/">Marketers in the Arena</a>
     <span>/</span>
-    <strong>Mexico City</strong>
-    <div class="lang-toggle" style="margin-left:8px"><button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button></div>
+    <strong>CDMX</strong>
+    <div class="lang-toggle" style="margin-left:6px">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
   </div>
   <div class="nav-r">
-    <a href="#format">Formato</a>
-    <a href="#program">Programa</a>
-    <a href="#venue">Sede</a>
-    <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button nav-cta" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc">Register →</a>
+    <a href="#why"><span class="t-es">Por qué</span><span class="t-en">Why</span></a>
+    <a href="#program"><span class="t-es">Programa</span><span class="t-en">Program</span></a>
+    <a href="#venue"><span class="t-es">Sede</span><span class="t-en">Venue</span></a>
+    <a href="#register" class="luma-checkout--button nav-cta" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc">
+      <span class="t-es">Registrarse →</span><span class="t-en">Register →</span>
+    </a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- 1. HERO -->
 <section class="hero">
   <div class="hero-l">
     <div>
-      <div class="hero-eyebrow">Mexico City Edition · June 17th, 2026</div>
+      <div class="hero-eyebrow"><span class="t-es">Edición Ciudad de México · 17 de Junio, 2026</span><span class="t-en">Mexico City Edition · June 17th, 2026</span></div>
       <h1>MARKETERS<br>IN THE<br>ARENA</h1>
     </div>
-    <div class="hero-details">
-      <div class="hd-item">
-        <span class="hd-label">Date</span>
-        <span class="hd-val">June 17, 2026</span>
-      </div>
-      <div class="hd-item">
-        <span class="hd-label">City</span>
-        <span class="hd-val">Mexico City</span>
-      </div>
-      <div class="hd-item">
-        <span class="hd-label">Format</span>
-        <span class="hd-val">1-Day Summit</span>
-      </div>
+    <div class="hero-meta">
+      <div class="hm"><span class="hm-l"><span class="t-es">Fecha</span><span class="t-en">Date</span></span><span class="hm-v">Jun 17, 2026</span></div>
+      <div class="hm"><span class="hm-l"><span class="t-es">Ciudad</span><span class="t-en">City</span></span><span class="hm-v">CDMX, MX</span></div>
+      <div class="hm"><span class="hm-l"><span class="t-es">Formato</span><span class="t-en">Format</span></span><span class="hm-v"><span class="t-es">1 Día</span><span class="t-en">1-Day</span></span></div>
     </div>
   </div>
   <div class="hero-r">
-    <div class="hero-rt">
-      <p><span class="t-es">Un encuentro íntimo para founders, marketers y operadores de growth en la intersección de crypto, fintech y tecnología emergente. Organizado por <strong style="color:var(--wh)">Stellar × Myosin</strong>.</span><span class="t-en">An intimate gathering for founders, marketers, and growth operators at the intersection of crypto, fintech, and emerging technology. Hosted by <strong style="color:var(--wh)">Stellar × Myosin</strong>.</span></p>
-      <p><span class="t-es">No es un evento pasivo. Es un espacio para conversaciones reales, aprendizajes honestos e insights prácticos — de operadores que entienden que el crecimiento se trata de confianza, comunidad y momentum.</span><span class="t-en">Not a passive networking event. A room for sharp conversations, honest lessons, and practical insights from operators who know that growth is about trust, distribution, community, and momentum.</span></p>
-      <div style="display:flex;gap:12px;margin-top:6px;flex-wrap:wrap">
-        <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button reg-btn" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc"><span class="t-es">Asistir al evento →</span><span class="t-en">Apply to attend →</span></a>
-        <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener" class="reg-btn" style="background:var(--y);color:var(--bk);border:none"><span class="t-es">Hablar en el evento →</span><span class="t-en">Speak at the event →</span></a>
-      </div>
+    <div class="hero-copy">
+      <p>
+        <span class="t-es">Un encuentro íntimo para founders, marketers y operadores de growth en la intersección de crypto, fintech y tecnología emergente. Organizado por <strong>Stellar × Myosin</strong>.</span>
+        <span class="t-en">An intimate gathering for founders, marketers, and growth operators at the intersection of crypto, fintech, and emerging technology. Hosted by <strong>Stellar × Myosin</strong>.</span>
+      </p>
+      <p>
+        <span class="t-es">No es un evento pasivo de networking. Es un espacio para conversaciones reales, aprendizajes honestos e insights prácticos de operadores que entienden que el crecimiento se trata de confianza, comunidad y momentum.</span>
+        <span class="t-en">Not a passive networking event. A room for sharp conversations, honest lessons, and practical insights from operators who know that growth is about trust, community, and momentum.</span>
+      </p>
     </div>
-
+    <div class="hero-cta">
+      <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button btn-y" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc">
+        <span class="t-es">Asistir al evento →</span><span class="t-en">Register to attend →</span>
+      </a>
+      <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener" class="btn-ghost">
+        <span class="t-es">Hablar en el evento →</span><span class="t-en">Apply to speak →</span>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- WHAT TO EXPECT -->
-<section class="sec-format" id="format">
-  <div class="sec-header">
-    <h2><span class="t-es">QUÉ <span style="color:var(--y)">ESPERAR</span></span><span class="t-en">WHAT TO <span style="color:var(--y)">EXPECT</span></span></h2>
-    <span class="label"><span class="t-es">Pláticas · Paneles · Hackathon de Marketing · Networking</span><span class="t-en">Talks · Panels · Marketing Hackathon · Networking</span></span>
+<!-- 2. TRUST STRIP -->
+<section class="trust-strip">
+  <div class="ts-cell">
+    <span class="ts-label"><span class="t-es">Organizado por</span><span class="t-en">Hosted by</span></span>
+    <span class="ts-val">Stellar × Myosin</span>
+    <span class="ts-sub"><span class="t-es">Presentadores del evento</span><span class="t-en">Event hosts</span></span>
   </div>
-  <div class="format-grid" style="grid-template-columns:repeat(4,1fr)">
+  <div class="ts-cell">
+    <span class="ts-label"><span class="t-es">Co-organizado con</span><span class="t-en">Co-hosted with</span></span>
+    <span class="ts-val">Catalaxia</span>
+    <span class="ts-sub">Universidad de la Libertad</span>
+  </div>
+  <div class="ts-cell">
+    <span class="ts-label"><span class="t-es">Con el apoyo de</span><span class="t-en">Supported by</span></span>
+    <span class="ts-val">Fdción. R. Salinas Pliego</span>
+    <span class="ts-sub"><span class="t-es">Apoyo institucional</span><span class="t-en">Institutional support</span></span>
+  </div>
+  <div class="ts-cell">
+    <span class="ts-label"><span class="t-es">Edición anterior</span><span class="t-en">Previous edition</span></span>
+    <span class="ts-val">Miami · May 2026</span>
+    <span class="ts-sub"><a href="/miami" style="color:rgba(255,255,255,.3);text-decoration:none;font-size:10px;font-family:'Barlow Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase"><span class="t-es">Ver edición Miami →</span><span class="t-en">See Miami edition →</span></a></span>
+  </div>
+</section>
+
+<!-- CONFERENCE CONTEXT -->
+<section class="conf-strip">
+  <div class="conf-l">
+    <span style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)"><span class="t-es">Contexto</span><span class="t-en">Context</span></span>
+    <h3><span class="t-es">Un día después del<br>main stage</span><span class="t-en">The day after<br>the main stage</span></h3>
+    <p><span class="t-es">Justo después de Stablecoin Conference LATAM — cuando las conversaciones ya están activas y las personas correctas siguen en la ciudad.</span><span class="t-en">Right after Stablecoin Conference LATAM — when conversations are already warm and the right people are still in the city.</span></p>
+  </div>
+  <div class="conf-r">
+    <div class="conf-day">
+      <span class="conf-day-num">15–16 Jun</span>
+      <h4>Stablecoin Conference LATAM</h4>
+      <p><span class="t-es">2,500 asistentes · 100+ speakers · 50+ países · Circle, Mastercard, Ripple, Bitso</span><span class="t-en">2,500 attendees · 100+ speakers · 50+ countries · Circle, Mastercard, Ripple, Bitso</span></p>
+      <a href="https://stablecoinconferencelatam.com" target="_blank" rel="noopener">stablecoinconferencelatam.com ↗</a>
+    </div>
+    <div class="conf-day" style="background:#111">
+      <span class="conf-day-num" style="color:var(--y)">17 Jun ←</span>
+      <h4>Marketers in the Arena CDMX</h4>
+      <p><span class="t-es">El follow-up íntimo. Un cuarto curado para operadores y founders — feedback real, trabajo real.</span><span class="t-en">The intimate follow-up. A curated room for operators and founders — real feedback, real work.</span></p>
+      <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc" style="background:transparent!important;color:var(--y)!important;padding:0!important;border-radius:0!important;font-size:9px!important;letter-spacing:.16em!important;margin-top:4px;display:inline-block"><span class="t-es">Registrarse →</span><span class="t-en">Register →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 3. WHY ATTEND -->
+<section id="why" style="border-bottom:var(--border)">
+  <div class="sec-hdr">
+    <h2><span class="t-es">POR QUÉ <em>ASISTIR</em></span><span class="t-en">WHY <em>ATTEND</em></span></h2>
+    <span class="lbl"><span class="t-es">Beneficios concretos</span><span class="t-en">Concrete benefits</span></span>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-num">01</span>
+      <div class="why-title"><span class="t-es">Feedback <em>en Vivo</em><br>a tu GTM</span><span class="t-en"><em>Live Feedback</em><br>on Your GTM</span></div>
+      <p class="why-body"><span class="t-es">Operadores senior revisan estrategias de marketing reales en vivo — frente al cuarto. Brutal, específico y genuinamente útil. La empresa recibe retroalimentación real; el cuarto recibe una clase magistral.</span><span class="t-en">Senior operators review real marketing strategies live — in front of the room. Brutal, specific, and genuinely useful. The company gets real feedback; the room gets a masterclass.</span></p>
+    </div>
+    <div class="why-card">
+      <span class="why-num">02</span>
+      <div class="why-title"><span class="t-es">Frameworks <em>Que Usas</em><br>Al Día Siguiente</span><span class="t-en">Frameworks <em>You Use</em><br>Next Day</span></div>
+      <p class="why-body"><span class="t-es">Pláticas y workshops de operadores que ya lo hicieron: GTM sin VC, escalar en mercados emergentes, community-first, tokenomics. Sin teoría — solo lo que funciona en campo.</span><span class="t-en">Talks and workshops from operators who've actually done it: GTM without VC, scaling in emerging markets, community-first, tokenomics. No theory — only what works in the field.</span></p>
+    </div>
+    <div class="why-card">
+      <span class="why-num">03</span>
+      <div class="why-title"><span class="t-es">Conexiones <em>De Alto Valor</em><br>En LATAM</span><span class="t-en"><em>High-Signal</em><br>LATAM Connections</span></div>
+      <p class="why-body"><span class="t-es">Un cuarto gated por aplicación. CMOs, founders, growth leads y builders del ecosistema Stellar y fintech/crypto de LATAM — todo el día, sin distracciones, en un mismo espacio.</span><span class="t-en">An application-gated room. CMOs, founders, growth leads, and builders from the Stellar and LATAM fintech/crypto ecosystem — all day, no noise, one room.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. WHO IS THIS FOR -->
+<section style="border-bottom:var(--border)">
+  <div class="sec-hdr">
+    <h2><span class="t-es">¿PARA <em>QUIÉN?</em></span><span class="t-en">WHO IS <em>THIS FOR?</em></span></h2>
+    <span class="lbl"><span class="t-es">Solo por aplicación · Lugares limitados</span><span class="t-en">Application-gated · Limited spots</span></span>
+  </div>
+  <div class="for-grid">
+    <div class="for-l">
+      <p><span class="t-es">Para las personas que están haciendo el trabajo real — lanzando productos, construyendo comunidades y convirtiendo ideas en tracción.</span><span class="t-en">For the people doing the real work — launching products, building communities, and turning ideas into traction.</span></p>
+      <div class="for-bullets">
+        <div class="for-bullet"><span class="for-bullet-arrow">→</span><span class="for-bullet-text"><span class="t-es">Founders en crypto, fintech, pagos, stablecoins y tecnología de consumo</span><span class="t-en">Founders in crypto, fintech, payments, stablecoins, and consumer technology</span></span></div>
+        <div class="for-bullet"><span class="for-bullet-arrow">→</span><span class="for-bullet-text"><span class="t-es">Marketers y growth leads impulsando adopción en LATAM</span><span class="t-en">Marketers and growth leads shaping adoption in LATAM</span></span></div>
+        <div class="for-bullet"><span class="for-bullet-arrow">→</span><span class="for-bullet-text"><span class="t-es">Community builders, operadores de ecosistema y partnership leads</span><span class="t-en">Community builders, ecosystem operators, and partnership leads</span></span></div>
+        <div class="for-bullet"><span class="for-bullet-arrow">→</span><span class="for-bullet-text"><span class="t-es">Creativos, estrategas y storytellers ayudando a marcas a crecer</span><span class="t-en">Creatives, strategists, and storytellers helping brands grow</span></span></div>
+        <div class="for-bullet"><span class="for-bullet-arrow">→</span><span class="for-bullet-text"><span class="t-es">Builders del futuro del acceso financiero y adopción real</span><span class="t-en">Builders of the future of financial access and real-world adoption</span></span></div>
+      </div>
+    </div>
+    <div class="for-r">
+      <h3><span class="t-es">¿Vas a<br>hablar?</span><span class="t-en">Want to<br>speak?</span></h3>
+      <p><span class="t-es">3 speakers confirmados. Programa activo. Si construyes en LATAM y quieres compartir tu trabajo — aplica.</span><span class="t-en">3 confirmed speakers. Program actively filling. Building in LATAM and want to share your work — apply.</span></p>
+      <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener" class="btn-y" style="background:var(--bk);color:var(--wh);margin-top:4px">
+        <span class="t-es">Aplicar como Speaker →</span><span class="t-en">Speaker Application →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FORMAT OVERVIEW -->
+<section style="border-bottom:var(--border)">
+  <div class="sec-hdr">
+    <h2><span class="t-es">QUÉ <em>ESPERAR</em></span><span class="t-en">WHAT TO <em>EXPECT</em></span></h2>
+    <span class="lbl"><span class="t-es">Pláticas · Panels · Hackathon · Networking</span><span class="t-en">Talks · Panels · Hackathon · Networking</span></span>
+  </div>
+  <div class="fmt-grid">
     <div class="fmt-card">
       <span class="fmt-num">01</span>
-      <div class="fmt-title"><span class="t-es">Conversaciones <span style="color:var(--y)">Curadas</span></span><span class="t-en">Curated <span style="color:var(--y)">Conversations</span></span></div>
-      <p class="fmt-body"><span class="t-es">Paneles, entrevistas a founders y preguntas en vivo. Conversaciones que no pasan en pasillos de conferencias — porque el cuarto está construido para eso.</span><span class="t-en">Sharp panels, founder interviews, and live Q&A. The kind of conversations that don't happen in conference hallways — because the room is built for them.</span></p>
+      <div class="fmt-title"><span class="t-es">Conversaciones <em>Curadas</em></span><span class="t-en">Curated <em>Conversations</em></span></div>
+      <p class="fmt-body"><span class="t-es">Paneles, entrevistas a founders y Q&A en vivo. Conversaciones que no pasan en pasillos de conferencias.</span><span class="t-en">Panels, founder interviews, and live Q&A. Conversations that don't happen in conference hallways.</span></p>
     </div>
     <div class="fmt-card">
       <span class="fmt-num">02</span>
-      <div class="fmt-title"><span class="t-es">Insights <span style="color:var(--y)">Prácticos</span></span><span class="t-en">Practical <span style="color:var(--y)">Growth Insights</span></span></div>
-      <p class="fmt-body"><span class="t-es">Pláticas y workshops de operadores: GTM sin VC, escalar en mercados emergentes, tokenomics, community-first. Frameworks que usas al día siguiente.</span><span class="t-en">Talks and workshops from operators doing the real work: GTM without VC, scaling protocols in emerging markets, tokenomics, community-first growth. Frameworks you use the next day.</span></p>
+      <div class="fmt-title"><span class="t-es">Insights <em>Prácticos</em></span><span class="t-en">Practical <em>Insights</em></span></div>
+      <p class="fmt-body"><span class="t-es">Workshops de operadores: GTM sin VC, escalar en LATAM, tokenomics, community-first. Frameworks que usas mañana.</span><span class="t-en">Operator workshops: GTM without VC, scaling in LATAM, tokenomics, community-first. Frameworks you use tomorrow.</span></p>
     </div>
     <div class="fmt-card">
       <span class="fmt-num">03</span>
-      <div class="fmt-title"><span class="t-es">Marketing <span style="color:var(--y)">Hackathon</span></span><span class="t-en">Marketing <span style="color:var(--y)">Hackathon</span></span></div>
+      <div class="fmt-title"><span class="t-es">Marketing <em>Hackathon</em></span><span class="t-en">Marketing <em>Hackathon</em></span></div>
       <p class="fmt-body"><span class="t-es">Equipos de 4–5. Dos sprints en vivo: investigación y campaña. Pitch en escenario. Ganador anunciado al cierre.</span><span class="t-en">Teams of 4–5. Two live sprints: research then campaign. Pitch on stage. Winner announced at closing.</span></p>
     </div>
     <div class="fmt-card">
       <span class="fmt-num">04</span>
-      <div class="fmt-title"><span class="t-es">Networking <span style="color:var(--y)">Community-First</span></span><span class="t-en">Community-First <span style="color:var(--y)">Networking</span></span></div>
-      <p class="fmt-body"><span class="t-es">Mesas estructuradas, 1:1s curados y networking abierto entre builders, operadores y líderes de ecosistema. Ven listo para conectar y conocer a quienes construyen lo que sigue.</span><span class="t-en">Structured roundtables, curated 1:1s, and open networking. Come ready to connect and meet the people building what's next.</span></p>
+      <div class="fmt-title"><span class="t-es">Networking <em>Estructurado</em></span><span class="t-en">Structured <em>Networking</em></span></div>
+      <p class="fmt-body"><span class="t-es">Mesas temáticas, 1:1s curados y networking abierto. Ven listo para conectar con quienes construyen lo que sigue.</span><span class="t-en">Themed tables, curated 1:1s, and open networking. Come ready to connect with the people building what's next.</span></p>
     </div>
   </div>
 </section>
 
-<!-- WHO IS THIS FOR -->
+<!-- 6. HACKATHON CALLOUT -->
 <section style="border-bottom:var(--border)">
-  <div class="sec-header">
-    <h2><span class="t-es">¿PARA <span style="color:var(--y)">QUIÉN ES?</span></span><span class="t-en">WHO IS <span style="color:var(--y)">THIS FOR</span></span></h2>
-    <span class="label"><span class="t-es">Para quién es · Solo por aplicación</span><span class="t-en">Who this is for · Application-gated</span></span>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr">
-    <div style="padding:40px 42px;border-right:var(--border);display:flex;flex-direction:column;gap:20px">
-      <p style="font-size:14px;line-height:1.8;color:var(--gr);max-width:440px"><span class="t-es">Para las personas que están haciendo el trabajo real — lanzando productos, construyendo comunidades y convirtiendo ideas en tracción.</span><span class="t-en">For the people doing the real work — launching products, building communities, and turning ideas into traction.</span></p>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div style="display:flex;gap:14px;align-items:flex-start">
-          <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;color:var(--y);flex-shrink:0;margin-top:1px">→</span>
-          <span style="font-size:13.5px;color:var(--gr)"><span class="t-es">Founders en crypto, fintech, pagos, stablecoins y tecnología de consumo</span><span class="t-en">Founders building in crypto, fintech, payments, stablecoins, and consumer technology</span></span>
-        </div>
-        <div style="display:flex;gap:14px;align-items:flex-start">
-          <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;color:var(--y);flex-shrink:0;margin-top:1px">→</span>
-          <span style="font-size:13.5px;color:var(--gr)"><span class="t-es">Marketers y growth leads impulsando adopción en LATAM</span><span class="t-en">Marketers and growth leads shaping adoption in LATAM</span></span>
-        </div>
-        <div style="display:flex;gap:14px;align-items:flex-start">
-          <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;color:var(--y);flex-shrink:0;margin-top:1px">→</span>
-          <span style="font-size:13.5px;color:var(--gr)"><span class="t-es">Community builders, operadores de ecosistema y partnership leads</span><span class="t-en">Community builders, ecosystem operators, and partnership leads</span></span>
-        </div>
-        <div style="display:flex;gap:14px;align-items:flex-start">
-          <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;color:var(--y);flex-shrink:0;margin-top:1px">→</span>
-          <span style="font-size:13.5px;color:var(--gr)"><span class="t-es">Creativos, estrategas y storytellers ayudando a marcas a crecer</span><span class="t-en">Creatives, strategists, and storytellers helping brands move beyond the screen</span></span>
-        </div>
-        <div style="display:flex;gap:14px;align-items:flex-start">
-          <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;color:var(--y);flex-shrink:0;margin-top:1px">→</span>
-          <span style="font-size:13.5px;color:var(--gr)"><span class="t-es">Builders del futuro del acceso financiero, comunidades internet-native y adopción real</span><span class="t-en">Builders of the future of financial access, internet-native communities, and real-world adoption</span></span>
-        </div>
+  <div class="hack-grid">
+    <div class="hack-l">
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)"><span class="t-es">Formato Destacado</span><span class="t-en">Featured Format</span></span>
+      <h3>Marketing<br>Hackathon</h3>
+      <p><span class="t-es">Equipos trabajan en sprints para construir una estrategia de marketing completa — desde investigación hasta campaña ejecutable — y pitchean en vivo al final del día.</span><span class="t-en">Teams work through sprints to build a complete marketing strategy — from research to executable campaign — and pitch live at the end of the day.</span></p>
+    </div>
+    <div class="hack-r">
+      <div class="hack-sprint">
+        <span class="hack-sprint-time">Sprint 1 · 12:20</span>
+        <span class="hack-sprint-title"><span class="t-es">Investigación + Insight de Usuario</span><span class="t-en">Research + User Insight</span></span>
+        <span class="hack-sprint-body"><span class="t-es">Grupos de 4–5 equipos · Solución en 1 página · 45 min trabajo + 10 min debrief</span><span class="t-en">Groups of 4–5 teams · 1-page solution · 45 min work + 10 min debrief</span></span>
+      </div>
+      <div class="hack-sprint">
+        <span class="hack-sprint-time">Sprint 2 · 14:00</span>
+        <span class="hack-sprint-title"><span class="t-es">Propuesta + Campaña</span><span class="t-en">Proposal + Campaign</span></span>
+        <span class="hack-sprint-body"><span class="t-es">Draft el go-to-market: 1 slide, 1 tweet, 1 email · 45 min trabajo + 10 min debrief</span><span class="t-en">Draft the go-to-market: 1 slide, 1 tweet, 1 email · 45 min work + 10 min debrief</span></span>
+      </div>
+      <div class="hack-sprint">
+        <span class="hack-sprint-time"><span class="t-es">Final · 15:00</span><span class="t-en">Finals · 15:00</span></span>
+        <span class="hack-sprint-title y"><span class="t-es">Pitch en Escenario</span><span class="t-en">Pitch on Stage</span></span>
+        <span class="hack-sprint-body"><span class="t-es">5 equipos · 5 min pitch + 2 min feedback · Ganador anunciado al cierre</span><span class="t-en">5 teams · 5 min pitch + 2 min feedback · Winner announced at closing</span></span>
       </div>
     </div>
-    <div style="background:var(--bl);padding:40px 42px;display:flex;flex-direction:column;gap:16px;justify-content:center">
-      <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;text-transform:uppercase;line-height:.92;color:var(--bk)"><span class="t-es">¿Vas a<br>hablar o<br>construir?</span><span class="t-en">Are you<br>speaking<br>or building?</span></h3>
-      <p style="font-size:13px;line-height:1.75;color:rgba(0,0,0,.6)"><span class="t-es">3 speakers confirmados. Programa activo. Si construyes en LATAM y quieres compartir tu trabajo — aplica.</span><span class="t-en">3 confirmed speakers. Program actively filling. If you're building in LATAM and want to share your work — apply.</span></p>
-      <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener"
-         style="display:inline-flex;align-items:center;background:var(--y);color:var(--bk);font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:14px 24px;border-radius:999px;text-decoration:none;width:fit-content;margin-top:4px">
-        Speaker Application →
-      </a>
+  </div>
+</section>
+
+<!-- 7. SPEAKERS -->
+<section style="border-bottom:var(--border)">
+  <div class="sec-hdr">
+    <h2><span class="t-es">SPEAKERS <em>& JUECES</em></span><span class="t-en">SPEAKERS <em>& JUDGES</em></span></h2>
+    <span class="lbl"><span class="t-es">3 confirmados · Programa activo</span><span class="t-en">3 confirmed · Program actively filling</span></span>
+  </div>
+  <div class="spk-grid">
+    <div class="spk-card">
+      <div class="spk-placeholder" style="height:120px;margin-bottom:4px">
+        <span class="spk-placeholder-label"><span class="t-es">Foto próximamente</span><span class="t-en">Photo coming</span></span>
+      </div>
+      <span class="spk-role-tag"><span class="t-es">Speaker Confirmado</span><span class="t-en">Confirmed Speaker</span></span>
+      <span class="spk-name"><span class="t-es">Por anunciar</span><span class="t-en">To be announced</span></span>
+      <span class="spk-co"><span class="t-es">Detalles próximamente</span><span class="t-en">Details coming soon</span></span>
+    </div>
+    <div class="spk-card">
+      <div class="spk-placeholder" style="height:120px;margin-bottom:4px">
+        <span class="spk-placeholder-label"><span class="t-es">Foto próximamente</span><span class="t-en">Photo coming</span></span>
+      </div>
+      <span class="spk-role-tag"><span class="t-es">Speaker Confirmado</span><span class="t-en">Confirmed Speaker</span></span>
+      <span class="spk-name"><span class="t-es">Por anunciar</span><span class="t-en">To be announced</span></span>
+      <span class="spk-co"><span class="t-es">Detalles próximamente</span><span class="t-en">Details coming soon</span></span>
+    </div>
+    <div class="spk-card" style="background:#0f0f0f">
+      <div style="flex:1;display:flex;flex-direction:column;gap:16px;justify-content:center;padding:16px 0">
+        <span class="spk-role-tag" style="color:rgba(255,255,255,.2)"><span class="t-es">¿Quieres hablar?</span><span class="t-en">Want to speak?</span></span>
+        <span class="spk-name" style="color:rgba(255,255,255,.3)"><span class="t-es">Aplica al programa</span><span class="t-en">Apply to the program</span></span>
+        <p style="font-size:12px;color:rgba(255,255,255,.2);line-height:1.6"><span class="t-es">Si estás construyendo en LATAM y tienes algo valioso que compartir — el cuarto te está esperando.</span><span class="t-en">If you're building in LATAM and have something valuable to share — the room is waiting for you.</span></p>
+        <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener" class="btn-y" style="margin-top:4px;font-size:11px">
+          <span class="t-es">Aplicar como Speaker →</span><span class="t-en">Speaker Application →</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-
-<!-- PROGRAM -->
+<!-- 8. PROGRAM -->
 <section id="program" style="border-bottom:var(--border)">
-  <div class="sec-header">
-    <h2>PROGRAM <span>— JUNE 17</span></h2>
-    <span class="label">4 Tracks · Main Stage + 3 Simultaneous Rooms</span>
+  <div class="sec-hdr">
+    <h2><span class="t-es">PROGRAMA <em>— 17 JUN</em></span><span class="t-en">PROGRAM <em>— JUN 17</em></span></h2>
+    <span class="lbl"><span class="t-es">4 Tracks · Sujeto a cambios</span><span class="t-en">4 Tracks · Subject to change</span></span>
   </div>
-
-  <!-- TRACK LEGEND -->
-  <div style="display:grid;grid-template-columns:120px 1fr 1fr 1fr 1fr;border-bottom:var(--border)">
-    <div style="padding:14px 16px;border-right:var(--border)"></div>
-    <div style="padding:14px 20px;border-right:var(--border);background:#111;display:flex;flex-direction:column;gap:3px">
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4)">Track 01</span>
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;text-transform:uppercase;color:var(--wh)">Main Stage</span>
-    </div>
-    <div style="padding:14px 20px;border-right:var(--border);background:#1a1a0a;display:flex;flex-direction:column;gap:3px">
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,239,90,.4)">Track 02</span>
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;text-transform:uppercase;color:var(--y)">Builders Workshop</span>
-    </div>
-    <div style="padding:14px 20px;border-right:var(--border);background:#0d0d1a;display:flex;flex-direction:column;gap:3px">
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(107,124,196,.4)">Track 03</span>
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;text-transform:uppercase;color:var(--bl)">Strategy / Cases</span>
-    </div>
-    <div style="padding:14px 20px;background:#0d0f0d;display:flex;flex-direction:column;gap:3px">
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(184,184,180,.3)">Track 04</span>
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;text-transform:uppercase;color:var(--gr)">Content + Media</span>
-    </div>
+  <!-- Track headers -->
+  <div style="display:grid;grid-template-columns:110px 1fr 1fr 1fr 1fr;border-bottom:var(--border)">
+    <div style="padding:12px 14px;border-right:var(--border)"></div>
+    <div style="padding:12px 18px;border-right:var(--border);background:#111"><span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:900;text-transform:uppercase;color:var(--wh)"><span class="t-es">Main Stage</span><span class="t-en">Main Stage</span></span></div>
+    <div style="padding:12px 18px;border-right:var(--border);background:#1a1a0a"><span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:900;text-transform:uppercase;color:var(--y)"><span class="t-es">Builders Workshop</span><span class="t-en">Builders Workshop</span></span></div>
+    <div style="padding:12px 18px;border-right:var(--border);background:#0d0d1a"><span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:900;text-transform:uppercase;color:var(--bl)"><span class="t-es">Estrategia / Casos</span><span class="t-en">Strategy / Cases</span></span></div>
+    <div style="padding:12px 18px;background:#0d0f0d"><span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:900;text-transform:uppercase;color:var(--gr)"><span class="t-es">Contenido + Media</span><span class="t-en">Content + Media</span></span></div>
   </div>
-
-  <!-- ROWS -->
-  <style>
-    .prog-r{display:grid;grid-template-columns:120px 1fr 1fr 1fr 1fr;border-bottom:1px solid #1a1a1a}
-    .prog-r:last-child{border-bottom:none}
-    .prog-time{padding:18px 16px;border-right:var(--border);display:flex;align-items:flex-start;padding-top:20px}
-    .prog-time span{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:rgba(255,255,255,.5)}
-    .prog-cell{padding:16px 20px;border-right:var(--border);display:flex;flex-direction:column;gap:5px;min-height:64px}
-    .prog-cell:last-child{border-right:none}
-    .prog-cell.main{background:#111}
-    .prog-cell.ws{background:#1a1a0a}
-    .prog-cell.st{background:#0d0d1a}
-    .prog-cell.cm{background:#0d0f0d}
-    .prog-cell.empty{background:var(--bk)}
-    .prog-cell.full-row{background:var(--bk);grid-column:2 / -1;border-right:none}
-    .prog-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
-    .prog-label.main{color:rgba(255,255,255,.9)}
-    .prog-label.ws{color:var(--y)}
-    .prog-label.st{color:var(--bl)}
-    .prog-label.cm{color:var(--gr)}
-    .prog-label.break{color:rgba(255,255,255,.4)}
-    .prog-sub{font-size:11.5px;line-height:1.5;color:rgba(255,255,255,.35)}
-  </style>
-
-  <!-- 10:30 -->
-  <div class="prog-r">
-    <div class="prog-time"><span>10:30</span></div>
-    <div class="prog-cell full-row" style="background:#0f0f0f">
-      <span class="prog-label main">Registro &amp; Bienvenida</span>
-      <span class="prog-sub">Café + The Arena Wall · All spaces open</span>
-    </div>
-  </div>
-
-  <!-- 11:00 -->
-  <div class="prog-r">
-    <div class="prog-time"><span>11:00</span></div>
-    <div class="prog-cell main">
-      <span class="prog-label main">Opening Remarks</span>
-      <span class="prog-sub">Rector Jorge Cuervo · Roberto Salinas · Estefania · Jason (Stellar CMO)</span>
-    </div>
-    <div class="prog-cell ws">
-      <span class="prog-label ws">Prep: Founder Speakers</span>
-      <span class="prog-sub">Final sound check + brief</span>
-    </div>
-    <div class="prog-cell st">
-      <span class="prog-label st">Builders Breakfast</span>
-      <span class="prog-sub">Technical founders · Informal intros</span>
-    </div>
-    <div class="prog-cell cm">
-      <span class="prog-label cm">Media Setup</span>
-      <span class="prog-sub">Journalists assigned · Equipment tested</span>
-    </div>
-  </div>
-
-  <!-- 11:30 -->
-  <div class="prog-r">
-    <div class="prog-time"><span>11:30</span></div>
-    <div class="prog-cell main">
-      <span class="prog-label main">Keynote</span>
-      <span class="prog-sub">"El usuario real de stablecoins en LATAM" — Founder interview · 30 min</span>
-    </div>
-    <div class="prog-cell ws">
-      <span class="prog-label ws">🔨 Scaling Workshop</span>
-      <span class="prog-sub">"Scaling a Protocol in Emerging Markets" · Interactive · Max 30</span>
-    </div>
-    <div class="prog-cell st">
-      <span class="prog-label st">Founder Roundtable</span>
-      <span class="prog-sub">"Tokenomics First: What Founders Get Wrong" · Off the record</span>
-    </div>
-    <div class="prog-cell cm">
-      <span class="prog-label cm">Founder Interviews</span>
-      <span class="prog-sub">Video interviews · 2–3 keynote speakers · Media recording</span>
-    </div>
-  </div>
-
-  <!-- 12:05 -->
-  <div class="prog-r">
-    <div class="prog-time"><span>12:05</span></div>
-    <div class="prog-cell full-row" style="background:#0a0a0a">
-      <span class="prog-label break">Break + Informal Networking</span>
-      <span class="prog-sub">Coffee · Pastries · Open conversation · 15 min</span>
-    </div>
-  </div>
-
-  <!-- 12:20 -->
-  <div class="prog-r">
-    <div class="prog-time"><span>12:20</span></div>
-    <div class="prog-cell main">
-      <span class="prog-label main">Founder Lightning Talks</span>
-      <span class="prog-sub">4–5 founders · 5 min each · No slides · 25 min total</span>
-    </div>
-    <div class="prog-cell ws">
-      <span class="prog-label ws">🔨 Hackathon Sprint 1</span>
-      <span class="prog-sub">"Research + Insight: Understanding Your User" · Small group · 4–5 teams</span>
-    </div>
-    <div class="prog-cell st">
-      <span class="prog-label st">Builder's Playbook</span>
-      <span class="prog-sub">"Go-to-Market Without VC" · 3 bootstrapped founders · Q&amp;A</span>
-    </div>
-    <div class="prog-cell cm">
-      <span class="prog-label cm">Roundtable Off-Record</span>
-      <span class="prog-sub">"La narrativa que funciona" · Journalists + top attendees · No recordings</span>
-    </div>
-  </div>
-
-  <!-- 13:00 -->
-  <div class="prog-r">
-    <div class="prog-time"><span>13:00</span></div>
-    <div class="prog-cell full-row" style="background:#0a0a0a">
-      <span class="prog-label break">Lunch + Networking Estructurado</span>
-      <span class="prog-sub">Pre-assigned tables · Facilitator-led intros</span>
-    </div>
-  </div>
-
-  <!-- 14:00 -->
-  <div class="prog-r">
-    <div class="prog-time"><span>14:00</span></div>
-    <div class="prog-cell main">
-      <span class="prog-label main">Panel 1 + The Arena Wall</span>
-      <span class="prog-sub">"Respuestas anónimas del cuarto" — 3–4 founders respond to live audience questions · Open debate · 45 min</span>
-    </div>
-    <div class="prog-cell ws">
-      <span class="prog-label ws">🔨 Hackathon Sprint 2</span>
-      <span class="prog-sub">"Proposal + Campaign Message" · Teams draft 1 slide, 1 tweet, 1 email</span>
-    </div>
-    <div class="prog-cell st">
-      <span class="prog-label st">Networking Estructurado</span>
-      <span class="prog-sub">"Mesas Temáticas" · Institutional Capital / Builders / Ecosystem Partners</span>
-    </div>
-    <div class="prog-cell cm">
-      <span class="prog-label cm">Grabación Ganadores</span>
-      <span class="prog-sub">Live recording · Hackathon teams · Pitch on camera</span>
-    </div>
-  </div>
-
-  <!-- 14:45 -->
-  <div class="prog-r">
-    <div class="prog-time"><span>14:45</span></div>
-    <div class="prog-cell full-row" style="background:#0a0a0a">
-      <span class="prog-label break">Break</span>
-      <span class="prog-sub">Water · Stretch · Re-center · 15 min</span>
-    </div>
-  </div>
-
-  <!-- 15:00 -->
-  <div class="prog-r">
-    <div class="prog-time"><span>15:00</span></div>
-    <div class="prog-cell main">
-      <span class="prog-label main">🔨 Hackathon Pitches + Sponsor Time</span>
-      <span class="prog-sub">5 teams pitch · 5 min + 2 min feedback · Sponsor 1 &amp; 2: 10 min each</span>
-    </div>
-    <div class="prog-cell ws">
-      <span class="prog-label ws">1:1 Speed Networking</span>
-      <span class="prog-sub">"Rondas de 5 min: perfil pre-asignado" · Curated 1:1s · Remesas MX / Builders / Early-stage</span>
-    </div>
-    <div class="prog-cell st">
-      <span class="prog-label st">Open Networking</span>
-      <span class="prog-sub">Unstructured · Founders + attendees self-organize · BD facilitating intros</span>
-    </div>
-    <div class="prog-cell cm">
-      <span class="prog-label cm">Clip Recording</span>
-      <span class="prog-sub">Best moments from Panel 1 · Live recording for press kit + social</span>
-    </div>
-  </div>
-
-  <!-- 15:45 -->
-  <div class="prog-r">
-    <div class="prog-time"><span>15:45</span></div>
-    <div class="prog-cell full-row" style="background:#111">
-      <span class="prog-label main">Closing: Main Stage</span>
-      <span class="prog-sub">Hackathon winner announced · Anagrama Labs research synthesis · Estefania final remarks · Rio announcement · 30 min</span>
-    </div>
-  </div>
-
-  <!-- 16:15 -->
-  <div class="prog-r" style="border-bottom:none">
-    <div class="prog-time"><span>16:15</span></div>
-    <div class="prog-cell full-row" style="background:var(--bl);border-right:none">
-      <span class="prog-label" style="color:var(--bk)">Cocktail + Networking Libre</span>
-      <span class="prog-sub" style="color:rgba(0,0,0,.5)">Light drinks · Rooftop · Sponsor VIP dinners · Until 18:00</span>
-    </div>
-  </div>
-
+  <div class="prog-r"><div class="prog-time"><span>10:30</span></div><div class="prog-cell full"><span class="prog-lbl break"><span class="t-es">Registro &amp; Bienvenida</span><span class="t-en">Registration &amp; Welcome</span></span><span class="prog-sub"><span class="t-es">Café + The Arena Wall · Todos los espacios abiertos</span><span class="t-en">Coffee + The Arena Wall · All spaces open</span></span></div></div>
+  <div class="prog-r"><div class="prog-time"><span>11:00</span></div><div class="prog-cell main"><span class="prog-lbl main"><span class="t-es">Apertura</span><span class="t-en">Opening Remarks</span></span><span class="prog-sub"><span class="t-es">Rector Jorge Cuervo · Roberto Salinas · Estefania · Jason (Stellar CMO)</span><span class="t-en">Rector Jorge Cuervo · Roberto Salinas · Estefania · Jason (Stellar CMO)</span></span></div><div class="prog-cell ws"><span class="prog-lbl ws"><span class="t-es">Prep Speakers</span><span class="t-en">Speaker Prep</span></span></div><div class="prog-cell st"><span class="prog-lbl st"><span class="t-es">Desayuno Builders</span><span class="t-en">Builders Breakfast</span></span></div><div class="prog-cell cm"><span class="prog-lbl cm">Media Setup</span></div></div>
+  <div class="prog-r"><div class="prog-time"><span>11:30</span></div><div class="prog-cell main"><span class="prog-lbl main">Keynote</span><span class="prog-sub"><span class="t-es">"El usuario real de stablecoins en LATAM" · 30 min</span><span class="t-en">"The real stablecoin user in LATAM" · 30 min</span></span></div><div class="prog-cell ws"><span class="prog-lbl ws"><span class="t-es">🔨 Workshop: Scaling</span><span class="t-en">🔨 Workshop: Scaling</span></span><span class="prog-sub"><span class="t-es">Escalar un protocolo en mercados emergentes · Max 30</span><span class="t-en">Scaling a protocol in emerging markets · Max 30</span></span></div><div class="prog-cell st"><span class="prog-lbl st"><span class="t-es">Mesa Founders</span><span class="t-en">Founder Roundtable</span></span><span class="prog-sub"><span class="t-es">"Tokenomics: Lo Que Founders No Ven" · Off-record</span><span class="t-en">"Tokenomics: What Founders Get Wrong" · Off-record</span></span></div><div class="prog-cell cm"><span class="prog-lbl cm"><span class="t-es">Entrevistas Video</span><span class="t-en">Video Interviews</span></span></div></div>
+  <div class="prog-r"><div class="prog-time"><span>12:05</span></div><div class="prog-cell full"><span class="prog-lbl break">Break</span><span class="prog-sub"><span class="t-es">Café · Conversación abierta · 15 min</span><span class="t-en">Coffee · Open conversation · 15 min</span></span></div></div>
+  <div class="prog-r"><div class="prog-time"><span>12:20</span></div><div class="prog-cell main"><span class="prog-lbl main"><span class="t-es">Lightning Talks</span><span class="t-en">Lightning Talks</span></span><span class="prog-sub"><span class="t-es">4–5 founders · 5 min c/u · Sin slides</span><span class="t-en">4–5 founders · 5 min each · No slides</span></span></div><div class="prog-cell ws"><span class="prog-lbl ws">🔨 Hackathon Sprint 1</span><span class="prog-sub"><span class="t-es">Investigación + Usuario · 4–5 equipos</span><span class="t-en">Research + User Insight · 4–5 teams</span></span></div><div class="prog-cell st"><span class="prog-lbl st"><span class="t-es">Builder's Playbook</span><span class="t-en">Builder's Playbook</span></span><span class="prog-sub"><span class="t-es">"GTM sin VC" · 3 founders bootstrapped</span><span class="t-en">"Go-to-Market Without VC" · 3 bootstrapped founders</span></span></div><div class="prog-cell cm"><span class="prog-lbl cm"><span class="t-es">Mesa Off-Record</span><span class="t-en">Off-Record Roundtable</span></span></div></div>
+  <div class="prog-r"><div class="prog-time"><span>13:00</span></div><div class="prog-cell full"><span class="prog-lbl break"><span class="t-es">Comida + Networking Estructurado</span><span class="t-en">Lunch + Structured Networking</span></span><span class="prog-sub"><span class="t-es">Mesas pre-asignadas · Intros facilitadas</span><span class="t-en">Pre-assigned tables · Facilitated intros</span></span></div></div>
+  <div class="prog-r"><div class="prog-time"><span>14:00</span></div><div class="prog-cell main"><span class="prog-lbl main"><span class="t-es">Panel 1 + The Arena Wall</span><span class="t-en">Panel 1 + The Arena Wall</span></span><span class="prog-sub"><span class="t-es">"Respuestas anónimas del cuarto" · Debate abierto</span><span class="t-en">"Anonymous answers from the room" · Open debate</span></span></div><div class="prog-cell ws"><span class="prog-lbl ws">🔨 Hackathon Sprint 2</span><span class="prog-sub"><span class="t-es">Propuesta + Campaña · 1 slide, 1 tweet, 1 email</span><span class="t-en">Proposal + Campaign · 1 slide, 1 tweet, 1 email</span></span></div><div class="prog-cell st"><span class="prog-lbl st"><span class="t-es">Networking Temático</span><span class="t-en">Themed Networking</span></span><span class="prog-sub"><span class="t-es">Capital Inst. / Builders / Ecosystem</span><span class="t-en">Institutional Capital / Builders / Ecosystem</span></span></div><div class="prog-cell cm"><span class="prog-lbl cm"><span class="t-es">Grabación Ganadores</span><span class="t-en">Winner Recording</span></span></div></div>
+  <div class="prog-r"><div class="prog-time"><span>14:45</span></div><div class="prog-cell full"><span class="prog-lbl break">Break · 15 min</span></div></div>
+  <div class="prog-r"><div class="prog-time"><span>15:00</span></div><div class="prog-cell main"><span class="prog-lbl main">🔨 <span class="t-es">Pitches Hackathon</span><span class="t-en">Hackathon Pitches</span></span><span class="prog-sub"><span class="t-es">5 equipos · 5 min + feedback · Sponsors en side stage</span><span class="t-en">5 teams · 5 min + feedback · Sponsors on side stage</span></span></div><div class="prog-cell ws"><span class="prog-lbl ws"><span class="t-es">1:1 Speed Networking</span><span class="t-en">1:1 Speed Networking</span></span><span class="prog-sub"><span class="t-es">Rondas de 5 min · Perfil pre-asignado</span><span class="t-en">5-min rounds · Pre-assigned profiles</span></span></div><div class="prog-cell st"><span class="prog-lbl st"><span class="t-es">Networking Abierto</span><span class="t-en">Open Networking</span></span></div><div class="prog-cell cm"><span class="prog-lbl cm">Clip Recording</span></div></div>
+  <div class="prog-r"><div class="prog-time"><span>15:45</span></div><div class="prog-cell full" style="background:#111"><span class="prog-lbl main"><span class="t-es">Cierre: Main Stage</span><span class="t-en">Closing: Main Stage</span></span><span class="prog-sub"><span class="t-es">Ganador Hackathon · Estefania palabras finales · Anuncio próxima ciudad</span><span class="t-en">Hackathon winner · Estefania closing remarks · Next city announcement</span></span></div></div>
+  <div class="prog-r" style="border-bottom:none"><div class="prog-time"><span>16:15</span></div><div class="prog-cell full-bl"><span class="prog-lbl close"><span class="t-es">Cóctel + Networking Libre</span><span class="t-en">Cocktail + Open Networking</span></span><span class="prog-sub dark"><span class="t-es">Bebidas · Rooftop · VIP dinners de sponsors · Hasta 18:00</span><span class="t-en">Light drinks · Rooftop · Sponsor VIP dinners · Until 18:00</span></span></div></div>
 </section>
 
-<!-- HACKATHON CALLOUT -->
-<section style="display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)">
-  <div style="background:var(--y);padding:46px 42px;border-right:var(--border);display:flex;flex-direction:column;gap:14px">
-    <span style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(0,0,0,.4)">Featured Format</span>
-    <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;line-height:.88;color:var(--bk)">Marketing<br>Hackathon</h3>
-    <p style="font-size:13.5px;line-height:1.75;color:rgba(0,0,0,.6);max-width:360px">Teams of 4–5 work through two sprints — user research, then campaign execution — and pitch live at the end. Judged by operators in the room. Winner announced on stage.</p>
+<!-- 9. VENUE -->
+<section id="venue" style="border-bottom:var(--border)">
+  <div class="sec-hdr">
+    <h2><span class="t-es">LA <em>SEDE</em></span><span class="t-en">THE <em>VENUE</em></span></h2>
+    <span class="lbl">Universidad de la Libertad · CDMX</span>
   </div>
-  <div style="background:var(--bk);padding:46px 42px;display:flex;flex-direction:column;gap:18px;justify-content:center">
-    <div style="display:flex;flex-direction:column;gap:4px">
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)">Sprint 1 · 12:20</span>
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;color:var(--wh)">Research + Insight</span>
-      <span style="font-size:12.5px;color:var(--gr)">Understanding your user — sketch a 1-page solution</span>
-    </div>
-    <div style="height:1px;background:#1e1e1e"></div>
-    <div style="display:flex;flex-direction:column;gap:4px">
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)">Sprint 2 · 14:00</span>
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;color:var(--wh)">Proposal + Campaign</span>
-      <span style="font-size:12.5px;color:var(--gr)">Draft the go-to-market — 1 slide, 1 tweet, 1 email</span>
-    </div>
-    <div style="height:1px;background:#1e1e1e"></div>
-    <div style="display:flex;flex-direction:column;gap:4px">
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)">Finals · 15:00</span>
-      <span style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;color:var(--y)">Pitch Live on Stage</span>
-      <span style="font-size:12.5px;color:var(--gr)">5 min pitch + 2 min feedback · Winner announced at closing</span>
-    </div>
-  </div>
-</section>
-
-<!-- CONFERENCE STRIP -->
-<section class="sec-conf">
-  <div class="conf-l">
-    <div class="pre">Context</div>
-    <h2>Right After<br>Stablecoin<br>Conference<br>LATAM</h2>
-    <p>Latin America's landmark stablecoin summit runs June 15–16. We come the day after — when the conversations are already warm and the right people are still in the city.</p>
-    <div class="conf-stats">
-      <div class="cs"><span class="cs-num">2,500</span><span class="cs-label">Attendees</span></div>
-      <div class="cs"><span class="cs-num">100+</span><span class="cs-label">Speakers</span></div>
-      <div class="cs"><span class="cs-num">50+</span><span class="cs-label">Countries</span></div>
-      <div class="cs"><span class="cs-num">800+</span><span class="cs-label">Companies</span></div>
-    </div>
-  </div>
-  <div class="conf-r">
-    <div>
-      <h3>June 15–16</h3>
-      <p>Stablecoin Conference LATAM — the main stage. Circle, Mastercard, Ripple, Fireblocks, Bitso, and 100+ speakers across two days.</p>
-      <a href="https://stablecoinconferencelatam.com" target="_blank" rel="noopener" class="conf-link">stablecoinconferencelatam.com ↗</a>
-    </div>
-    <div>
-      <h3>June 17th ← We're here</h3>
-      <p>Marketers in the Arena CDMX — the intimate follow-up. A curated room for operators and builders to get real feedback and do real work.</p>
-      <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button conf-link" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc" style="color:var(--y)">Register now →</a>
-    </div>
-  </div>
-</section>
-
-<!-- WHY MEXICO CITY -->
-<section class="sec-why">
-  <div class="sec-header">
-    <h2><span class="t-es">POR QUÉ <span style="color:var(--y)">CIUDAD DE MÉXICO</span></span><span class="t-en">WHY <span style="color:var(--y)">MEXICO CITY</span></span></h2>
-  </div>
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-num">01</div>
-      <div class="why-title">The <span>Builders</span><br>Are Already Here</div>
-      <p class="why-body">Mexico City has one of the most active crypto and fintech ecosystems in LATAM. <a href="https://www.etherfuse.com" target="_blank" rel="noopener">Etherfuse</a> is building the rails for the Mexican peso stablecoin (MXNe) and tokenized CETES bonds on Stellar — cutting cross-border payment costs from 7% to under 0.04%.</p>
-      <span class="why-tag">Etherfuse · MXNe · CETES Stablebonds on Stellar</span>
-    </div>
-    <div class="why-card">
-      <div class="why-num">02</div>
-      <div class="why-title">The <span>Remittance</span><br>Capital of the World</div>
-      <p class="why-body">Mexico received over $60 billion in remittances in 2024 — nearly 4% of GDP. For millions of families, cross-border money movement isn't a use case, it's survival. Stablecoins built on Stellar are cutting those costs in real-time. The marketers in this room are shaping how that story gets told.</p>
-      <span class="why-tag">#2 Global Remittance Recipient · $60B+ in 2024</span>
-    </div>
-    <div class="why-card">
-      <div class="why-num">03</div>
-      <div class="why-title">Co-organizado con <span>Catalaxia</span></div>
-      <p class="why-body"><span class="t-es">Co-organizado con <strong style="color:var(--wh)">Catalaxia</strong>, el Startup Accelerator Hub de la Universidad de la Libertad — una institución que cree que el ecosistema de innovación en México se construye desde adentro. Su hospitalidad hace posible este espacio.</span><span class="t-en">Co-hosted with <strong style="color:var(--wh)">Catalaxia</strong>, the Startup Accelerator Hub at Universidad de la Libertad — an institution that believes Mexico's innovation ecosystem is built from within. Their hospitality makes this space possible.</span></p>
-      <p class="why-body" style="font-size:12px;color:rgba(255,255,255,.3);font-style:italic">With support from Fundación Ricardo Salinas Pliego.</p>
-      <span class="why-tag">Catalaxia · Universidad de la Libertad · Fundación Ricardo Salinas Pliego</span>
-    </div>
-    <div class="why-card">
-      <div class="why-num">04</div>
-      <div class="why-title">We've <span>Done This</span><br>Before</div>
-      <p class="why-body">Miami was Edition 01. A curated room of 19 speakers, live roasts, and a sold-out day of programming. CDMX is Edition 02 — built on the same playbook, rooted in this market. The infrastructure is proven. The room is different.</p>
-      <span class="why-tag">Miami Edition · May 4th, 2026 · The Loft</span>
-    </div>
-  </div>
-</section>
-
-<!-- VENUE -->
-<section class="sec-venue" id="venue">
-  <div class="sec-header">
-    <h2>THE <span>VENUE</span></h2>
-    <span class="label">Universidad de la Libertad · Innovation Hub · CDMX</span>
-  </div>
-  <div class="venue-body">
+  <div class="venue-grid">
     <div class="venue-copy">
-      <h3>Universidad de<br>la <span>Libertad</span></h3>
-      <p>The Startup Accelerator Hub at Universidad de la Libertad — a purpose-built innovation environment designed for exactly this kind of day. Co-hosted with <strong style="color:var(--wh)">Catalaxia</strong>, whose hospitality makes this space possible in the city.</p>
-      <p style="font-size:12px;color:rgba(255,255,255,.3);line-height:1.6">Av. Constituyentes 1100, Lomas Altas<br>Miguel Hidalgo, 11950 Ciudad de México, CDMX</p>
-      <a href="https://maps.google.com/?q=Av.+Constituyentes+1100,+Lomas+Altas,+Miguel+Hidalgo,+11950+Ciudad+de+México,+CDMX" target="_blank" rel="noopener"
-         style="display:inline-flex;align-items:center;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none;margin-top:4px;gap:6px">
-        Open in Maps ↗
-      </a>
+      <h3><em>Universidad de<br>la Libertad</em></h3>
+      <p><span class="t-es">El Startup Accelerator Hub de la Universidad de la Libertad — un espacio de innovación diseñado exactamente para este tipo de día. Co-organizado con <strong style="color:var(--wh)">Catalaxia</strong>.</span><span class="t-en">The Startup Accelerator Hub at Universidad de la Libertad — an innovation space designed exactly for this kind of day. Co-hosted with <strong style="color:var(--wh)">Catalaxia</strong>.</span></p>
+      <p class="venue-addr">Av. Constituyentes 1100, Lomas Altas<br>Miguel Hidalgo, 11950 Ciudad de México, CDMX</p>
+      <div style="display:flex;gap:12px;margin-top:4px;flex-wrap:wrap">
+        <a href="https://maps.google.com/?q=Av.+Constituyentes+1100,+Lomas+Altas,+Miguel+Hidalgo,+11950+Ciudad+de+México,+CDMX" target="_blank" rel="noopener" style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none"><span class="t-es">Abrir en Maps ↗</span><span class="t-en">Open in Maps ↗</span></a>
+      </div>
     </div>
     <div class="venue-video">
-      <iframe src="https://www.youtube.com/embed/tptWaZvS6dQ?si=lBIYAkHAPRE1mrJj" title="Venue — Universidad de la Libertad" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/tptWaZvS6dQ?si=lBIYAkHAPRE1mrJj" title="Venue" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </section>
 
-<!-- TAGLINES -->
-<section class="sec-tags">
-  <div class="tc bk"><span class="tlb">Mexico City</span><blockquote><span class="t-es">Donde construir también significa crecer.</span><span class="t-en">Where building also means growing.</span></blockquote></div>
-  <div class="tc y"><span class="tlb">June 17th</span><blockquote><span class="t-es">El día después del main stage.</span><span class="t-en">The day after the main stage.</span></blockquote></div>
-  <div class="tc bl"><span class="tlb">Marketers in the Arena</span><blockquote><span class="t-es">Feedback real. Trabajo real.</span><span class="t-en">Real feedback. Real work.</span></blockquote></div>
-</section>
-
-<!-- REGISTER -->
-<section class="sec-register" id="register">
-  <div class="reg-l">
-    <h2><span class="t-es">ASEGURA<br>TU <span style="color:var(--y)">LUGAR</span></span><span class="t-en">SECURE<br>YOUR <span style="color:var(--y)">SPOT</span></span></h2>
-    <p><span class='t-es'>Lugares limitados. No es una conferencia — es un cuarto curado. Regístrate y confirmamos tu lugar.</span><span class='t-en'>Limited spots. This isn't a conference — it's a curated room. Register and we'll confirm your spot.</span></p>
-    <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
-      <div style="display:flex;gap:10px;align-items:center">
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)">→</span>
-        <span style="font-size:13px;color:var(--gr)">June 17th, 2026 · Mexico City</span>
-      </div>
-      <div style="display:flex;gap:10px;align-items:center">
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)">→</span>
-        <span style="font-size:13px;color:var(--gr)"><span class='t-es'>Hub de Innovación · Universidad de la Libertad</span><span class='t-en'>Innovation Hub · Universidad de la Libertad</span></span>
-      </div>
-      <div style="display:flex;gap:10px;align-items:center">
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)">→</span>
-        <span style="font-size:13px;color:var(--gr)"><span class='t-es'>Un día después de Stablecoin Conference LATAM</span><span class='t-en'>Day after Stablecoin Conference LATAM</span></span>
-      </div>
+<!-- 10. PARTNERS -->
+<section style="border-bottom:var(--border)">
+  <div class="sec-hdr">
+    <h2><span class="t-es">PARTNERS <em>&amp; APOYO</em></span><span class="t-en">PARTNERS <em>&amp; SUPPORT</em></span></h2>
+  </div>
+  <div class="partners-grid">
+    <div class="partner-card">
+      <span class="partner-type"><span class="t-es">Organizadores del evento</span><span class="t-en">Event hosts</span></span>
+      <span class="partner-name">Stellar × Myosin</span>
+      <p class="partner-desc"><span class="t-es">Stellar Development Foundation y Myosin co-organizan la serie Marketers in the Arena en múltiples ciudades.</span><span class="t-en">Stellar Development Foundation and Myosin co-host the Marketers in the Arena series across multiple cities.</span></p>
+    </div>
+    <div class="partner-card">
+      <span class="partner-type"><span class="t-es">Co-organización + Sede</span><span class="t-en">Co-host + Venue</span></span>
+      <span class="partner-name">Catalaxia</span>
+      <p class="partner-desc"><span class="t-es">El Startup Accelerator Hub de la Universidad de la Libertad. Co-organizado con la convicción de que el ecosistema de innovación en México se construye desde adentro.</span><span class="t-en">The Startup Accelerator Hub at Universidad de la Libertad. Co-hosted with the conviction that Mexico's innovation ecosystem is built from within.</span></p>
+    </div>
+    <div class="partner-card">
+      <span class="partner-type"><span class="t-es">Apoyo institucional</span><span class="t-en">Institutional support</span></span>
+      <span class="partner-name">Fdción. R. Salinas Pliego</span>
+      <p class="partner-desc"><span class="t-es">Fundación Ricardo Salinas Pliego — apoyo institucional que hace posible la escala y el alcance de este evento en la ciudad.</span><span class="t-en">Fundación Ricardo Salinas Pliego — institutional support enabling the scale and reach of this event in the city.</span></p>
     </div>
   </div>
-  <div class="reg-r">
-    <span class="rl"><span class="t-es">Asistir al evento</span><span class="t-en">Attend the event</span></span>
-    <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc"
-       class="luma-checkout--button"
-       data-luma-action="checkout"
-       data-luma-event-id="evt-QCtdTFSFmJA7EKc">
-      Register for Event →
-    </a>
-    <div style="height:1px;background:rgba(0,0,0,.15);margin:8px 0"></div>
-    <div class="reg-detail">
-      <span class="rd-label"><span class="t-es">Hablar en el evento</span><span class="t-en">Speak at the event</span></span>
-      <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener"
-         style="display:inline-flex;align-items:center;background:var(--y);color:var(--bk);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:12px 22px;border-radius:999px;text-decoration:none;width:fit-content;margin-top:4px">
-        Speaker Application →
+</section>
+
+<!-- 11. REGISTER -->
+<section id="register" style="border-bottom:var(--border)">
+  <div class="reg-grid">
+    <div class="reg-l">
+      <h2><span class="t-es">ASEGURA<br>TU <em>LUGAR</em></span><span class="t-en">SECURE<br>YOUR <em>SPOT</em></span></h2>
+      <p><span class="t-es">Lugares limitados. No es una conferencia — es un cuarto curado. Regístrate y confirmamos tu lugar.</span><span class="t-en">Limited spots. Not a conference — a curated room. Register and we'll confirm your spot.</span></p>
+      <div class="reg-checklist">
+        <div class="reg-check"><span class="reg-check-arrow">→</span><span><span class="t-es">17 de Junio, 2026 · Ciudad de México</span><span class="t-en">June 17th, 2026 · Mexico City</span></span></div>
+        <div class="reg-check"><span class="reg-check-arrow">→</span><span><span class="t-es">Hub de Innovación · Universidad de la Libertad</span><span class="t-en">Innovation Hub · Universidad de la Libertad</span></span></div>
+        <div class="reg-check"><span class="reg-check-arrow">→</span><span><span class="t-es">Un día después de Stablecoin Conference LATAM</span><span class="t-en">Day after Stablecoin Conference LATAM</span></span></div>
+        <div class="reg-check"><span class="reg-check-arrow">→</span><span><span class="t-es">Solo por aplicación · Gratuito</span><span class="t-en">Application-gated · Free to attend</span></span></div>
+      </div>
+    </div>
+    <div class="reg-r">
+      <span class="reg-r-label"><span class="t-es">Asistir al evento</span><span class="t-en">Attend the event</span></span>
+      <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc">
+        <span class="t-es">Registrarse →</span><span class="t-en">Register →</span>
       </a>
-    </div>
-    <div style="height:1px;background:rgba(0,0,0,.15);margin:8px 0"></div>
-    <div class="reg-detail">
-      <span class="rd-label">Partnerships & Sponsorships</span>
-      <span class="rd-val"><a href="mailto:stef@growwithguava.com" style="color:var(--bk);text-decoration:none;border-bottom:2px solid rgba(0,0,0,.2)">stef@growwithguava.com</a></span>
+      <div class="reg-divider"></div>
+      <div class="reg-detail">
+        <span class="rd-label"><span class="t-es">Hablar en el evento</span><span class="t-en">Speak at the event</span></span>
+        <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener" class="btn-y" style="background:var(--bk);color:var(--wh);border-radius:2px;margin-top:6px;font-size:11px">
+          <span class="t-es">Aplicar como Speaker →</span><span class="t-en">Speaker Application →</span>
+        </a>
+      </div>
+      <div class="reg-divider"></div>
+      <div class="reg-detail">
+        <span class="rd-label"><span class="t-es">Partnerships y Sponsors</span><span class="t-en">Partnerships &amp; Sponsors</span></span>
+        <span class="rd-val"><a href="mailto:stef@growwithguava.com" style="color:var(--bk);text-decoration:none">stef@growwithguava.com</a></span>
+      </div>
     </div>
   </div>
 </section>
 <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 
+<!-- 12. FAQ -->
+<section style="border-bottom:var(--border)">
+  <div class="sec-hdr">
+    <h2>FAQ</h2>
+    <span class="lbl"><span class="t-es">Preguntas frecuentes</span><span class="t-en">Frequently asked questions</span></span>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <span class="faq-q"><span class="t-es">¿Es gratuito?</span><span class="t-en">Is it free?</span></span>
+      <p class="faq-a"><span class="t-es">Sí. El evento es gratuito pero requiere aplicación. Los lugares son limitados y curados.</span><span class="t-en">Yes. The event is free but requires an application. Spots are limited and curated.</span></p>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q"><span class="t-es">¿Quién puede asistir?</span><span class="t-en">Who can attend?</span></span>
+      <p class="faq-a"><span class="t-es">Founders, marketers, builders y operadores en crypto, fintech y tecnología emergente. El evento está diseñado para personas que están haciendo el trabajo real.</span><span class="t-en">Founders, marketers, builders, and operators in crypto, fintech, and emerging technology. Designed for people doing the real work.</span></p>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q"><span class="t-es">¿Cómo llego?</span><span class="t-en">How do I get there?</span></span>
+      <p class="faq-a"><span class="t-es">Av. Constituyentes 1100, Lomas Altas, Miguel Hidalgo. Cerca de Periférico. Hay estacionamiento disponible en la universidad.</span><span class="t-en">Av. Constituyentes 1100, Lomas Altas, Miguel Hidalgo. Near Periférico. Parking available at the university.</span></p>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q"><span class="t-es">¿Habrá comida?</span><span class="t-en">Will there be food?</span></span>
+      <p class="faq-a"><span class="t-es">Sí. Desayuno de builders, comida y cóctel de cierre están incluidos en el evento.</span><span class="t-en">Yes. Builders breakfast, lunch, and closing cocktail are all included.</span></p>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q"><span class="t-es">¿Qué es el Marketing Hackathon?</span><span class="t-en">What is the Marketing Hackathon?</span></span>
+      <p class="faq-a"><span class="t-es">Equipos de 4–5 personas trabajan dos sprints para construir una estrategia de marketing completa y pitchean en vivo. Participación voluntaria — se forman equipos en el evento.</span><span class="t-en">Teams of 4–5 work through two sprints to build a full marketing strategy and pitch live. Participation is optional — teams form at the event.</span></p>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q"><span class="t-es">¿Habrá fotos y video?</span><span class="t-en">Will there be photos and video?</span></span>
+      <p class="faq-a"><span class="t-es">Sí. El evento contará con equipo de foto y video. Algunos momentos son off-record — se indicará claramente en el momento.</span><span class="t-en">Yes. The event will have photo and video coverage. Some moments are off-record — this will be clearly indicated at the time.</span></p>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q"><span class="t-es">¿Con quién me contacto?</span><span class="t-en">Who do I contact?</span></span>
+      <p class="faq-a"><span class="t-es">Para preguntas generales o partnerships: <a href="mailto:stef@growwithguava.com" style="color:var(--y)">stef@growwithguava.com</a></span><span class="t-en">For general questions or partnerships: <a href="mailto:stef@growwithguava.com" style="color:var(--y)">stef@growwithguava.com</a></span></p>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q"><span class="t-es">¿Puedo venir solo al hackathon?</span><span class="t-en">Can I join the hackathon solo?</span></span>
+      <p class="faq-a"><span class="t-es">Sí. Los equipos se forman al inicio del evento. Puedes venir solo y unirte a un equipo en el momento.</span><span class="t-en">Yes. Teams form at the start of the event. You can come solo and join a team on the day.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- TAGLINES -->
+<div class="taglines">
+  <div class="tl bk"><span class="tl-label">CDMX</span><blockquote><span class="t-es">Donde construir también significa crecer.</span><span class="t-en">Where building also means growing.</span></blockquote></div>
+  <div class="tl y"><span class="tl-label"><span class="t-es">17 de Junio</span><span class="t-en">June 17th</span></span><blockquote><span class="t-es">El día después del main stage.</span><span class="t-en">The day after the main stage.</span></blockquote></div>
+  <div class="tl bl"><span class="tl-label">Marketers in the Arena</span><blockquote><span class="t-es">Feedback real. Trabajo real.</span><span class="t-en">Real feedback. Real work.</span></blockquote></div>
+</div>
+
+<!-- 13. FINAL CTA -->
+<div class="final-cta">
+  <h2><span class="t-es">¿LISTO PARA<br>EL CUARTO?</span><span class="t-en">READY FOR<br>THE ROOM?</span></h2>
+  <p><span class="t-es">Lugares limitados. Registro abierto ahora. Ciudad de México, 17 de Junio de 2026.</span><span class="t-en">Limited spots. Registration open now. Mexico City, June 17, 2026.</span></p>
+  <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button btn-y" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc" style="background:var(--bk)!important;color:var(--wh)!important;font-size:14px!important;padding:16px 36px!important">
+    <span class="t-es">Registrarse →</span><span class="t-en">Register →</span>
+  </a>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-title">Marketers in the Arena</div>
   <div style="display:flex;align-items:center;gap:24px">
-    <a href="/miami" class="footer-link" style="color:rgba(255,255,255,.3)">Miami Edition ↗</a>
-    <a href="/" class="footer-link" style="color:rgba(255,255,255,.3)">← All Editions</a>
+    <a href="/miami" class="footer-link"><span class="t-es">Miami Edition ↗</span><span class="t-en">Miami Edition ↗</span></a>
+    <a href="/" class="footer-link"><span class="t-es">← Todas las ediciones</span><span class="t-en">← All Editions</span></a>
   </div>
-  <span style="font-size:9px;letter-spacing:.12em;color:rgba(255,255,255,.4);text-transform:uppercase;font-family:'Barlow Condensed',sans-serif">Produced by Grow With Guava</span>
+  <span style="font-size:9px;letter-spacing:.12em;color:rgba(255,255,255,.3);text-transform:uppercase;font-family:'Barlow Condensed',sans-serif">Produced by Grow With Guava</span>
 </footer>
 
+<!-- MOBILE STICKY CTA -->
+<div class="sticky-cta">
+  <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button btn-y" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc" style="font-size:11px!important;padding:12px 20px!important">
+    <span class="t-es">Registrarse →</span><span class="t-en">Register →</span>
+  </a>
+  <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener" class="btn-ghost" style="font-size:10px;padding:11px 16px">
+    <span class="t-es">Hablar →</span><span class="t-en">Speak →</span>
+  </a>
+</div>
 
 <script>
   function setLang(lang) {
@@ -666,10 +689,8 @@
     localStorage.setItem('cdmx-lang', lang);
   }
   document.addEventListener('DOMContentLoaded', function() {
-    var saved = localStorage.getItem('cdmx-lang') || 'es';
-    setLang(saved);
+    setLang(localStorage.getItem('cdmx-lang') || 'es');
   });
 </script>
-
 </body>
 </html>
