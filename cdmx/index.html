@@ -56,20 +56,31 @@
   .sec-hdr h2 em{font-style:normal;color:var(--y)}
   .sec-hdr .lbl{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3)}
 
-  /* HERO */
-  .hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--border)}
-  .hero-l{background:var(--y);padding:52px 42px;border-right:var(--border);display:flex;flex-direction:column;justify-content:space-between;min-height:420px}
-  .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(0,0,0,.4);margin-bottom:12px}
-  .hero-l h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,6.5vw,80px);font-weight:900;line-height:.86;text-transform:uppercase;color:var(--bk)}
-  .hero-meta{display:flex;gap:28px;margin-top:28px}
-  .hm{display:flex;flex-direction:column;gap:2px}
-  .hm-l{font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)}
-  .hm-v{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;color:var(--bk)}
-  .hero-r{display:flex;flex-direction:column}
-  .hero-copy{padding:40px 42px;flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px}
-  .hero-copy p{font-size:14px;line-height:1.8;color:var(--gr);max-width:420px}
-  .hero-copy p strong{color:var(--wh);font-weight:600}
-  .hero-cta{padding:28px 42px;border-top:var(--border);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  /* NEW HERO - Color Blocked Grid */
+  .hero{display:grid;grid-template-columns:1fr;border-bottom:var(--border);background:var(--bk)}
+  .hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .hero-grid-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-right:var(--border);border-bottom:var(--border);position:relative;overflow:hidden}
+  .hero-grid-cell:nth-child(3n){border-right:none}
+  .hero-grid-cell:nth-child(n+4){border-bottom:none}
+  .hero-grid-cell.yellow{background:var(--y)}
+  .hero-grid-cell.blue{background:var(--bl)}
+  .hero-grid-cell.black{background:var(--bk)}
+  .hero-grid-cell img{max-width:70%;max-height:70%;object-fit:contain}
+  .hero-grid-cell svg{width:60%;height:60%;stroke:currentColor;fill:none;stroke-width:2}
+  
+  .hero-main{grid-column:1/-1;padding:60px 42px;background:var(--bk);display:flex;flex-direction:column;gap:48px;align-items:center;text-align:center}
+  .hero-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(48px,8vw,84px);font-weight:900;text-transform:uppercase;line-height:.95;letter-spacing:-.02em;color:var(--wh)}
+  .hero-partners{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:var(--border)}
+  .partner-cell{padding:40px 28px;border-right:var(--border);display:flex;align-items:center;justify-content:center;background:var(--bk)}
+  .partner-cell:nth-child(3n){border-right:none}
+  .partner-cell img{max-width:80%;height:auto}
+  .partner-cell.yellow{background:var(--y)}
+  .partner-cell.blue{background:var(--bl)}
+  .partner-logo{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;color:var(--wh)}
+  .partner-cell.yellow .partner-logo{color:var(--bk)}
+  
+  /* OLD HERO HIDDEN */
+  .hero-l, .hero-r, .hero-copy, .hero-cta, .hero-meta{display:none}
 
   /* TRUST STRIP */
   .trust-strip{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:var(--border);background:var(--wh)}
@@ -327,31 +338,62 @@
 
 <!-- 1. HERO -->
 <section class="hero">
-  <div class="hero-l">
-    <div>
-      <div class="hero-eyebrow"><span class="t-es">Edición Ciudad de México · 17 de Junio, 2026</span><span class="t-en">Mexico City Edition · June 17th, 2026</span></div>
-      <h1>MARKETERS<br>IN THE<br>ARENA</h1>
+  <!-- 3x3 Color Grid with Icons -->
+  <div class="hero-grid">
+    <!-- Row 1 -->
+    <div class="hero-grid-cell blue">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"/><path d="M 30 50 Q 50 30, 70 50" stroke-linecap="round"/><path d="M 30 50 Q 50 70, 70 50" stroke-linecap="round"/></svg>
     </div>
-    <div class="hero-meta">
-      <div class="hm"><span class="hm-l"><span class="t-es">Fecha</span><span class="t-en">Date</span></span><span class="hm-v">Jun 17, 2026</span></div>
-      <div class="hm"><span class="hm-l"><span class="t-es">Ciudad</span><span class="t-en">City</span></span><span class="hm-v">CDMX, MX</span></div>
-      <div class="hm"><span class="hm-l"><span class="t-es">Formato</span><span class="t-en">Format</span></span><span class="hm-v"><span class="t-es">1 Día</span><span class="t-en">1-Day</span></span></div>
+    <div class="hero-grid-cell black">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:900;color:var(--wh);text-align:center">UNIVERSIDAD<br>DE LA LIBERTAD</div>
+    </div>
+    <div class="hero-grid-cell yellow">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--bk)">MYOSIN</div>
+    </div>
+    <!-- Row 2 -->
+    <div class="hero-grid-cell yellow">
+      <svg viewBox="0 0 100 100"><defs><pattern id="dots" x="15" y="15" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="7.5" cy="7.5" r="2" fill="var(--bk)"/></pattern></defs><rect x="20" y="20" width="60" height="60" fill="url(#dots)"/><path d="M 35 35 L 50 50 L 65 35 M 50 35 L 65 50 L 50 65 L 35 50 Z" fill="none"/></svg>
+    </div>
+    <div class="hero-grid-cell blue">
+      <svg viewBox="0 0 100 100"><path d="M 25 75 Q 25 35, 50 25 Q 75 35, 75 75" stroke-width="3" stroke-linecap="round"/></svg>
+    </div>
+    <div class="hero-grid-cell black">
+      <svg viewBox="0 0 100 100"><path d="M 30 85 L 35 45 L 50 25 L 65 45 L 70 85 M 45 85 L 45 60 M 55 85 L 55 60 M 50 60 L 50 40" stroke-width="2" stroke-linecap="round"/><circle cx="50" cy="15" r="8"/></svg>
     </div>
   </div>
-  <div class="hero-r">
-    <div class="hero-copy">
-      <p>
+  
+  <!-- Main Title -->
+  <div class="hero-main">
+    <h1 class="hero-title"><span class="t-es">Marketers<br>en la Arena</span><span class="t-en">Marketers<br>in the Arena</span></h1>
+    <div style="max-width:600px;display:flex;flex-direction:column;gap:24px">
+      <p style="font-size:16px;line-height:1.8;color:var(--gr)">
         <span class="t-es">Un encuentro íntimo para founders, marketers, builders de ecosistema y operadores de growth construyendo en la intersección de crypto, fintech y tecnología emergente.</span>
         <span class="t-en">An intimate gathering for founders, marketers, ecosystem builders, and growth operators building at the intersection of crypto, fintech, and emerging technology.</span>
       </p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button btn-y" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc">
+          <span class="t-es">Asistir al evento →</span><span class="t-en">Register to attend →</span>
+        </a>
+        <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener" class="btn-ghost">
+          <span class="t-es">Hablar en el evento →</span><span class="t-en">Apply to speak →</span>
+        </a>
+      </div>
     </div>
-    <div class="hero-cta">
-      <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button btn-y" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc">
-        <span class="t-es">Asistir al evento →</span><span class="t-en">Register to attend →</span>
-      </a>
-      <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener" class="btn-ghost">
-        <span class="t-es">Hablar en el evento →</span><span class="t-en">Apply to speak →</span>
-      </a>
+  </div>
+  
+  <!-- Partners Section -->
+  <div class="hero-partners">
+    <div class="partner-cell blue">
+      <div class="partner-logo">STELLAR</div>
+    </div>
+    <div class="partner-cell black">
+      <div style="text-align:center">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--y);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px"><span class="t-es">Organizado por</span><span class="t-en">Hosted by</span></div>
+        <div class="partner-logo" style="color:var(--y);font-size:14px">Stellar × Myosin</div>
+      </div>
+    </div>
+    <div class="partner-cell yellow">
+      <div class="partner-logo">MYOSIN</div>
     </div>
   </div>
 </section>
