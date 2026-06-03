@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Media kit for Marketers in the Arena — CDMX Edition. June 17, 2026. Curated gathering for founders, operators, and builders at the intersection of marketing, tech, and crypto." />
+  <meta property="og:title" content="Marketers in the Arena — CDMX Media Kit" />
+  <meta property="og:description" content="A curated room at the intersection of marketing, tech, and crypto. Mexico City · June 17, 2026." />
+  <meta property="og:url" content="https://marketersarena.com/cdmx/kit" />
+  <meta property="og:type" content="website" />
+  <title>Media Kit — MITA CDMX · Marketers in the Arena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a14;
+      --yellow: #F5C518;
+      --lavender: #A87EE8;
+      --cream: #F8F6F2;
+      --cream-mid: #EEE9E1;
+      --text-muted: #888;
+      --border: rgba(248,246,242,0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── TICKER ─── */
+    .ticker-wrap {
+      width: 100%;
+      overflow: hidden;
+      background: var(--yellow);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .ticker {
+      display: flex;
+      white-space: nowrap;
+      animation: ticker 28s linear infinite;
+    }
+    .ticker-item {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--black);
+      padding: 0 28px;
+    }
+    .ticker-item::after { content: '✦'; margin-left: 28px; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ─── NAV ─── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .nav-logo:hover { opacity: 1; }
+    .nav-logo strong { color: var(--yellow); }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-cta {
+      font-size: 11px !important;
+      letter-spacing: 0.1em !important;
+      color: var(--black) !important;
+      background: var(--yellow);
+      padding: 8px 18px;
+      border-radius: 2px;
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: #e6b800; color: var(--black) !important; }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 80px 48px 72px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: 'MEDIA KIT';
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      color: rgba(248,246,242,0.08);
+      font-weight: 600;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--yellow);
+    }
+    .hero-subtitle {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,0.4);
+      margin-bottom: 48px;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    .meta-item {}
+    .meta-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,0.35);
+      margin-bottom: 4px;
+    }
+    .meta-value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--cream);
+    }
+
+    /* ─── SECTION WRAPPER ─── */
+    section {
+      padding: 80px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--lavender);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 28px;
+    }
+    .section-title em { font-style: italic; color: var(--yellow); }
+    .section-body {
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(248,246,242,0.72);
+      max-width: 640px;
+    }
+    .section-body p + p { margin-top: 18px; }
+
+    .rule {
+      width: 36px;
+      height: 1px;
+      background: var(--yellow);
+      margin: 36px 0;
+    }
+
+    /* ─── STAT GRID ─── */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 48px;
+    }
+    .stat-cell {
+      background: var(--black);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-lbl {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,0.4);
+    }
+
+    /* ─── WHO GRID ─── */
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 48px;
+    }
+    .who-cell {
+      background: var(--black);
+      padding: 32px 28px;
+    }
+    .who-number {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--yellow);
+      margin-bottom: 16px;
+    }
+    .who-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: 10px;
+    }
+    .who-body {
+      font-size: 13px;
+      color: rgba(248,246,242,0.5);
+      line-height: 1.6;
+    }
+
+    /* ─── FORMAT ─── */
+    .format-list {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .format-item {
+      background: var(--black);
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      align-items: start;
+      transition: background 0.2s;
+    }
+    .format-item:hover { background: #0f0f1e; }
+    .format-name {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--cream);
+    }
+    .format-desc {
+      font-size: 14px;
+      color: rgba(248,246,242,0.55);
+      line-height: 1.65;
+    }
+
+    /* ─── THEMES ─── */
+    .themes-list {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .theme-row {
+      background: var(--black);
+      padding: 28px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      transition: background 0.2s;
+    }
+    .theme-row:hover { background: #0f0f1e; }
+    .theme-content {}
+    .theme-track {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,0.3);
+      margin-bottom: 8px;
+    }
+    .theme-name {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+    .theme-desc {
+      font-size: 13px;
+      color: rgba(248,246,242,0.5);
+      line-height: 1.6;
+      max-width: 520px;
+    }
+    .theme-tag {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid rgba(168,126,232,0.3);
+      color: var(--lavender);
+      padding: 4px 12px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    /* ─── INVOLVE ─── */
+    .involve-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 48px;
+    }
+    .involve-cell {
+      background: var(--black);
+      padding: 32px 28px;
+    }
+    .involve-role {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 20px;
+    }
+    .involve-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .involve-list li {
+      font-size: 13px;
+      color: rgba(248,246,242,0.6);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .involve-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: rgba(245,197,24,0.5);
+      font-size: 11px;
+    }
+
+    /* ─── ONE PAGER ─── */
+    .onepager {
+      border: 1px solid var(--border);
+      padding: 48px;
+      margin-top: 48px;
+      position: relative;
+    }
+    .onepager::before {
+      content: 'ONE-PAGE SUMMARY';
+      position: absolute;
+      top: -1px;
+      left: 40px;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      padding: 3px 12px;
+    }
+    .onepager-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .onepager-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .onepager-title em { font-style: italic; color: var(--yellow); }
+    .onepager-date {
+      font-size: 13px;
+      color: rgba(248,246,242,0.4);
+      margin-top: 8px;
+      letter-spacing: 0.06em;
+    }
+    .onepager-badge {
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      white-space: nowrap;
+    }
+    .onepager-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    @media (max-width: 680px) { .onepager-cols { grid-template-columns: 1fr; } }
+    .op-block { margin-bottom: 28px; }
+    .op-block h5 {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,0.35);
+      margin-bottom: 10px;
+    }
+    .op-block p {
+      font-size: 13px;
+      color: rgba(248,246,242,0.65);
+      line-height: 1.65;
+    }
+    .op-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .op-tag {
+      font-size: 11px;
+      border: 1px solid var(--border);
+      color: rgba(248,246,242,0.5);
+      padding: 3px 10px;
+    }
+    .onepager-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .onepager-footer span {
+      font-size: 12px;
+      color: rgba(248,246,242,0.3);
+      letter-spacing: 0.08em;
+    }
+    .onepager-footer a {
+      color: var(--yellow);
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    /* ─── BLURBS ─── */
+    .blurb {
+      border: 1px solid var(--border);
+      padding: 36px 36px 32px;
+      margin-top: 24px;
+      position: relative;
+    }
+    .blurb-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--lavender);
+      margin-bottom: 20px;
+    }
+    .blurb-text {
+      font-size: 14px;
+      color: rgba(248,246,242,0.65);
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: rgba(248,246,242,0.4);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: all 0.2s;
+    }
+    .copy-btn:hover { border-color: rgba(248,246,242,0.3); color: var(--cream); }
+    .copy-btn.copied { border-color: var(--lavender); color: var(--lavender); }
+
+    /* ─── CHECKLIST ─── */
+    .checklist-section { margin-top: 48px; }
+    .checklist-group { margin-bottom: 36px; }
+    .checklist-group-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,0.3);
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(248,246,242,0.05);
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .checklist-item:hover { opacity: 0.8; }
+    .checklist-item.done { opacity: 0.38; }
+    .check-box {
+      width: 16px;
+      height: 16px;
+      border: 1px solid rgba(248,246,242,0.2);
+      flex-shrink: 0;
+      margin-top: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: var(--lavender);
+      transition: all 0.2s;
+    }
+    .checklist-item.done .check-box {
+      background: var(--lavender);
+      border-color: var(--lavender);
+      color: #fff;
+    }
+    .check-text {
+      font-size: 14px;
+      color: rgba(248,246,242,0.7);
+    }
+    .check-text small {
+      display: block;
+      font-size: 12px;
+      color: rgba(248,246,242,0.3);
+      margin-top: 2px;
+    }
+
+    /* ─── CTA SECTION ─── */
+    .cta-section {
+      padding: 80px 48px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .cta-section .section-label { text-align: center; }
+    .cta-section .section-title { text-align: center; margin: 0 auto 20px; }
+    .cta-body {
+      font-size: 15px;
+      color: rgba(248,246,242,0.55);
+      max-width: 480px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+    .cta-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #e6b800; }
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: rgba(248,246,242,0.6);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: rgba(248,246,242,0.4); color: var(--cream); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 32px 48px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    footer span {
+      font-size: 11px;
+      color: rgba(248,246,242,0.25);
+      letter-spacing: 0.08em;
+    }
+    footer a {
+      font-size: 11px;
+      color: rgba(248,246,242,0.35);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+    }
+    footer a:hover { color: var(--cream); }
+
+    /* ─── NAV TABS ─── */
+    .tab-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .tab-nav::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,0.38);
+      padding: 14px 22px;
+      cursor: pointer;
+      white-space: nowrap;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      font-family: 'DM Sans', sans-serif;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .tab-btn:hover { color: rgba(248,246,242,0.7); }
+    .tab-btn.active { color: var(--yellow); border-bottom-color: var(--yellow); }
+
+    .tab-section { display: none; }
+    .tab-section.active { display: block; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 48px 24px 40px; }
+      section { padding: 56px 24px; }
+      .format-item { grid-template-columns: 1fr; gap: 12px; }
+      .onepager { padding: 32px 24px; }
+      footer { padding: 24px; }
+      .cta-section { padding: 60px 24px; }
+      .tab-btn { padding: 14px 16px; font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker">
+    <span class="ticker-item">Media Kit 2026</span>
+    <span class="ticker-item">CDMX · June 17</span>
+    <span class="ticker-item">Marketers in the Arena</span>
+    <span class="ticker-item">Application-Gated</span>
+    <span class="ticker-item">100 Attendees</span>
+    <span class="ticker-item">Founders First</span>
+    <span class="ticker-item">Media Kit 2026</span>
+    <span class="ticker-item">CDMX · June 17</span>
+    <span class="ticker-item">Marketers in the Arena</span>
+    <span class="ticker-item">Application-Gated</span>
+    <span class="ticker-item">100 Attendees</span>
+    <span class="ticker-item">Founders First</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="https://marketersarena.com/" class="nav-logo">
+    Marketers in the Arena / <strong>CDMX</strong> / Kit
+  </a>
+  <div class="nav-links">
+    <a href="https://marketersarena.com/cdmx#why">Event Page</a>
+    <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" target="_blank" rel="noopener" class="nav-cta">Register →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Media Kit · CDMX Edition · 2026</div>
+  <h1>Marketers <em>in the</em><br>Arena</h1>
+  <div class="hero-subtitle">Ciudad de México · Media Kit</div>
+  <div class="hero-meta">
+    <div class="meta-item">
+      <div class="meta-label">Date</div>
+      <div class="meta-value">June 17, 2026</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">City</div>
+      <div class="meta-value">Mexico City, MX</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Venue</div>
+      <div class="meta-value">Universidad La Libertad</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Capacity</div>
+      <div class="meta-value">~100 Attendees</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Format</div>
+      <div class="meta-value">Application-Gated</div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB NAV -->
+<div class="tab-nav" role="tablist" aria-label="Media kit sections">
+  <button class="tab-btn active" onclick="showTab('overview', this)" role="tab">Overview</button>
+  <button class="tab-btn" onclick="showTab('audience', this)" role="tab">Audience</button>
+  <button class="tab-btn" onclick="showTab('experience', this)" role="tab">Experience</button>
+  <button class="tab-btn" onclick="showTab('themes', this)" role="tab">Themes</button>
+  <button class="tab-btn" onclick="showTab('involve', this)" role="tab">Get Involved</button>
+  <button class="tab-btn" onclick="showTab('onepager', this)" role="tab">One-Pager</button>
+  <button class="tab-btn" onclick="showTab('blurbs', this)" role="tab">Outreach Copy</button>
+  <button class="tab-btn" onclick="showTab('checklist', this)" role="tab">Asset Checklist</button>
+</div>
+
+<!-- OVERVIEW -->
+<section id="tab-overview" class="tab-section active" role="tabpanel">
+  <div class="section-label">Event Overview</div>
+  <div class="section-title">Where marketing<br>meets <em>what's next.</em></div>
+  <div class="section-body">
+    <p>Marketers in the Arena is a curated, application-gated gathering for the builders, strategists, and operators shaping the next chapter of marketing — across tech, crypto, and the creator economy.</p>
+    <p>This isn't a conference. There are no booths, no panel marathons, no name-drop keynotes. MITA is a room designed for signal over noise — lightning talks without slides, live anonymous Q&A, and the kind of conversations that only happen when the right people are in the same space.</p>
+    <p>The CDMX edition lands June 17, 2026 at Universidad La Libertad — 100 carefully selected founders, operators, and ecosystem builders who are building in, for, and alongside Latin America.</p>
+  </div>
+  <div class="rule"></div>
+  <div class="section-label">Why This Event Matters</div>
+  <div class="section-body">
+    <p>Latin America is one of the fastest-growing markets for Web3 adoption, stablecoin usage, and DeFi. Mexico City sits at the center of that moment — a city with one of the most active startup and crypto communities in the region, underserved by events that actually go deep.</p>
+    <p>MITA CDMX is the missing room. Not a side event. Not a satellite. A first-class gathering for the people doing the serious work — and a cultural moment built around the founders, not the sponsors.</p>
+  </div>
+  <div class="stat-grid" aria-label="Key event statistics">
+    <div class="stat-cell">
+      <div class="stat-num">100</div>
+      <div class="stat-lbl">Curated attendees</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">1</div>
+      <div class="stat-lbl">Focused day</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">5+</div>
+      <div class="stat-lbl">Speaker voices</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">4</div>
+      <div class="stat-lbl">Cities in 2026</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">2</div>
+      <div class="stat-lbl">Languages</div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section id="tab-audience" class="tab-section" role="tabpanel">
+  <div class="section-label">Who It's For</div>
+  <div class="section-title">Built for<br><em>builders first.</em></div>
+  <div class="section-body">
+    <p>MITA is designed for people who are actively building — not watching from the sidelines. Attendance is application-based, which means the room is composed rather than collected. Every seat is earned.</p>
+  </div>
+  <div class="who-grid" aria-label="Audience segments">
+    <div class="who-cell">
+      <div class="who-number">01</div>
+      <div class="who-title">Founders & Operators</div>
+      <div class="who-body">Early-to-growth stage founders in Web3, fintech, SaaS, and the creator economy. GTM leads and growth operators running marketing for high-growth startups.</div>
+    </div>
+    <div class="who-cell">
+      <div class="who-number">02</div>
+      <div class="who-title">Builders & Developers</div>
+      <div class="who-body">Protocol builders, product leads, and developers exploring the intersection of tech, distribution, and community growth in emerging markets.</div>
+    </div>
+    <div class="who-cell">
+      <div class="who-number">03</div>
+      <div class="who-title">Ecosystem Partners</div>
+      <div class="who-body">Layer 1s, Layer 2s, protocol teams, and ecosystem funds looking to go deeper in LATAM — beyond logos and beyond booths.</div>
+    </div>
+    <div class="who-cell">
+      <div class="who-number">04</div>
+      <div class="who-title">Investors & BD</div>
+      <div class="who-body">Early-stage investors and business development leads seeking deal flow, co-investment signals, and ecosystem intelligence from the ground.</div>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="section-label">Target Room Composition</div>
+  <div class="section-body">
+    <p>We design the room intentionally. Target mix for CDMX: 50%+ founders and operators, 20% developers and protocol builders, 15% investors and BD, 15% marketing and content ecosystem. Every application is reviewed for this balance.</p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="tab-experience" class="tab-section" role="tabpanel">
+  <div class="section-label">The Event Experience</div>
+  <div class="section-title">Culture,<br>not <em>conference.</em></div>
+  <div class="section-body">
+    <p>MITA runs on a simple editorial philosophy: every element of the event is designed to remove friction between people and real conversation. No panels reading bullet points. No booths. No small talk for small talk's sake.</p>
+  </div>
+  <div class="format-list" aria-label="Event format elements">
+    <div class="format-item">
+      <div class="format-name">Lightning Talks,<br>No Slides</div>
+      <div class="format-desc">8–12 minute practitioner talks — unfiltered, direct, slide-free. No decks means no hiding behind polished narratives. Just what you actually know. Talks are documented and released as YouTube episodes after the event.</div>
+    </div>
+    <div class="format-item">
+      <div class="format-name">The Arena Wall</div>
+      <div class="format-desc">Live anonymous Q&A projected in real time. The most honest questions in the room, asked without social risk. Speakers answer in the moment. The tension is the point.</div>
+    </div>
+    <div class="format-item">
+      <div class="format-name">Marketing Hackathon</div>
+      <div class="format-desc">Teams of 1–4 work two live sprints — research then campaign — and pitch on stage. $3,000 in prizes. Optional but electric. Teams form on the day.</div>
+    </div>
+    <div class="format-item">
+      <div class="format-name">Sponsor 1:1s,<br>Not Booths</div>
+      <div class="format-desc">Partners get curated, scheduled 1:1 time with attendees — not a table to stand behind. More valuable, more honest, and more likely to actually result in something.</div>
+    </div>
+    <div class="format-item">
+      <div class="format-name">Post-Event<br>Working Groups</div>
+      <div class="format-desc">Select attendees are invited into follow-up sessions around specific themes — turning a one-day event into an ongoing collaboration node for the ecosystem.</div>
+    </div>
+    <div class="format-item">
+      <div class="format-name">Bilingual by Design</div>
+      <div class="format-desc">English and Spanish throughout — programming, registration, communications, and signage. Designed for a Latin American audience, not adapted for one after the fact.</div>
+    </div>
+  </div>
+</section>
+
+<!-- THEMES -->
+<section id="tab-themes" class="tab-section" role="tabpanel">
+  <div class="section-label">Programming Themes</div>
+  <div class="section-title">The conversations<br><em>worth having.</em></div>
+  <div class="section-body">
+    <p>MITA CDMX is organized around five programming tracks, each designed to produce useful signal — not inspiration theater. Speakers are practitioners, not pundits. Talks are specific, not abstract.</p>
+  </div>
+  <div class="themes-list" aria-label="Programming tracks">
+    <div class="theme-row">
+      <div class="theme-content">
+        <div class="theme-track">Track 01</div>
+        <div class="theme-name">Growth Without Guardrails</div>
+        <div class="theme-desc">How do you market something the mainstream doesn't understand yet? Distribution strategy, community flywheels, and narrative frameworks for Web3 and emerging tech in LATAM.</div>
+      </div>
+      <div class="theme-tag">GTM</div>
+    </div>
+    <div class="theme-row">
+      <div class="theme-content">
+        <div class="theme-track">Track 02</div>
+        <div class="theme-name">The LATAM Advantage</div>
+        <div class="theme-desc">What does it mean to build for this market — not just in it? Localization, remittances, stablecoin adoption, and the cultural nuances that global playbooks consistently miss.</div>
+      </div>
+      <div class="theme-tag">Regional</div>
+    </div>
+    <div class="theme-row">
+      <div class="theme-content">
+        <div class="theme-track">Track 03</div>
+        <div class="theme-name">On-Chain Economics for Operators</div>
+        <div class="theme-desc">DeFi mechanics translated for marketing and product leaders: token incentives, liquidity, RWA integration, and the GTM implications of on-chain growth metrics.</div>
+      </div>
+      <div class="theme-tag">Web3</div>
+    </div>
+    <div class="theme-row">
+      <div class="theme-content">
+        <div class="theme-track">Track 04</div>
+        <div class="theme-name">Brand in the Age of Protocol</div>
+        <div class="theme-desc">When your product is a protocol, your community is your brand team, and your narrative is open source — how do you build identity that actually compounds over time?</div>
+      </div>
+      <div class="theme-tag">Brand</div>
+    </div>
+    <div class="theme-row">
+      <div class="theme-content">
+        <div class="theme-track">Track 05</div>
+        <div class="theme-name">The Founder's Marketing Playbook</div>
+        <div class="theme-desc">Tactical, honest, practitioner-led. What actually worked, what failed publicly, and the frameworks that survive first contact with a skeptical market.</div>
+      </div>
+      <div class="theme-tag">Practitioner</div>
+    </div>
+  </div>
+</section>
+
+<!-- GET INVOLVED -->
+<section id="tab-involve" class="tab-section" role="tabpanel">
+  <div class="section-label">Get Involved</div>
+  <div class="section-title">There's a seat<br><em>for you.</em></div>
+  <div class="section-body">
+    <p>MITA is built on collaboration. Whether you're a practitioner with a story to tell, a brand aligned with this community, or an organization that believes in this ecosystem — we'd love to bring you in.</p>
+  </div>
+  <div class="involve-grid" aria-label="Ways to get involved">
+    <div class="involve-cell">
+      <div class="involve-role">Speak</div>
+      <ul class="involve-list">
+        <li>Lightning talk (8–12 min, no slides)</li>
+        <li>Panel or moderated conversation</li>
+        <li>Workshop or working session</li>
+        <li>Marketing Roast format</li>
+        <li>Featured in YouTube content post-event</li>
+      </ul>
+    </div>
+    <div class="involve-cell">
+      <div class="involve-role">Partner</div>
+      <ul class="involve-list">
+        <li>Curated 1:1 time with attendees</li>
+        <li>Brand integration across touchpoints</li>
+        <li>Co-branded content production</li>
+        <li>Post-event working group access</li>
+        <li>Featured in MITA media distribution</li>
+      </ul>
+    </div>
+    <div class="involve-cell">
+      <div class="involve-role">Moderate</div>
+      <ul class="involve-list">
+        <li>Host a track or session block</li>
+        <li>Moderate Arena Wall Q&A</li>
+        <li>Co-facilitate working group</li>
+        <li>On-site MC or segment host</li>
+        <li>Part of MITA talent roster</li>
+      </ul>
+    </div>
+    <div class="involve-cell">
+      <div class="involve-role">Collaborate</div>
+      <ul class="involve-list">
+        <li>Media and press access</li>
+        <li>Community partner cross-promotion</li>
+        <li>Scholarship nominations</li>
+        <li>Talent and speaker referrals</li>
+        <li>City co-host for future editions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ONE-PAGER -->
+<section id="tab-onepager" class="tab-section" role="tabpanel">
+  <div class="section-label">Shareable Summary</div>
+  <div class="section-title">The whole picture,<br><em>one page.</em></div>
+  <div class="section-body">
+    <p>Use this when sharing the event overview with potential speakers, partners, or collaborators who need the full picture in under two minutes. Print-ready in structure.</p>
+  </div>
+  <div class="onepager">
+    <div class="onepager-header">
+      <div>
+        <div class="onepager-title">Marketers <em>in the</em> Arena</div>
+        <div class="onepager-date">CDMX Edition · June 17, 2026 · Universidad La Libertad</div>
+      </div>
+      <div class="onepager-badge">Media Kit 2026</div>
+    </div>
+    <div class="onepager-cols">
+      <div>
+        <div class="op-block">
+          <h5>What It Is</h5>
+          <p>A curated, application-gated gathering at the intersection of marketing, tech, and crypto — designed for founders and operators building in Latin America. 100 attendees. One day. Zero booths.</p>
+        </div>
+        <div class="op-block">
+          <h5>Why CDMX, Why Now</h5>
+          <p>Mexico City is one of the most active startup and Web3 hubs in LATAM — and one of the most underserved by events that actually go deep. MITA fills that gap with a room built around founders, not logos.</p>
+        </div>
+        <div class="op-block">
+          <h5>Programming Format</h5>
+          <p>Lightning talks without slides. The Arena Wall (live anonymous Q&A). Marketing Hackathon ($3K prizes). Sponsor 1:1s over booths. Post-event working groups. Bilingual throughout.</p>
+        </div>
+        <div class="op-block">
+          <h5>Who Attends</h5>
+          <div class="op-tags">
+            <span class="op-tag">Founders</span>
+            <span class="op-tag">Web3 operators</span>
+            <span class="op-tag">Developers</span>
+            <span class="op-tag">Investors</span>
+            <span class="op-tag">BD leads</span>
+            <span class="op-tag">Protocol teams</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="op-block">
+          <h5>Programming Tracks</h5>
+          <div class="op-tags">
+            <span class="op-tag">Growth Without Guardrails</span>
+            <span class="op-tag">The LATAM Advantage</span>
+            <span class="op-tag">On-Chain Economics</span>
+            <span class="op-tag">Brand in the Age of Protocol</span>
+            <span class="op-tag">Founder Marketing Playbook</span>
+          </div>
+        </div>
+        <div class="op-block" style="margin-top:20px;">
+          <h5>Ways to Get Involved</h5>
+          <p>Speak · Partner · Moderate · Media · Community collaboration. All roles are curated. No generic sponsorship tiers.</p>
+        </div>
+        <div class="op-block" style="margin-top:20px;">
+          <h5>The Bigger Picture</h5>
+          <p>Part of a multi-city 2026 series: CDMX (June) → Rio (August) → Singapore (October) → Lisbon (October). Each edition is distinct. The community is cumulative.</p>
+        </div>
+        <div class="op-block" style="margin-top:20px;">
+          <h5>Organizers</h5>
+          <p>Produced by Guava Growth Terminal. Co-hosted with Myosin × Stellar Foundation, Catalaxia, and Universidad La Libertad. Built for the ecosystem.</p>
+        </div>
+      </div>
+    </div>
+    <div class="onepager-footer">
+      <div>
+        <a href="mailto:stef@growwithguava.com">stef@growwithguava.com</a>
+        <span style="margin: 0 8px;">·</span>
+        <a href="https://marketersarena.com">marketersarena.com</a>
+        <span style="margin: 0 8px;">·</span>
+        <a href="https://x.com/MarketersArena" target="_blank" rel="noopener">@MarketersArena</a>
+      </div>
+      <span>Guava Growth Terminal · 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- BLURBS -->
+<section id="tab-blurbs" class="tab-section" role="tabpanel">
+  <div class="section-label">Outreach Copy</div>
+  <div class="section-title">Ready-to-send<br><em>language.</em></div>
+  <div class="section-body">
+    <p>Copy-ready blurbs for speaker invitations, partner outreach, and social posts. Adjust names and specifics before sending.</p>
+  </div>
+
+  <div class="blurb">
+    <button class="copy-btn" onclick="copyText(this, 'blurb-speaker')" aria-label="Copy speaker invitation">Copy</button>
+    <div class="blurb-label">Speaker Invitation</div>
+    <div id="blurb-speaker" class="blurb-text">Hey [Name] — I'm putting together the speaker lineup for Marketers in the Arena, CDMX edition (June 17, Universidad La Libertad, Mexico City) and your name came up immediately.
+
+MITA is a curated, apply-to-attend gathering at the intersection of marketing, tech, and crypto — built for the founders and operators doing the serious work in Latin America. We keep it to ~100 people, which means the room is as valuable as the stage.
+
+The format is lightning talks, no slides — 8–12 minutes of what you actually know. We follow with a live anonymous Q&A (The Arena Wall), and talks are documented and released as YouTube episodes after the event.
+
+Based on [specific reason — their work, expertise, community], I think you'd bring exactly the kind of signal this room needs. No pitch decks required. Just your real perspective.
+
+Would love to get you on the program. Can we find 20 minutes to connect this week?</div>
+  </div>
+
+  <div class="blurb">
+    <button class="copy-btn" onclick="copyText(this, 'blurb-partner')" aria-label="Copy partner blurb">Copy</button>
+    <div class="blurb-label">Partner / Ecosystem Sharing</div>
+    <div id="blurb-partner" class="blurb-text">Marketers in the Arena is coming to Mexico City — June 17, 2026 at Universidad La Libertad.
+
+MITA is an application-gated event for founders, operators, and ecosystem builders at the intersection of marketing, tech, and crypto. 100 attendees. No booths. No generic panels. Just high-signal conversations and a room composed around founder density.
+
+We're building the CDMX program now and looking for partners who are genuinely embedded in the LATAM ecosystem — not brands looking for logo placement, but organizations who believe in this community and want to build something real with it.
+
+If your team is active in LATAM Web3 or tech and you'd like to be part of this edition — as a partner, collaborator, or ecosystem supporter — I'd love to explore what that looks like.
+
+Full media kit: marketersarena.com/cdmx/kit | @MarketersArena</div>
+  </div>
+
+  <div class="blurb">
+    <button class="copy-btn" onclick="copyText(this, 'blurb-social')" aria-label="Copy social post">Copy</button>
+    <div class="blurb-label">Social / Community Post</div>
+    <div id="blurb-social" class="blurb-text">Marketers in the Arena is coming to CDMX. June 17, 2026. 100 seats. Apply to attend.
+
+No booths. No slides. No panel theater. Just founders, operators, and builders in a room designed for real conversation — at the intersection of marketing, tech, and crypto in Latin America.
+
+We're curating the speaker lineup and accepting applications now. If this sounds like your room — or you know someone it should be — link in bio.
+
+#MarketersArena #CDMX #Web3LATAM #Web3Marketing</div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section id="tab-checklist" class="tab-section" role="tabpanel">
+  <div class="section-label">Pre-Design Checklist</div>
+  <div class="section-title">Assets to gather<br><em>before designing.</em></div>
+  <div class="section-body">
+    <p>Check off assets as you gather them. Click each item to mark complete. Everything here is needed before the final media kit design can go to production.</p>
+  </div>
+  <div class="checklist-section">
+
+    <div class="checklist-group">
+      <div class="checklist-group-label">Branding & Visual Identity</div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">MITA logo — SVG or high-res PNG, dark and light versions
+          <small>Required for all collateral and cover pages</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Brand color codes confirmed for print
+          <small>#0a0a14, #F5C518, #A87EE8, #F8F6F2 — confirm CMYK if printing</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Partner logos — Myosin, Stellar, Catalaxia, Fdción. R. Salinas Pliego
+          <small>SVG or transparent PNG, light and dark variants</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-group">
+      <div class="checklist-group-label">Event Details</div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Confirmed venue name and full address
+          <small>Av. Constituyentes 1100, Lomas Altas, Miguel Hidalgo — verify for print</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Doors open and program start times confirmed
+          <small>Needed for all invites and printed collateral</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Registration / application link live and working
+          <small>marketersarena.com/cdmx + Luma link — both should resolve</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-group">
+      <div class="checklist-group-label">Speakers & Program</div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">At least 3 confirmed speaker names and titles
+          <small>For media kit credibility — without names, kit feels incomplete to partners</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Speaker headshots — high-res, square crop, consistent style
+          <small>300dpi minimum for print; consistent framing preferred</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">MC confirmed + bio and headshot
+          <small>Featured in program and social announcements</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Agenda finalized or at minimum rough timing blocks
+          <small>Even draft schedule helps design the program section</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-group">
+      <div class="checklist-group-label">Media & Photography</div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Miami edition photos cleared for use in CDMX materials
+          <small>Social proof visuals — check usage rights for media kit distribution</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Venue walkthrough photos or venue press imagery
+          <small>For the Experience section and spatial context</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Hero image or key visual direction finalized
+          <small>Sets design direction for all collateral — should be decided before production</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-group">
+      <div class="checklist-group-label">Copy & Communications</div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Final tagline confirmed in English and Spanish
+          <small>"Where marketing meets what's next" / equivalent — lock before design</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Bilingual copy finalized for key sections
+          <small>Overview, CTA, and social blurbs at minimum</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">Primary contact email confirmed and monitored
+          <small>stef@growwithguava.com or event-specific — must be live during outreach</small>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+        <div class="check-box"></div>
+        <div class="check-text">X/Twitter handle and event hashtags finalized
+          <small>#MarketersArena #CDMX — consistent across all materials</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="section-label">Ready for the Room?</div>
+  <div class="section-title">Let's build<br><em>something real.</em></div>
+  <div class="cta-body">We're curating the CDMX speaker lineup and partner roster now. If this sounds like your room — or you know someone it should — reach out directly.</div>
+  <div class="cta-links">
+    <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" target="_blank" rel="noopener" class="btn-primary">Register to Attend →</a>
+    <a href="https://forms.gle/2SvRrq8XLUCkyxk18" target="_blank" rel="noopener" class="btn-outline">Apply to Speak →</a>
+    <a href="mailto:stef@growwithguava.com" class="btn-outline">Partner with Us →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Marketers in the Arena · Produced by Grow With Guava</span>
+  <div style="display:flex;gap:24px;">
+    <a href="https://marketersarena.com/">All Editions</a>
+    <a href="https://marketersarena.com/cdmx">CDMX Event Page</a>
+    <a href="https://marketersarena.com/miami">Miami Edition</a>
+  </div>
+</footer>
+
+<script>
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo({ top: document.querySelector('.tab-nav').offsetTop - 2, behavior: 'smooth' });
+  }
+
+  function toggleItem(el) {
+    el.classList.toggle('done');
+    el.setAttribute('aria-checked', el.classList.contains('done'));
+    el.querySelector('.check-box').textContent = el.classList.contains('done') ? '✓' : '';
+  }
+
+  function copyText(btn, id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2500);
+    });
+  }
+
+  // Keyboard support for checklist
+  document.querySelectorAll('.checklist-item').forEach(item => {
+    item.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleItem(item); }
+    });
+  });
+</script>
+
+</body>
+</html>
