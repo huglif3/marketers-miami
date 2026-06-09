@@ -116,6 +116,10 @@
   /* FOR WHO */
   .for-grid{display:grid;grid-template-columns:1fr 1fr}
   .for-l{padding:40px 42px;border-right:var(--border);display:flex;flex-direction:column;gap:14px}
+  .for-title-wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:8px}
+  .for-title-wrap h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(38px,5vw,62px);font-weight:900;text-transform:uppercase;line-height:.88;color:var(--wh)}
+  .for-title-wrap h2 em{font-style:normal;color:var(--y)}
+  .for-title-wrap .lbl{font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.35)}
   .for-l p{font-size:14px;line-height:1.75;color:var(--gr);max-width:420px}
   .for-l p strong{color:var(--wh)}
   .for-checker{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;max-width:420px;margin-top:8px;border:var(--border);background:#161616}
@@ -163,35 +167,58 @@
   .hack-sprint-body{font-size:12px;color:var(--gr)}
 
   /* PROGRAM */
-  .prog-r{display:grid;grid-template-columns:110px 1fr 1fr;border-bottom:1px solid #1a1a1a}
-  .prog-r:last-child{border-bottom:none}
-  .prog-time{padding:16px 14px;border-right:var(--border);display:flex;align-items:flex-start;padding-top:18px}
-  .prog-time span{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;color:#FFFFFF}
-  .prog-cell{padding:14px 18px;border-right:var(--border);display:flex;flex-direction:column;gap:4px;min-height:56px}
-  .prog-cell:last-child{border-right:none}
-  .prog-cell.main{background:#111}
-  .prog-cell.ws{background:#1a1a0a}
-  .prog-cell.st{background:#0d0d1a}
-  .prog-cell.cm{background:#0d0f0d}
-  .prog-cell.full{background:#0a0a0a;grid-column:2/-1;border-right:none}
-  .prog-cell.full-bl{background:var(--bl);grid-column:2/-1;border-right:none}
-  .prog-lbl{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-  .prog-lbl.main{color:rgba(255,255,255,.85)}
-  .prog-lbl.ws{color:var(--y)}
-  .prog-lbl.st{color:var(--bl)}
-  .prog-lbl.cm{color:var(--gr)}
-  .prog-lbl.break{color:rgba(255,255,255,.35)}
-  .prog-lbl.close{color:var(--bk)}
-  .prog-sub{font-size:11px;line-height:1.4;color:rgba(255,255,255,.28)}
-  .prog-sub.dark{color:rgba(0,0,0,.45)}
+  .agenda-shell{border-top:var(--border)}
+  .agenda-desktop{display:block;overflow-x:auto}
+  .agenda-table{width:100%;border-collapse:collapse;table-layout:fixed;background:#f3f0e7}
+  .agenda-table th,.agenda-table td{border:2px solid #b7bec8;vertical-align:top}
+  .agenda-table th{padding:16px 10px;background:#163f70;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;line-height:1;text-transform:uppercase;text-align:center}
+  .agenda-time{width:112px;padding:16px 10px;background:#163f70;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:1.02;text-align:center}
+  .agenda-time.small{font-size:18px}
+  .agenda-cell{padding:14px 14px 16px;background:#fbf8f0}
+  .agenda-cell.network{background:#6e98de}
+  .agenda-cell.stage{background:#efe5a5}
+  .agenda-cell.workshop{background:#dcefdc}
+  .agenda-cell.lunch{background:#eadcf8}
+  .agenda-cell.media,.agenda-cell.vip{background:#d9d9d9}
+  .agenda-cell.logistics{background:#efefef}
+  .agenda-cell.general{background:#f8fafc}
+  .agenda-cell.empty{background:#faf7f2}
+  .agenda-badge{display:inline-flex;align-items:center;padding:4px 8px;border-radius:999px;background:rgba(0,0,0,.08);font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(0,0,0,.58)}
+  .agenda-title{display:block;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:.96;text-transform:uppercase;color:#101010}
+  .agenda-copy{display:flex;flex-direction:column;gap:5px;margin-top:10px;font-size:13px;line-height:1.45;color:#222}
+  .agenda-copy.compact{gap:3px}
+  .agenda-copy strong{font-weight:700}
+  .agenda-copy .small{font-size:12px;color:rgba(0,0,0,.68)}
+  .agenda-mobile{display:none}
+  .agenda-card{padding:20px;border-bottom:var(--border);display:flex;flex-direction:column;gap:14px;background:#0b0b0b}
+  .agenda-card-time{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;line-height:.95;text-transform:uppercase;color:var(--wh)}
+  .agenda-card-grid{display:grid;gap:10px}
+  .agenda-card-item{padding:14px;border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:6px}
+  .agenda-card-item.network{background:#6e98de;color:#08101a}
+  .agenda-card-item.stage{background:#efe5a5;color:#111}
+  .agenda-card-item.workshop{background:#dcefdc;color:#111}
+  .agenda-card-item.lunch{background:#eadcf8;color:#111}
+  .agenda-card-item.media,.agenda-card-item.vip{background:#d9d9d9;color:#111}
+  .agenda-card-item.logistics{background:#efefef;color:#111}
+  .agenda-card-item.general{background:#f8fafc;color:#111}
+  .agenda-card-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(0,0,0,.55)}
+  .agenda-card-item.network .agenda-card-label{color:rgba(8,16,26,.6)}
+  .agenda-card-body{font-size:13px;line-height:1.4}
+  .agenda-legend{display:flex;gap:12px;flex-wrap:wrap;padding:18px 20px;border-top:var(--border);background:#0d0d0d}
+  .agenda-key{display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,.65)}
+  .agenda-key-swatch{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .agenda-key-swatch.network{background:#6e98de}
+  .agenda-key-swatch.stage{background:#efe5a5}
+  .agenda-key-swatch.workshop{background:#a7dca8}
+  .agenda-key-swatch.lunch{background:#b167f4}
+  .agenda-key-swatch.logistics{background:#d8d8d8}
 
   /* SPEAKERS */
-  .spk-grid{display:grid;grid-template-columns:repeat(3,1fr)}
-  .spk-card{padding:36px 32px;border-right:var(--border);display:flex;flex-direction:column;gap:12px;cursor:pointer}
-  .spk-card:last-child{border-right:none}
+  .spk-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+  .spk-card{padding:28px 22px;border-right:var(--border);display:flex;flex-direction:column;gap:10px;cursor:pointer}
   .spk-card:hover .spk-name{color:var(--y)}
   .spk-role-tag{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
-  .spk-name{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:var(--wh)}
+  .spk-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;color:var(--wh)}
   .spk-co{font-size:12px;color:rgba(255,255,255,.4)}
   .spk-social{display:none}
   .spk-placeholder{background:#0f0f0f;border:1px dashed #2a2a2a;border-radius:2px;padding:24px;display:flex;flex-direction:column;gap:8px;text-align:center;align-items:center}
@@ -299,11 +326,10 @@
     .reg-l{border-right:none;border-bottom:var(--border);padding:32px 20px}
     .reg-r{padding:32px 20px}
 
-    .prog-r{grid-template-columns:72px 1fr!important}
-    .prog-cell.ws,.prog-cell.st,.prog-cell.cm{display:none!important}
-    .prog-cell.full,.prog-cell.full-bl{grid-column:2/-1!important}
-    #program [style*="grid-template-columns:110px"]{grid-template-columns:72px 1fr!important}
-    #program [style*="grid-template-columns:110px"] div:not(:nth-child(1)):not(:nth-child(2)){display:none!important}
+    .agenda-desktop{display:none}
+    .agenda-mobile{display:block}
+    .agenda-card-grid{grid-template-columns:1fr}
+    .agenda-legend{padding:14px 16px}
 
     .sec-hdr{padding:18px 20px 12px;flex-direction:column;align-items:flex-start;gap:4px}
     .sec-hdr h2{font-size:26px}
@@ -443,12 +469,12 @@
 
 <!-- 4. WHO IS THIS FOR -->
 <section style="border-bottom:var(--border)">
-  <div class="sec-hdr">
-    <h2><span class="t-es">¿PARA <em>QUIÉN?</em></span><span class="t-en">WHO IS <em>THIS FOR?</em></span></h2>
-    <span class="lbl"><span class="t-es">Solo por aplicación · Lugares limitados</span><span class="t-en">Application-gated · Limited spots</span></span>
-  </div>
   <div class="for-grid">
     <div class="for-l">
+      <div class="for-title-wrap">
+        <h2><span class="t-es">¿PARA <em>QUIÉN?</em></span><span class="t-en">WHO IS <em>THIS FOR?</em></span></h2>
+        <span class="lbl"><span class="t-es">Solo por aplicación · Lugares limitados</span><span class="t-en">Application-gated · Limited spots</span></span>
+      </div>
       <p><span class="t-es">Para las personas lanzando productos, construyendo comunidades y convirtiendo ideas en tracción.</span><span class="t-en">For the people launching products, building communities, and turning ideas into traction.</span></p>
       <div class="for-checker">
         <div class="for-tile y"><span class="for-tile-label">Founders</span></div>
@@ -484,7 +510,25 @@
 <section style="border-bottom:var(--border)">
   <div class="sec-hdr">
     <h2><span class="t-es">INICIA<em> 10:00 AM</em></span><span class="t-en">STARTS <em>10:00 AM</em></span></h2>
-    <span class="lbl"><span class="t-es">June 17, 2025 · CDMX</span><span class="t-en">June 17, 2025 · CDMX</span></span>
+    <span class="lbl"><span class="t-es">17 de Junio, 2026 · CDMX</span><span class="t-en">June 17, 2026 · CDMX</span></span>
+  </div>
+</section>
+
+<!-- 7. PROGRAM -->
+<section id="program" style="border-bottom:var(--border)">
+  <div class="sec-hdr">
+    <h2><span class="t-es">PROGRAMA <em>— 17 JUN</em></span><span class="t-en">PROGRAM <em>— JUN 17</em></span></h2>
+    <span class="lbl"><span class="t-es">CDMX · 17 de Junio 2026 · Agenda general</span><span class="t-en">CDMX · June 17, 2026 · General agenda</span></span>
+  </div>
+  <div class="agenda-shell">
+    <div id="agenda-root"></div>
+    <div class="agenda-legend">
+      <div class="agenda-key"><span class="agenda-key-swatch network"></span><span><span class="t-es">Networking</span><span class="t-en">Networking</span></span></div>
+      <div class="agenda-key"><span class="agenda-key-swatch stage"></span><span><span class="t-es">Main Stage / Núcleo</span><span class="t-en">Main Stage / Nucleo</span></span></div>
+      <div class="agenda-key"><span class="agenda-key-swatch workshop"></span><span><span class="t-es">Workshops</span><span class="t-en">Workshops</span></span></div>
+      <div class="agenda-key"><span class="agenda-key-swatch lunch"></span><span><span class="t-es">Lunch</span><span class="t-en">Lunch</span></span></div>
+      <div class="agenda-key"><span class="agenda-key-swatch logistics"></span><span><span class="t-es">Logística</span><span class="t-en">Logistics</span></span></div>
+    </div>
   </div>
 </section>
 
@@ -544,32 +588,6 @@
       <span class="spk-co">VP of Growth</span>
     </div>
   </div>
-</section>
-
-<!-- 8. PROGRAM -->
-<section id="program" style="border-bottom:var(--border)">
-  <div class="sec-hdr">
-    <h2><span class="t-es">PROGRAMA <em>— 17 JUN</em></span><span class="t-en">PROGRAM <em>— JUN 17</em></span></h2>
-    <span class="lbl"><span class="t-es">3 Tracks · Sujeto a cambios</span><span class="t-en">3 Tracks · Subject to change</span></span>
-  </div>
-  <!-- Track headers -->
-  <div style="display:grid;grid-template-columns:110px 1fr 1fr;border-bottom:var(--border)">
-    <div style="padding:12px 14px;border-right:var(--border)"></div>
-    <div style="padding:12px 18px;border-right:var(--border);background:#111"><span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:900;text-transform:uppercase;color:var(--wh)"><span class="t-es">Main Stage</span><span class="t-en">Main Stage</span></span></div>
-    <div style="padding:12px 18px;background:#1a1a0a"><span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:900;text-transform:uppercase;color:var(--y)"><span class="t-es">Builders Workshop</span><span class="t-en">Builders Workshop</span></span></div>
-  </div>
-  <div class="prog-r"><div class="prog-time"><span>10:00</span></div><div class="prog-cell full"><span class="prog-lbl break"><span class="t-es">Puertas Abiertas</span><span class="t-en">Doors Open</span></span><span class="prog-sub"><span class="t-es">Café + Networking · Todos los espacios abiertos</span><span class="t-en">Coffee + Networking · All spaces open</span></span></div></div>
-  <div class="prog-r"><div class="prog-time"><span>11:00</span></div><div class="prog-cell main"><span class="prog-lbl main"><span class="t-es">Palabras de Apertura</span><span class="t-en">Opening Remarks</span></span></div><div class="prog-cell ws"></div></div>
-  <div class="prog-r"><div class="prog-time"><span>11:30</span></div><div class="prog-cell main"><span class="prog-lbl main">Keynote</span><span class="prog-sub"><span class="t-es">"¿Cómo reinventarte en la era de la inteligencia artificial?"</span><span class="t-en">"How to reinvent your company in the age of artificial intelligence?"</span></span></div><div class="prog-cell ws"></div></div>
-  <div class="prog-r"><div class="prog-time"><span>11:45</span></div><div class="prog-cell main"><span class="prog-lbl main"><span class="t-es">Marketing 101</span><span class="t-en">Marketing 101</span></span></div><div class="prog-cell ws"></div></div>
-  <div class="prog-r"><div class="prog-time"><span>12:05</span></div><div class="prog-cell main"><span class="prog-lbl main"><span class="t-es">Construyendo narrativas for dummies</span><span class="t-en">Construyendo narrativas for dummies</span></span></div><div class="prog-cell ws"></div></div>
-  <div class="prog-r"><div class="prog-time"><span>12:35</span></div><div class="prog-cell main"><span class="prog-lbl main"><span class="t-es">Cómo entrar a nuevos mercados: GTM LATAM</span><span class="t-en">How to enter new markets: GTM LATAM</span></span></div><div class="prog-cell ws"></div></div>
-  <div class="prog-r"><div class="prog-time"><span>13:00</span></div><div class="prog-cell main"><span class="prog-lbl main"><span class="t-es">PANEL: AI Hacks para marketing del día a día</span><span class="t-en">PANEL: AI Hacks for everyday marketing</span></span></div><div class="prog-cell ws"></div></div>
-  <div class="prog-r"><div class="prog-time"><span>13:30</span></div><div class="prog-cell full"><span class="prog-lbl break"><span class="t-es">Almuerzo</span><span class="t-en">Lunch</span></span></div></div>
-  <div class="prog-r"><div class="prog-time"><span>14:30</span></div><div class="prog-cell main"><span class="prog-lbl main" style="color:var(--y)">🔥 <span class="t-es">Marketing Roast 1</span><span class="t-en">Marketing Roast 1</span></span></div><div class="prog-cell ws"></div></div>
-  <div class="prog-r"><div class="prog-time"><span>14:55</span></div><div class="prog-cell main"><span class="prog-lbl main" style="color:var(--y)">🔥 <span class="t-es">Marketing Roast 2</span><span class="t-en">Marketing Roast 2</span></span></div><div class="prog-cell ws"></div></div>
-  <div class="prog-r"><div class="prog-time"><span>15:20</span></div><div class="prog-cell main"><span class="prog-lbl main" style="color:var(--y)">🔥 <span class="t-es">Marketing Roast 3</span><span class="t-en">Marketing Roast 3</span></span></div><div class="prog-cell ws"></div></div>
-  <div class="prog-r" style="border-bottom:none"><div class="prog-time"><span>16:00 - 17:30</span></div><div class="prog-cell full-bl"><span class="prog-lbl close"><span class="t-es">Happy Hour</span><span class="t-en">Happy Hour</span></span></div></div>
 </section>
 
 <!-- 9. VENUE -->
@@ -713,13 +731,392 @@
 </div>
 
 <script>
+  const agendaColumns = [
+    { key: 'network', es: 'Río /<br>Networking Area', en: 'Rio /<br>Networking Area' },
+    { key: 'stage', es: 'Main Stage', en: 'Main Stage' },
+    { key: 'pecera', es: 'Pecera', en: 'Pecera' },
+    { key: 'salon', es: 'Salón', en: 'Salon' }
+  ];
+
+  const agendaRows = [
+    {
+      time: '10:00',
+      cells: {
+        network: {
+          variant: 'network',
+          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+          title: { es: 'Llegada de invitados / Registro', en: 'Guest Arrival / Registration' },
+          lines: [
+            { es: 'Café y snacks de bienvenida', en: 'Welcome coffee and snacks' }
+          ]
+        },
+        stage: null,
+        pecera: {
+          variant: 'workshop',
+          eyebrow: { es: 'W1 / Mariana', en: 'W1 / Mariana' },
+          title: { es: 'Building Brands Through Content, the playbook.', en: 'Building Brands Through Content, the playbook.' }
+        },
+        salon: {
+          variant: 'workshop',
+          eyebrow: { es: 'W2 / Acid', en: 'W2 / Acid' },
+          title: { es: 'Manual de Supervivencia en Marketing', en: 'Marketing Survival Manual' }
+        }
+      }
+    },
+    {
+      time: '11:00',
+      cells: {
+        network: null,
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Apertura en Núcleo', en: 'Opening in Nucleo' },
+          lines: [{ es: 'MC', en: 'MC' }]
+        },
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '11:00 - 11:05',
+      cells: {
+        network: null,
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Jorge Díaz Cuervo', en: 'Jorge Díaz Cuervo' },
+          lines: [{ es: 'Palabras de bienvenida Rector UL', en: 'Welcome remarks, Rector UL' }]
+        },
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '11:05 - 11:10',
+      cells: {
+        network: null,
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Roberto Salinas León', en: 'Roberto Salinas León' },
+          lines: [{ es: 'Palabras de bienvenida Director de Catalaxia Ventures', en: 'Welcome remarks, Director of Catalaxia Ventures' }]
+        },
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '11:10 - 11:15',
+      cells: {
+        network: {
+          variant: 'network',
+          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+          title: { es: 'Cambio de escenario a fireside chat', en: 'Stage reset to fireside chat' }
+        },
+        stage: null,
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '11:15',
+      cells: {
+        network: null,
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Stellar x Myosin', en: 'Stellar x Myosin' },
+          lines: [{ es: 'Fireside Chat', en: 'Fireside Chat' }]
+        },
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '11:35',
+      cells: {
+        network: {
+          variant: 'network',
+          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+          title: { es: 'MC', en: 'MC' }
+        },
+        stage: null,
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '11:37',
+      cells: {
+        network: null,
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Tala + Espacio', en: 'Tala + Espacio' },
+          lines: [{ es: 'Fireside Chat', en: 'Fireside Chat' }]
+        },
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '12:00',
+      cells: {
+        network: null,
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Marketing 102', en: 'Marketing 102' },
+          lines: [{ es: 'Brandon Rodriguez, VP of Growth @ Etherfuse', en: 'Brandon Rodriguez, VP of Growth @ Etherfuse' }]
+        },
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '12:40',
+      cells: {
+        network: {
+          variant: 'logistics',
+          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+          title: { es: 'Montaje catering lunch', en: 'Lunch catering setup' }
+        },
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Mercado Pago + Espacio', en: 'Mercado Pago + Espacio' },
+          lines: [{ es: 'Fireside Chat', en: 'Fireside Chat' }]
+        },
+        pecera: {
+          variant: 'workshop',
+          eyebrow: { es: 'W3 / Wendy Lopez', en: 'W3 / Wendy Lopez' },
+          title: { es: 'AI Workflows for Startups', en: 'AI Workflows for Startups' }
+        },
+        salon: null
+      }
+    },
+    {
+      time: '13:00',
+      cells: {
+        network: null,
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Nazca + Espacio', en: 'Nazca + Espacio' },
+          lines: [{ es: 'Fireside Chat', en: 'Fireside Chat' }]
+        },
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '13:30',
+      cells: {
+        network: {
+          variant: 'lunch',
+          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+          title: { es: 'Lunch', en: 'Lunch' }
+        },
+        stage: null,
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '14:00 - 14:30',
+      cells: {
+        network: {
+          variant: 'network',
+          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+          title: { es: 'Networking + canapés', en: 'Networking + canapes' }
+        },
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Marketing Roast 1', en: 'Marketing Roast 1' }
+        },
+        pecera: {
+          variant: 'workshop',
+          eyebrow: { es: 'W3 / Wendy Lopez', en: 'W3 / Wendy Lopez' },
+          title: { es: 'AI Workflows for Startups', en: 'AI Workflows for Startups' }
+        },
+        salon: null
+      }
+    },
+    {
+      time: '14:30 - 15:00',
+      cells: {
+        network: {
+          variant: 'network',
+          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+          title: { es: 'Networking + canapés', en: 'Networking + canapes' }
+        },
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Marketing Roast 2', en: 'Marketing Roast 2' }
+        },
+        pecera: null,
+        salon: {
+          variant: 'workshop',
+          eyebrow: { es: 'W4 / Edouard Triet', en: 'W4 / Edouard Triet' },
+          title: { es: 'Vibecode and AI for Marketers', en: 'Vibecode and AI for Marketers' }
+        }
+      }
+    },
+    {
+      time: '15:30',
+      cells: {
+        network: {
+          variant: 'network',
+          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+          title: { es: 'Networking + canapés', en: 'Networking + canapes' }
+        },
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'MC - Cierre', en: 'MC - Closing' },
+          lines: [{ es: 'Invitación a networking o W4', en: 'Invite to networking or W4' }]
+        },
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '15:30 - 16:00',
+      cells: {
+        network: {
+          variant: 'network',
+          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+          title: { es: 'Networking + canapés', en: 'Networking + canapes' }
+        },
+        stage: null,
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '16:00',
+      full: {
+        variant: 'general',
+        eyebrow: { es: 'General', en: 'General' },
+        title: { es: 'Salida invitados / Transporte de regreso', en: 'Guest departure / Return transport' }
+      }
+    },
+    {
+      time: '16:30',
+      cells: {
+        network: {
+          variant: 'logistics',
+          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+          title: { es: 'Desmontaje catering', en: 'Catering teardown' }
+        },
+        stage: {
+          variant: 'logistics',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Desmontaje stage', en: 'Stage teardown' }
+        },
+        pecera: {
+          variant: 'logistics',
+          eyebrow: { es: 'Pecera', en: 'Pecera' },
+          title: { es: 'Limpieza', en: 'Cleanup' }
+        },
+        salon: {
+          variant: 'logistics',
+          eyebrow: { es: 'Salón', en: 'Salon' },
+          title: { es: 'Limpieza', en: 'Cleanup' }
+        }
+      }
+    }
+  ];
+
+  function langHTML(copy) {
+    return `<span class="t-es">${copy.es}</span><span class="t-en">${copy.en}</span>`;
+  }
+
+  function renderAgendaCell(cell) {
+    const classes = ['agenda-cell', cell.variant || 'general'];
+    const rowSpan = cell.rowSpan ? ` rowspan="${cell.rowSpan}"` : '';
+    return `<td class="${classes.join(' ')}"${rowSpan}>
+      ${cell.eyebrow ? `<span class="agenda-badge">${langHTML(cell.eyebrow)}</span>` : ''}
+      ${cell.title ? `<span class="agenda-title">${langHTML(cell.title)}</span>` : ''}
+      ${cell.lines && cell.lines.length ? `<div class="agenda-copy${cell.lines.length === 1 ? ' compact' : ''}">${cell.lines.map(line => `<span>${langHTML(line)}</span>`).join('')}</div>` : ''}
+    </td>`;
+  }
+
+  function renderAgendaCellBody(cell) {
+    return `${cell.eyebrow ? `<span class="agenda-badge">${langHTML(cell.eyebrow)}</span>` : ''}
+      ${cell.title ? `<span class="agenda-title">${langHTML(cell.title)}</span>` : ''}
+      ${cell.lines && cell.lines.length ? `<div class="agenda-copy${cell.lines.length === 1 ? ' compact' : ''}">${cell.lines.map(line => `<span>${langHTML(line)}</span>`).join('')}</div>` : ''}`;
+  }
+
+  function renderAgendaDesktop() {
+    const headerCells = agendaColumns.map(column => `<th>${langHTML({ es: column.es, en: column.en })}</th>`).join('');
+    const bodyRows = agendaRows.map(row => {
+      const timeClass = row.time.includes('-') ? 'agenda-time small' : 'agenda-time';
+      if (row.full) {
+        return `<tr><td class="${timeClass}">${row.time}</td><td class="agenda-cell ${row.full.variant || 'general'}" colspan="${agendaColumns.length}">${renderAgendaCellBody(row.full)}</td></tr>`;
+      }
+      const cellsHTML = agendaColumns.map(column => {
+        const cell = row.cells[column.key];
+        if (!cell) return '<td class="agenda-cell empty"></td>';
+        if (cell.hidden) return '';
+        return renderAgendaCell(cell);
+      }).join('');
+      return `<tr><td class="${timeClass}">${row.time}</td>${cellsHTML}</tr>`;
+    }).join('');
+
+    return `<div class="agenda-desktop"><table class="agenda-table"><thead><tr><th><span class="t-es">Hora</span><span class="t-en">Time</span></th>${headerCells}</tr></thead><tbody>${bodyRows}</tbody></table></div>`;
+  }
+
+  function renderAgendaMobile() {
+    const cards = agendaRows.map(row => {
+      const items = row.full
+        ? [row.full]
+        : agendaColumns.map(column => {
+            const cell = row.cells[column.key];
+            if (!cell) return null;
+            if (cell.hidden) return cell.mobileClone || null;
+            return cell;
+          }).filter(Boolean);
+
+      return `<article class="agenda-card">
+        <div class="agenda-card-time">${row.time}</div>
+        <div class="agenda-card-grid">
+          ${items.map(cell => `<div class="agenda-card-item ${cell.variant || 'general'}">
+            ${cell.eyebrow ? `<span class="agenda-card-label">${langHTML(cell.eyebrow)}</span>` : ''}
+            ${cell.title ? `<div class="agenda-card-body"><strong>${langHTML(cell.title)}</strong>${cell.lines && cell.lines.length ? `<div class="agenda-copy${cell.lines.length === 1 ? ' compact' : ''}">${cell.lines.map(line => `<span>${langHTML(line)}</span>`).join('')}</div>` : ''}</div>` : ''}
+          </div>`).join('')}
+        </div>
+      </article>`;
+    }).join('');
+
+    return `<div class="agenda-mobile">${cards}</div>`;
+  }
+
+  function renderAgenda() {
+    const root = document.getElementById('agenda-root');
+    if (!root) return;
+    root.innerHTML = `${renderAgendaDesktop()}${renderAgendaMobile()}`;
+  }
+
   function setLang(lang) {
     document.body.classList.toggle('lang-en', lang === 'en');
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
     localStorage.setItem('cdmx-lang', lang);
   }
   document.addEventListener('DOMContentLoaded', function() {
+    renderAgenda();
     setLang(localStorage.getItem('cdmx-lang') || 'es');
+    const speakerGrid = document.querySelector('.spk-grid');
+    if (speakerGrid) {
+      const cards = Array.from(speakerGrid.querySelectorAll('.spk-card'));
+      for (let i = cards.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+      cards.forEach(card => speakerGrid.appendChild(card));
+    }
     document.querySelectorAll('.spk-card').forEach(card => {
       const socialLink = card.querySelector('.spk-social');
       if (!socialLink) return;
