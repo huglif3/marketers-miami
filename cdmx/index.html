@@ -183,7 +183,7 @@
   .agenda-cell.logistics{background:#efefef}
   .agenda-cell.general{background:#f8fafc}
   .agenda-cell.empty{background:#faf7f2}
-  .agenda-badge{display:inline-flex;align-items:center;padding:4px 8px;border-radius:999px;background:rgba(0,0,0,.08);font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(0,0,0,.58)}
+  .agenda-badge{display:none}
   .agenda-title{display:block;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:.96;text-transform:uppercase;color:#101010}
   .agenda-copy{display:flex;flex-direction:column;gap:5px;margin-top:10px;font-size:13px;line-height:1.45;color:#222}
   .agenda-copy.compact{gap:3px}
@@ -201,8 +201,7 @@
   .agenda-card-item.media,.agenda-card-item.vip{background:#d9d9d9;color:#111}
   .agenda-card-item.logistics{background:#efefef;color:#111}
   .agenda-card-item.general{background:#f8fafc;color:#111}
-  .agenda-card-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(0,0,0,.55)}
-  .agenda-card-item.network .agenda-card-label{color:rgba(8,16,26,.6)}
+  .agenda-card-label{display:none}
   .agenda-card-body{font-size:13px;line-height:1.4}
   .agenda-legend{display:flex;gap:12px;flex-wrap:wrap;padding:18px 20px;border-top:var(--border);background:#0d0d0d}
   .agenda-key{display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,.65)}
@@ -491,15 +490,27 @@
       <div class="for-why-grid">
         <div class="for-why-card">
           <span class="for-why-num">01</span>
-          <span class="for-why-title"><span class="t-es">Feedback <em>en vivo</em> a tu GTM</span><span class="t-en">Live <em>feedback</em> on your GTM</span></span>
+          <span class="for-why-title"><span class="t-es">Build smarter <em>growth systems</em></span><span class="t-en">Build smarter <em>growth systems</em></span></span>
         </div>
         <div class="for-why-card">
           <span class="for-why-num">02</span>
-          <span class="for-why-title"><span class="t-es">Frameworks que usas <em>al día siguiente</em></span><span class="t-en">Frameworks you use <em>the next day</em></span></span>
+          <span class="for-why-title"><span class="t-es">Learn AI <em>workflows that ship</em></span><span class="t-en">Learn AI <em>workflows that ship</em></span></span>
         </div>
         <div class="for-why-card">
           <span class="for-why-num">03</span>
-          <span class="for-why-title"><span class="t-es">Conexiones <em>de alto valor</em> en LATAM</span><span class="t-en">High-value <em>connections</em> in LATAM</span></span>
+          <span class="for-why-title"><span class="t-es">Meet Mexico’s <em>GTM operators</em></span><span class="t-en">Meet Mexico’s <em>GTM operators</em></span></span>
+        </div>
+        <div class="for-why-card">
+          <span class="for-why-num">04</span>
+          <span class="for-why-title"><span class="t-es">Turn attention <em>into adoption</em></span><span class="t-en">Turn attention <em>into adoption</em></span></span>
+        </div>
+        <div class="for-why-card">
+          <span class="for-why-num">05</span>
+          <span class="for-why-title"><span class="t-es">Sharpen your <em>brand strategy</em></span><span class="t-en">Sharpen your <em>brand strategy</em></span></span>
+        </div>
+        <div class="for-why-card">
+          <span class="for-why-num">06</span>
+          <span class="for-why-title"><span class="t-es">See live <em>marketing critiques</em></span><span class="t-en">See live <em>marketing critiques</em></span></span>
         </div>
       </div>
     </div>
@@ -554,9 +565,9 @@
       <a class="spk-social" href="https://www.linkedin.com/in/wendy-lopez-n/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="spk-card">
-      <img class="spk-img" src="marian-pedroza.png" alt="Marian Pedroza">
+      <img class="spk-img" src="/cdmx/marian-pedroza.png" alt="Mariana Pedroza">
       <span class="spk-role-tag">Industrias Pedroza</span>
-      <span class="spk-name">Marian Pedroza</span>
+      <span class="spk-name">Mariana Pedroza</span>
       <span class="spk-co">Creative Director</span>
       <a class="spk-social" href="https://x.com/marianpedeoza" target="_blank" rel="noopener">X / @marianpedeoza</a>
     </div>
@@ -738,6 +749,36 @@
     { key: 'salon', es: 'Salón', en: 'Salon' }
   ];
 
+  function networkingCanapesCell(options = {}) {
+    return {
+      variant: 'network',
+      eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+      title: { es: 'Networking + canapés', en: 'Networking + canapes' },
+      rowSpan: options.rowSpan || 0,
+      hidden: Boolean(options.hidden),
+      mobileClone: options.hidden ? {
+        variant: 'network',
+        eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+        title: { es: 'Networking + canapés', en: 'Networking + canapes' }
+      } : null
+    };
+  }
+
+  function lunchCell(options = {}) {
+    return {
+      variant: 'lunch',
+      eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+      title: { es: 'Lunch', en: 'Lunch' },
+      rowSpan: options.rowSpan || 0,
+      hidden: Boolean(options.hidden),
+      mobileClone: options.hidden ? {
+        variant: 'lunch',
+        eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
+        title: { es: 'Lunch', en: 'Lunch' }
+      } : null
+    };
+  }
+
   const agendaRows = [
     {
       time: '10:00',
@@ -750,6 +791,15 @@
             { es: 'Café y snacks de bienvenida', en: 'Welcome coffee and snacks' }
           ]
         },
+        stage: null,
+        pecera: null,
+        salon: null
+      }
+    },
+    {
+      time: '10:30',
+      cells: {
+        network: null,
         stage: null,
         pecera: {
           variant: 'workshop',
@@ -770,20 +820,6 @@
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
-          title: { es: 'Apertura en Núcleo', en: 'Opening in Nucleo' },
-          lines: [{ es: 'MC', en: 'MC' }]
-        },
-        pecera: null,
-        salon: null
-      }
-    },
-    {
-      time: '11:00 - 11:05',
-      cells: {
-        network: null,
-        stage: {
-          variant: 'stage',
-          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
           title: { es: 'Jorge Díaz Cuervo', en: 'Jorge Díaz Cuervo' },
           lines: [{ es: 'Palabras de bienvenida Rector UL', en: 'Welcome remarks, Rector UL' }]
         },
@@ -792,7 +828,7 @@
       }
     },
     {
-      time: '11:05 - 11:10',
+      time: '11:05',
       cells: {
         network: null,
         stage: {
@@ -801,19 +837,6 @@
           title: { es: 'Roberto Salinas León', en: 'Roberto Salinas León' },
           lines: [{ es: 'Palabras de bienvenida Director de Catalaxia Ventures', en: 'Welcome remarks, Director of Catalaxia Ventures' }]
         },
-        pecera: null,
-        salon: null
-      }
-    },
-    {
-      time: '11:10 - 11:15',
-      cells: {
-        network: {
-          variant: 'network',
-          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
-          title: { es: 'Cambio de escenario a fireside chat', en: 'Stage reset to fireside chat' }
-        },
-        stage: null,
         pecera: null,
         salon: null
       }
@@ -833,20 +856,7 @@
       }
     },
     {
-      time: '11:35',
-      cells: {
-        network: {
-          variant: 'network',
-          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
-          title: { es: 'MC', en: 'MC' }
-        },
-        stage: null,
-        pecera: null,
-        salon: null
-      }
-    },
-    {
-      time: '11:37',
+      time: '11:30',
       cells: {
         network: null,
         stage: {
@@ -874,31 +884,23 @@
       }
     },
     {
-      time: '12:40',
+      time: '12:30',
       cells: {
-        network: {
-          variant: 'logistics',
-          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
-          title: { es: 'Montaje catering lunch', en: 'Lunch catering setup' }
-        },
+        network: null,
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
           title: { es: 'Mercado Pago + Espacio', en: 'Mercado Pago + Espacio' },
           lines: [{ es: 'Fireside Chat', en: 'Fireside Chat' }]
         },
-        pecera: {
-          variant: 'workshop',
-          eyebrow: { es: 'W3 / Wendy Lopez', en: 'W3 / Wendy Lopez' },
-          title: { es: 'AI Workflows for Startups', en: 'AI Workflows for Startups' }
-        },
+        pecera: null,
         salon: null
       }
     },
     {
       time: '13:00',
       cells: {
-        network: null,
+        network: lunchCell({ rowSpan: 2 }),
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
@@ -912,24 +914,16 @@
     {
       time: '13:30',
       cells: {
-        network: {
-          variant: 'lunch',
-          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
-          title: { es: 'Lunch', en: 'Lunch' }
-        },
+        network: lunchCell({ hidden: true }),
         stage: null,
         pecera: null,
         salon: null
       }
     },
     {
-      time: '14:00 - 14:30',
+      time: '14:00',
       cells: {
-        network: {
-          variant: 'network',
-          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
-          title: { es: 'Networking + canapés', en: 'Networking + canapes' }
-        },
+        network: null,
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
@@ -944,13 +938,9 @@
       }
     },
     {
-      time: '14:30 - 15:00',
+      time: '14:30',
       cells: {
-        network: {
-          variant: 'network',
-          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
-          title: { es: 'Networking + canapés', en: 'Networking + canapes' }
-        },
+        network: networkingCanapesCell({ rowSpan: 3 }),
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
@@ -967,11 +957,7 @@
     {
       time: '15:30',
       cells: {
-        network: {
-          variant: 'network',
-          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
-          title: { es: 'Networking + canapés', en: 'Networking + canapes' }
-        },
+        network: networkingCanapesCell({ hidden: true }),
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
@@ -983,13 +969,9 @@
       }
     },
     {
-      time: '15:30 - 16:00',
+      time: '15:30',
       cells: {
-        network: {
-          variant: 'network',
-          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
-          title: { es: 'Networking + canapés', en: 'Networking + canapes' }
-        },
+        network: networkingCanapesCell({ hidden: true }),
         stage: null,
         pecera: null,
         salon: null
@@ -1001,31 +983,6 @@
         variant: 'general',
         eyebrow: { es: 'General', en: 'General' },
         title: { es: 'Salida invitados / Transporte de regreso', en: 'Guest departure / Return transport' }
-      }
-    },
-    {
-      time: '16:30',
-      cells: {
-        network: {
-          variant: 'logistics',
-          eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
-          title: { es: 'Desmontaje catering', en: 'Catering teardown' }
-        },
-        stage: {
-          variant: 'logistics',
-          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
-          title: { es: 'Desmontaje stage', en: 'Stage teardown' }
-        },
-        pecera: {
-          variant: 'logistics',
-          eyebrow: { es: 'Pecera', en: 'Pecera' },
-          title: { es: 'Limpieza', en: 'Cleanup' }
-        },
-        salon: {
-          variant: 'logistics',
-          eyebrow: { es: 'Salón', en: 'Salon' },
-          title: { es: 'Limpieza', en: 'Cleanup' }
-        }
       }
     }
   ];
