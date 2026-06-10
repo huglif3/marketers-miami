@@ -160,6 +160,8 @@
   .spk-co{font-size:12px;color:rgba(255,255,255,.4)}
   .spk-social{display:none}
   .spk-img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center top;display:block;background:#1e1e1e;border-radius:2px;margin-bottom:4px}
+  .spk-img-fallback{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#111 0%,#1c1c1c 100%);border:1px solid #232323}
+  .spk-img-initials{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--y)}
 
   /* VENUE */
   .venue-grid{display:grid;grid-template-columns:1fr 1fr}
@@ -510,14 +512,14 @@
       <a class="spk-social" href="https://www.linkedin.com/in/edouard-triet/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="spk-card">
-      <img class="spk-img" src="https://drive.google.com/thumbnail?id=1VJGtZnCpfYWSgiv0Ve2SKtrw-l4Ssf5H&sz=w1200" alt="Jox Gallardo">
-      <span class="spk-role-tag">Mercado Pago - TWIF</span>
-      <span class="spk-name">Jox Gallardo</span>
-      <span class="spk-co">Sr. Analyst - Remittances</span>
-      <a class="spk-social" href="https://www.linkedin.com/in/joxgallardo/" target="_blank" rel="noopener">LinkedIn</a>
+      <img class="spk-img" src="/cdmx/estefania-ochoa.jpg" alt="Estefania Ochoa">
+      <span class="spk-role-tag">Myosin</span>
+      <span class="spk-name">Estefania Ochoa</span>
+      <span class="spk-co">LATAM GTM Lead</span>
+      <a class="spk-social" href="https://x.com/nftmami" target="_blank" rel="noopener">X / @nftmami</a>
     </div>
     <div class="spk-card">
-      <img class="spk-img" src="https://drive.google.com/thumbnail?id=1yDY6wQK1N9XyEJVkqOCOlE2VG-JkPdht&sz=w1200" alt="Alexis Downey">
+      <img class="spk-img" src="/cdmx/alexis-downey.png" alt="Alexis Downey">
       <span class="spk-role-tag">Stellar Development Foundation</span>
       <span class="spk-name">Alexis Downey</span>
       <span class="spk-co">Marketing Strategy</span>
@@ -996,16 +998,35 @@
     });
   }
 
-  function shuffleSpeakerCards() {
+  function orderSpeakerCards() {
     const speakerGrid = document.querySelector('.spk-grid');
     if (!speakerGrid) return;
 
     const cards = Array.from(speakerGrid.querySelectorAll('.spk-card'));
-    for (let i = cards.length - 1; i > 0; i -= 1) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [cards[i], cards[j]] = [cards[j], cards[i]];
-    }
-    cards.forEach(card => speakerGrid.appendChild(card));
+    const speakerOrder = [
+      'Jorge Díaz Cuervo',
+      'Roberto Salinas León',
+      'Mariana Pedroza',
+      'Acid',
+      'Estefania Ochoa',
+      'Alexis Downey',
+      'Carlos Cota',
+      'Brandon Rodriguez',
+      'Luis Andres Enriquez',
+      'Wendy López',
+      'Edouard Triet'
+    ];
+    const orderMap = new Map(speakerOrder.map((name, index) => [name, index]));
+
+    cards
+      .sort((leftCard, rightCard) => {
+        const leftName = leftCard.querySelector('.spk-name')?.textContent?.trim() || '';
+        const rightName = rightCard.querySelector('.spk-name')?.textContent?.trim() || '';
+        const leftIndex = orderMap.has(leftName) ? orderMap.get(leftName) : Number.MAX_SAFE_INTEGER;
+        const rightIndex = orderMap.has(rightName) ? orderMap.get(rightName) : Number.MAX_SAFE_INTEGER;
+        return leftIndex - rightIndex;
+      })
+      .forEach(card => speakerGrid.appendChild(card));
   }
 
   function initSpeakerCardLinks() {
@@ -1031,7 +1052,7 @@
     renderAgenda();
     initLanguageToggle();
     setLang(localStorage.getItem('cdmx-lang') || 'es');
-    shuffleSpeakerCards();
+    orderSpeakerCards();
     initSpeakerCardLinks();
   });
 </script>
