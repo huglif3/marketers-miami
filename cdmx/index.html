@@ -45,8 +45,6 @@
 
   /* BUTTONS */
   .btn-y{display:inline-flex;align-items:center;background:var(--y);color:var(--bk);font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:14px 28px;border-radius:999px;text-decoration:none;border:none;cursor:pointer;white-space:nowrap}
-  .btn-ghost{display:inline-flex;align-items:center;background:transparent;color:rgba(255,255,255,.5);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:12px 22px;border-radius:999px;text-decoration:none;border:1px solid #333}
-
   /* LUMA override */
   .luma-checkout--button{background:var(--y)!important;color:var(--bk)!important;font-family:'Barlow Condensed',sans-serif!important;font-size:12px!important;font-weight:800!important;letter-spacing:.18em!important;text-transform:uppercase!important;padding:14px 28px!important;border-radius:999px!important;border:none!important}
 
@@ -76,12 +74,6 @@
   .partner-cell img{max-width:80%;height:auto}
   .partner-cell.yellow{background:var(--y)}
   .partner-cell.blue{background:var(--bl)}
-  .partner-logo{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;color:var(--wh)}
-  .partner-cell.yellow .partner-logo{color:var(--bk)}
-  
-  /* OLD HERO HIDDEN */
-  .hero-l, .hero-r, .hero-copy, .hero-cta, .hero-meta{display:none}
-
   /* TRUST STRIP */
   .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:var(--border);background:var(--wh)}
   .ts-cell{padding:20px 28px;border-right:2px solid rgba(0,0,0,.12);display:flex;flex-direction:column;gap:4px}
@@ -89,29 +81,6 @@
   .ts-label{font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.4)}
   .ts-val{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;text-transform:uppercase;color:var(--bk)}
   .ts-sub{font-size:11px;color:rgba(0,0,0,.45)}
-
-  /* CONFERENCE CONTEXT */
-  .conf-strip{display:grid;grid-template-columns:1fr 2fr;border-bottom:var(--border)}
-  .conf-l{background:var(--y);padding:36px 38px;border-right:var(--border);display:flex;flex-direction:column;gap:10px}
-  .conf-l h3{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:900;text-transform:uppercase;line-height:.9;color:var(--bk)}
-  .conf-l p{font-size:12px;line-height:1.6;color:rgba(0,0,0,.55);max-width:280px}
-  .conf-r{display:grid;grid-template-columns:1fr 1fr}
-  .conf-day{padding:32px 32px;border-right:var(--border);display:flex;flex-direction:column;gap:10px}
-  .conf-day:last-child{border-right:none}
-  .conf-day-num{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--y)}
-  .conf-day h4{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;color:var(--wh);line-height:1}
-  .conf-day p{font-size:12px;line-height:1.6;color:var(--gr)}
-  .conf-day a{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none;margin-top:4px;display:inline-block}
-  .conf-day a:hover{color:var(--y)}
-
-  /* WHY ATTEND */
-  .why-grid{display:grid;grid-template-columns:1fr 1fr 1fr}
-  .why-card{padding:36px 30px;border-right:var(--border);display:flex;flex-direction:column;gap:12px}
-  .why-card:last-child{border-right:none}
-  .why-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;color:rgba(255,255,255,.2)}
-  .why-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
-  .why-title em{font-style:normal;color:var(--y)}
-  .why-body{font-size:13px;line-height:1.75;color:var(--gr)}
 
   /* FOR WHO */
   .for-grid{display:grid;grid-template-columns:1fr 1fr}
@@ -144,28 +113,6 @@
   .for-why-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;color:rgba(255,255,255,.28)}
   .for-why-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,3.1vw,34px);font-weight:900;text-transform:uppercase;line-height:.9;color:var(--wh);max-width:360px}
   .for-why-title em{font-style:normal;color:var(--y)}
-  /* FORMAT OVERVIEW */
-  .fmt-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-  .fmt-card{padding:32px 28px;border-right:var(--border);display:flex;flex-direction:column;gap:10px}
-  .fmt-card:last-child{border-right:none}
-  .fmt-num{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;color:rgba(255,255,255,.2)}
-  .fmt-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;line-height:.95;color:var(--wh)}
-  .fmt-title em{font-style:normal;color:var(--y)}
-  .fmt-body{font-size:12.5px;line-height:1.7;color:var(--gr)}
-
-  /* HACKATHON */
-  .hack-grid{display:grid;grid-template-columns:1fr 2fr}
-  .hack-l{background:var(--y);padding:44px 38px;border-right:var(--border);display:flex;flex-direction:column;gap:12px}
-  .hack-l h3{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,46px);font-weight:900;text-transform:uppercase;line-height:.88;color:var(--bk)}
-  .hack-l p{font-size:13px;line-height:1.7;color:rgba(0,0,0,.6);max-width:320px}
-  .hack-r{padding:44px 38px;display:flex;flex-direction:column;gap:0}
-  .hack-sprint{padding:18px 0;border-bottom:1px solid #1e1e1e;display:flex;flex-direction:column;gap:4px}
-  .hack-sprint:last-child{border-bottom:none}
-  .hack-sprint-time{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
-  .hack-sprint-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;color:var(--wh)}
-  .hack-sprint-title.y{color:var(--y)}
-  .hack-sprint-body{font-size:12px;color:var(--gr)}
-
   /* PROGRAM */
   .agenda-shell{border-top:var(--border)}
   .agenda-desktop{display:block;overflow-x:auto}
@@ -173,22 +120,17 @@
   .agenda-table th,.agenda-table td{border:2px solid #b7bec8;vertical-align:top}
   .agenda-table th{padding:16px 10px;background:#163f70;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;line-height:1;text-transform:uppercase;text-align:center}
   .agenda-time{width:112px;padding:16px 10px;background:#163f70;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:1.02;text-align:center}
-  .agenda-time.small{font-size:18px}
   .agenda-cell{padding:14px 14px 16px;background:#fbf8f0}
   .agenda-cell.network{background:#6e98de}
   .agenda-cell.stage{background:#efe5a5}
   .agenda-cell.workshop{background:#dcefdc}
   .agenda-cell.lunch{background:#eadcf8}
-  .agenda-cell.media,.agenda-cell.vip{background:#d9d9d9}
-  .agenda-cell.logistics{background:#efefef}
   .agenda-cell.general{background:#f8fafc}
   .agenda-cell.empty{background:#faf7f2}
   .agenda-badge{display:none}
   .agenda-title{display:block;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:.96;text-transform:uppercase;color:#101010}
   .agenda-copy{display:flex;flex-direction:column;gap:5px;margin-top:10px;font-size:13px;line-height:1.45;color:#222}
   .agenda-copy.compact{gap:3px}
-  .agenda-copy strong{font-weight:700}
-  .agenda-copy .small{font-size:12px;color:rgba(0,0,0,.68)}
   .agenda-mobile{display:none}
   .agenda-card{padding:20px;border-bottom:var(--border);display:flex;flex-direction:column;gap:14px;background:#0b0b0b}
   .agenda-card-time{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;line-height:.95;text-transform:uppercase;color:var(--wh)}
@@ -198,8 +140,6 @@
   .agenda-card-item.stage{background:#efe5a5;color:#111}
   .agenda-card-item.workshop{background:#dcefdc;color:#111}
   .agenda-card-item.lunch{background:#eadcf8;color:#111}
-  .agenda-card-item.media,.agenda-card-item.vip{background:#d9d9d9;color:#111}
-  .agenda-card-item.logistics{background:#efefef;color:#111}
   .agenda-card-item.general{background:#f8fafc;color:#111}
   .agenda-card-label{display:none}
   .agenda-card-body{font-size:13px;line-height:1.4}
@@ -210,7 +150,6 @@
   .agenda-key-swatch.stage{background:#efe5a5}
   .agenda-key-swatch.workshop{background:#a7dca8}
   .agenda-key-swatch.lunch{background:#b167f4}
-  .agenda-key-swatch.logistics{background:#d8d8d8}
 
   /* SPEAKERS */
   .spk-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
@@ -220,9 +159,7 @@
   .spk-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;color:var(--wh)}
   .spk-co{font-size:12px;color:rgba(255,255,255,.4)}
   .spk-social{display:none}
-  .spk-placeholder{background:#0f0f0f;border:1px dashed #2a2a2a;border-radius:2px;padding:24px;display:flex;flex-direction:column;gap:8px;text-align:center;align-items:center}
   .spk-img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center top;display:block;background:#1e1e1e;border-radius:2px;margin-bottom:4px}
-  .spk-placeholder-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2)}
 
   /* VENUE */
   .venue-grid{display:grid;grid-template-columns:1fr 1fr}
@@ -231,8 +168,8 @@
   .venue-copy h3 em{font-style:normal;color:var(--y)}
   .venue-copy p{font-size:13px;line-height:1.75;color:var(--gr);max-width:360px}
   .venue-addr{font-size:11.5px;color:rgba(255,255,255,.3);line-height:1.6;margin-top:4px}
-  .venue-video{background:#000;display:flex;align-items:stretch}
-  .venue-video iframe{width:100%;min-height:320px;border:none;display:block}
+  .venue-media{background:#000;display:flex;align-items:stretch}
+  .venue-media img{width:100%;min-height:320px;border:none;display:block;object-fit:cover}
 
   /* PARTNERS */
   .partners-grid{display:grid;grid-template-columns:repeat(3,1fr)}
@@ -280,9 +217,7 @@
   .tl-label{font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.3}
 
   /* TEXT CONTRAST */
-  .hero-copy p,.why-body,.fmt-body,.for-l p,.for-bullet-text,.hack-sprint-body,.venue-copy p,.partner-desc,.reg-l p,.reg-check,.faq-a{color:var(--wh);opacity:.82}
-  .prog-sub{color:rgba(255,255,255,.58)!important}
-  .why-num,.fmt-num{color:rgba(255,255,255,.35)}
+  .for-l p,.venue-copy p,.partner-desc,.reg-l p,.reg-check,.faq-a{color:var(--wh);opacity:.82}
   .sec-hdr .lbl{color:rgba(255,255,255,.5)}
   .spk-co{color:rgba(255,255,255,.6)}
   .venue-addr{color:rgba(255,255,255,.6)!important}
@@ -301,27 +236,20 @@
     .nav-r a:not(.nav-cta){display:none}
     .nav-cta{padding:7px 14px;font-size:10px!important}
 
-    .hero,.for-grid,.venue-grid,.reg-grid,.hack-grid{grid-template-columns:1fr!important}
-    .hero-l{min-height:auto;padding:32px 20px 24px;border-right:none;border-bottom:var(--border)}
-    .hero-copy{padding:24px 20px}
-    .hero-cta{padding:20px;flex-direction:column}
-    .hero-cta a{text-align:center;justify-content:center;width:100%}
-    .hero-copy p{font-size:15px;max-width:100%}
+    .hero,.for-grid,.venue-grid,.reg-grid{grid-template-columns:1fr!important}
 
     .trust-strip{grid-template-columns:1fr}
     .ts-cell{border-right:none!important;border-bottom:1px solid rgba(0,0,0,.12)}
 
-    .why-grid,.spk-grid,.partners-grid,.fmt-grid,.faq-grid,.taglines{grid-template-columns:1fr!important}
-    .why-card,.spk-card,.partner-card,.fmt-card,.faq-item,.tl{border-right:none!important;border-bottom:var(--border)}
-    .why-card:last-child,.spk-card:last-child,.partner-card:last-child,.fmt-card:last-child,.tl:last-child{border-bottom:none}
+    .spk-grid,.partners-grid,.faq-grid,.taglines{grid-template-columns:1fr!important}
+    .spk-card,.partner-card,.faq-item,.tl{border-right:none!important;border-bottom:var(--border)}
+    .spk-card:last-child,.partner-card:last-child,.tl:last-child{border-bottom:none}
 
     .for-l{border-right:none;border-bottom:var(--border);padding:28px 20px}
     .for-r{padding:28px 20px}
-    .hack-l{border-right:none;border-bottom:var(--border)}
-    .hack-r{padding:24px 20px}
     .venue-copy{border-right:none;border-bottom:var(--border);padding:28px 20px}
     .venue-copy p{max-width:100%}
-    .venue-video iframe{min-height:220px}
+    .venue-media img{min-height:220px}
     .reg-l{border-right:none;border-bottom:var(--border);padding:32px 20px}
     .reg-r{padding:32px 20px}
 
@@ -337,8 +265,7 @@
   }
 
   @media(max-width:480px){
-    .hero-l h1{font-size:clamp(38px,13vw,54px)}
-    .hack-l h3{font-size:clamp(26px,10vw,36px)}
+    .hero-title{font-size:clamp(38px,13vw,54px)}
   }
 
   /* FOOTER */
@@ -364,8 +291,8 @@
     <span>/</span>
     <strong>CDMX</strong>
     <div class="lang-toggle" style="margin-left:6px">
-      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
-      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn active" data-lang="es" type="button" aria-label="Cambiar idioma a español" aria-pressed="true">ES</button>
+      <button class="lang-btn" data-lang="en" type="button" aria-label="Switch language to English" aria-pressed="false">EN</button>
     </div>
   </div>
   <div class="nav-r">
@@ -388,7 +315,7 @@
       <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="none" stroke="#E8EF5A" stroke-width="3"/><circle cx="50" cy="50" r="38" fill="none" stroke="#E8EF5A" stroke-width="2"/><path d="M 30 50 Q 50 35, 70 50 Q 50 65, 30 50" fill="none" stroke="#E8EF5A" stroke-width="2"/><path d="M 50 15 Q 50 50 50 85" stroke="#E8EF5A" stroke-width="2"/></svg>
     </div>
     <div class="hero-grid-cell black">
-      <img src="https://marketersarena.com/cdmx/udl-logo.png" alt="Universidad de la Libertad" style="max-width:85%;max-height:85%;object-fit:contain">
+      <img src="/cdmx/udl-logo.png" alt="Universidad de la Libertad" style="max-width:85%;max-height:85%;object-fit:contain">
     </div>
     <div class="hero-grid-cell yellow">
       <!-- Pyramid icon -->
@@ -428,13 +355,13 @@
   <!-- Partners Section -->
   <div class="hero-partners">
     <div class="partner-cell blue">
-      <img src="https://marketersarena.com/cdmx/stellar-logo.svg" alt="Stellar" style="max-width:70%;max-height:70%;object-fit:contain">
+      <img src="/cdmx/stellar-logo.svg" alt="Stellar" style="max-width:70%;max-height:70%;object-fit:contain">
     </div>
     <div class="partner-cell black">
-      <img src="https://marketersarena.com/cdmx/hero-center-logo.svg" alt="Marketers in the Arena CDMX" style="max-width:80%;max-height:80%;object-fit:contain">
+      <img src="/cdmx/hero-center-logo.svg" alt="Marketers in the Arena CDMX" style="max-width:80%;max-height:80%;object-fit:contain">
     </div>
     <div class="partner-cell yellow">
-      <img src="https://marketersarena.com/cdmx/myosin-logo.svg" alt="Myosin" style="max-width:70%;max-height:70%;object-fit:contain">
+      <img src="/cdmx/myosin-logo.svg" alt="Myosin" style="max-width:70%;max-height:70%;object-fit:contain">
     </div>
   </div>
 </section>
@@ -467,7 +394,7 @@
 
 
 <!-- 4. WHO IS THIS FOR -->
-<section style="border-bottom:var(--border)">
+<section id="why" style="border-bottom:var(--border)">
   <div class="for-grid">
     <div class="for-l">
       <div class="for-title-wrap">
@@ -508,10 +435,6 @@
           <span class="for-why-num">05</span>
           <span class="for-why-title"><span class="t-es">Sharpen your <em>brand strategy</em></span><span class="t-en">Sharpen your <em>brand strategy</em></span></span>
         </div>
-        <div class="for-why-card">
-          <span class="for-why-num">06</span>
-          <span class="for-why-title"><span class="t-es">See live <em>marketing critiques</em></span><span class="t-en">See live <em>marketing critiques</em></span></span>
-        </div>
       </div>
     </div>
   </div>
@@ -538,7 +461,6 @@
       <div class="agenda-key"><span class="agenda-key-swatch stage"></span><span><span class="t-es">Main Stage / Núcleo</span><span class="t-en">Main Stage / Nucleo</span></span></div>
       <div class="agenda-key"><span class="agenda-key-swatch workshop"></span><span><span class="t-es">Workshops</span><span class="t-en">Workshops</span></span></div>
       <div class="agenda-key"><span class="agenda-key-swatch lunch"></span><span><span class="t-es">Lunch</span><span class="t-en">Lunch</span></span></div>
-      <div class="agenda-key"><span class="agenda-key-swatch logistics"></span><span><span class="t-es">Logística</span><span class="t-en">Logistics</span></span></div>
     </div>
   </div>
 </section>
@@ -616,8 +538,8 @@
         <a href="https://maps.google.com/?q=Av.+Constituyentes+1100,+Lomas+Altas,+Miguel+Hidalgo,+11950+Ciudad+de+México,+CDMX" target="_blank" rel="noopener" style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none"><span class="t-es">Abrir en Maps ↗</span><span class="t-en">Open in Maps ↗</span></a>
       </div>
     </div>
-    <div class="venue-video">
-      <iframe src="https://www.youtube.com/embed/tptWaZvS6dQ?si=lBIYAkHAPRE1mrJj" title="Venue" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="venue-media">
+      <img src="/cdmx/universidad-banner.png" alt="Interior de la Universidad de la Libertad en Ciudad de México">
     </div>
   </div>
 </section>
@@ -961,7 +883,7 @@
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
-          title: { es: 'MC - Cierre', en: 'MC - Closing' },
+          title: { es: 'Cierre', en: 'Closing' },
           lines: [{ es: 'Invitación a networking o W4', en: 'Invite to networking or W4' }]
         },
         pecera: null,
@@ -1059,24 +981,37 @@
 
   function setLang(lang) {
     document.body.classList.toggle('lang-en', lang === 'en');
-    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    document.querySelectorAll('.lang-btn').forEach(button => {
+      const isActive = button.dataset.lang === lang;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
     localStorage.setItem('cdmx-lang', lang);
   }
-  document.addEventListener('DOMContentLoaded', function() {
-    renderAgenda();
-    setLang(localStorage.getItem('cdmx-lang') || 'es');
+
+  function initLanguageToggle() {
+    document.querySelectorAll('.lang-btn').forEach(button => {
+      button.addEventListener('click', () => setLang(button.dataset.lang));
+    });
+  }
+
+  function shuffleSpeakerCards() {
     const speakerGrid = document.querySelector('.spk-grid');
-    if (speakerGrid) {
-      const cards = Array.from(speakerGrid.querySelectorAll('.spk-card'));
-      for (let i = cards.length - 1; i > 0; i -= 1) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [cards[i], cards[j]] = [cards[j], cards[i]];
-      }
-      cards.forEach(card => speakerGrid.appendChild(card));
+    if (!speakerGrid) return;
+
+    const cards = Array.from(speakerGrid.querySelectorAll('.spk-card'));
+    for (let i = cards.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [cards[i], cards[j]] = [cards[j], cards[i]];
     }
+    cards.forEach(card => speakerGrid.appendChild(card));
+  }
+
+  function initSpeakerCardLinks() {
     document.querySelectorAll('.spk-card').forEach(card => {
       const socialLink = card.querySelector('.spk-social');
       if (!socialLink) return;
+
       card.setAttribute('role', 'link');
       card.setAttribute('tabindex', '0');
       card.addEventListener('click', () => {
@@ -1089,6 +1024,14 @@
         }
       });
     });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    renderAgenda();
+    initLanguageToggle();
+    setLang(localStorage.getItem('cdmx-lang') || 'es');
+    shuffleSpeakerCards();
+    initSpeakerCardLinks();
   });
 </script>
 </body>
