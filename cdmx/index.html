@@ -116,40 +116,40 @@
   /* PROGRAM */
   .agenda-shell{border-top:var(--border)}
   .agenda-desktop{display:block;overflow-x:auto}
-  .agenda-table{width:100%;border-collapse:collapse;table-layout:fixed;background:#f3f0e7}
-  .agenda-table th,.agenda-table td{border:2px solid #b7bec8;vertical-align:top}
-  .agenda-table th{padding:16px 10px;background:#163f70;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;line-height:1;text-transform:uppercase;text-align:center}
-  .agenda-time{width:112px;padding:16px 10px;background:#163f70;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:1.02;text-align:center}
+  .agenda-table{width:100%;border-collapse:collapse;table-layout:fixed;background:#f3f0dc}
+  .agenda-table th,.agenda-table td{border:2px solid rgba(10,10,10,.18);vertical-align:top}
+  .agenda-table th{padding:16px 10px;background:var(--bk);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;line-height:1;text-transform:uppercase;text-align:center}
+  .agenda-time{width:112px;padding:16px 10px;background:var(--bl);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:1.02;text-align:center}
   .agenda-cell{padding:14px 14px 16px;background:#fbf8f0}
-  .agenda-cell.network{background:#6e98de}
-  .agenda-cell.stage{background:#efe5a5}
-  .agenda-cell.workshop{background:#dcefdc}
-  .agenda-cell.lunch{background:#eadcf8}
-  .agenda-cell.general{background:#f8fafc}
-  .agenda-cell.empty{background:#faf7f2}
+  .agenda-cell.network{background:var(--bl);color:var(--bk)}
+  .agenda-cell.stage{background:var(--y);color:var(--bk)}
+  .agenda-cell.workshop{background:#f3f0dc;color:var(--bk)}
+  .agenda-cell.lunch{background:var(--bk);color:var(--wh)}
+  .agenda-cell.general{background:#f3f0dc;color:var(--bk)}
+  .agenda-cell.empty{background:#f7f2e6}
   .agenda-badge{display:none}
-  .agenda-title{display:block;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:.96;text-transform:uppercase;color:#101010}
-  .agenda-copy{display:flex;flex-direction:column;gap:5px;margin-top:10px;font-size:13px;line-height:1.45;color:#222}
+  .agenda-title{display:block;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:.96;text-transform:uppercase;color:inherit}
+  .agenda-copy{display:flex;flex-direction:column;gap:5px;margin-top:10px;font-size:13px;line-height:1.45;color:inherit}
   .agenda-copy.compact{gap:3px}
   .agenda-mobile{display:none}
   .agenda-card{padding:20px;border-bottom:var(--border);display:flex;flex-direction:column;gap:14px;background:#0b0b0b}
   .agenda-card-time{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;line-height:.95;text-transform:uppercase;color:var(--wh)}
   .agenda-card-grid{display:grid;gap:10px}
   .agenda-card-item{padding:14px;border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:6px}
-  .agenda-card-item.network{background:#6e98de;color:#08101a}
-  .agenda-card-item.stage{background:#efe5a5;color:#111}
-  .agenda-card-item.workshop{background:#dcefdc;color:#111}
-  .agenda-card-item.lunch{background:#eadcf8;color:#111}
-  .agenda-card-item.general{background:#f8fafc;color:#111}
+  .agenda-card-item.network{background:var(--bl);color:var(--bk)}
+  .agenda-card-item.stage{background:var(--y);color:var(--bk)}
+  .agenda-card-item.workshop{background:#f3f0dc;color:var(--bk)}
+  .agenda-card-item.lunch{background:var(--bk);color:var(--wh);border-color:rgba(232,239,90,.26)}
+  .agenda-card-item.general{background:#f3f0dc;color:var(--bk)}
   .agenda-card-label{display:none}
   .agenda-card-body{font-size:13px;line-height:1.4}
   .agenda-legend{display:flex;gap:12px;flex-wrap:wrap;padding:18px 20px;border-top:var(--border);background:#0d0d0d}
   .agenda-key{display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,.65)}
   .agenda-key-swatch{width:14px;height:14px;border-radius:3px;display:inline-block}
-  .agenda-key-swatch.network{background:#6e98de}
-  .agenda-key-swatch.stage{background:#efe5a5}
-  .agenda-key-swatch.workshop{background:#a7dca8}
-  .agenda-key-swatch.lunch{background:#b167f4}
+  .agenda-key-swatch.network{background:var(--bl)}
+  .agenda-key-swatch.stage{background:var(--y)}
+  .agenda-key-swatch.workshop{background:#f3f0dc;border:1px solid rgba(255,255,255,.16)}
+  .agenda-key-swatch.lunch{background:var(--bk);border:1px solid rgba(232,239,90,.3)}
 
   /* SPEAKERS */
   .spk-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
@@ -180,20 +180,9 @@
   .partner-desc{font-size:12px;line-height:1.6;color:var(--gr)}
 
   /* REGISTER */
-  .reg-grid{display:grid;grid-template-columns:1fr 1fr}
-  .reg-l{background:var(--bk);padding:52px 42px;border-right:var(--border);display:flex;flex-direction:column;gap:18px}
-  .reg-l h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(40px,5.5vw,66px);font-weight:900;text-transform:uppercase;line-height:.86;color:var(--wh)}
-  .reg-l h2 em{font-style:normal;color:var(--y)}
-  .reg-l p{font-size:13.5px;line-height:1.75;color:var(--gr);max-width:340px}
-  .reg-checklist{display:flex;flex-direction:column;gap:6px}
-  .reg-check{display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--gr)}
-  .reg-check-arrow{color:var(--y);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:12px}
-  .reg-r{background:var(--y);padding:52px 42px;display:flex;flex-direction:column;justify-content:center;gap:20px}
-  .reg-r-label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)}
-  .reg-detail{display:flex;flex-direction:column;gap:3px}
-  .rd-label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.35);font-family:'Barlow Condensed',sans-serif}
-  .rd-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--bk)}
-  .reg-divider{height:1px;background:rgba(0,0,0,.15)}
+  .reg-embed{background:var(--y);padding:56px 42px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+  .reg-embed-label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.4)}
+  .reg-embed-frame{width:100%;max-width:600px;height:450px;border:1px solid #bfcbda88;border-radius:4px;background:#fff}
 
   /* FAQ */
   .faq-grid{display:grid;grid-template-columns:1fr 1fr}
@@ -217,7 +206,7 @@
   .tl-label{font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.3}
 
   /* TEXT CONTRAST */
-  .for-l p,.venue-copy p,.partner-desc,.reg-l p,.reg-check,.faq-a{color:var(--wh);opacity:.82}
+  .for-l p,.venue-copy p,.partner-desc,.faq-a{color:var(--wh);opacity:.82}
   .sec-hdr .lbl{color:rgba(255,255,255,.5)}
   .spk-co{color:rgba(255,255,255,.6)}
   .venue-addr{color:rgba(255,255,255,.6)!important}
@@ -236,7 +225,7 @@
     .nav-r a:not(.nav-cta){display:none}
     .nav-cta{padding:7px 14px;font-size:10px!important}
 
-    .hero,.for-grid,.venue-grid,.reg-grid{grid-template-columns:1fr!important}
+    .hero,.for-grid,.venue-grid{grid-template-columns:1fr!important}
 
     .trust-strip{grid-template-columns:1fr}
     .ts-cell{border-right:none!important;border-bottom:1px solid rgba(0,0,0,.12)}
@@ -250,6 +239,8 @@
     .venue-copy{border-right:none;border-bottom:var(--border);padding:28px 20px}
     .venue-copy p{max-width:100%}
     .venue-media img{min-height:220px}
+    .reg-embed{padding:32px 20px}
+    .reg-embed-frame{max-width:100%;height:520px}
     .reg-l{border-right:none;border-bottom:var(--border);padding:32px 20px}
     .reg-r{padding:32px 20px}
 
@@ -570,28 +561,20 @@
 
 <!-- 11. REGISTER -->
 <section id="register" style="border-bottom:var(--border)">
-  <div class="reg-grid">
-    <div class="reg-l">
-      <h2><span class="t-es">ASEGURA<br>TU <em>LUGAR</em></span><span class="t-en">SECURE<br>YOUR <em>SPOT</em></span></h2>
-      <p><span class="t-es">Lugares limitados. No es una conferencia — es un cuarto curado. Regístrate y confirmamos tu lugar.</span><span class="t-en">Limited spots. Not a conference — a curated room. Register and we'll confirm your spot.</span></p>
-      <div class="reg-checklist">
-        <div class="reg-check"><span class="reg-check-arrow">→</span><span><span class="t-es">17 de Junio, 2026 · Ciudad de México</span><span class="t-en">June 17th, 2026 · Mexico City</span></span></div>
-        <div class="reg-check"><span class="reg-check-arrow">→</span><span><span class="t-es">Hub de Innovación · Universidad de la Libertad</span><span class="t-en">Innovation Hub · Universidad de la Libertad</span></span></div>
-        <div class="reg-check"><span class="reg-check-arrow">→</span><span><span class="t-es">Un día después de Stablecoin Conference LATAM</span><span class="t-en">Day after Stablecoin Conference LATAM</span></span></div>
-        <div class="reg-check"><span class="reg-check-arrow">→</span><span><span class="t-es">Solo por aplicación · Gratuito</span><span class="t-en">Application-gated · Free to attend</span></span></div>
-      </div>
-    </div>
-    <div class="reg-r">
-      <span class="reg-r-label"><span class="t-es">Asistir al evento</span><span class="t-en">Attend the event</span></span>
-      <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc">
-        <span class="t-es">Registrarse →</span><span class="t-en">Register →</span>
-      </a>
-      <div class="reg-divider"></div>
-      <div class="reg-detail">
-        <span class="rd-label"><span class="t-es">Partnerships y Sponsors</span><span class="t-en">Partnerships &amp; Sponsors</span></span>
-        <span class="rd-val"><a href="mailto:stef@growwithguava.com" style="color:var(--bk);text-decoration:none">stef@growwithguava.com</a></span>
-      </div>
-    </div>
+  <div class="reg-embed">
+    <span class="reg-embed-label"><span class="t-es">Asistir al evento</span><span class="t-en">Attend the event</span></span>
+    <iframe
+      class="reg-embed-frame"
+      src="https://luma.com/embed/event/evt-QCtdTFSFmJA7EKc/simple"
+      width="600"
+      height="450"
+      frameborder="0"
+      style="border:1px solid #bfcbda88;border-radius:4px;"
+      allow="fullscreen; payment"
+      aria-hidden="false"
+      tabindex="0"
+      title="Luma registration form for Marketers in the Arena CDMX"
+    ></iframe>
   </div>
 </section>
 <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
