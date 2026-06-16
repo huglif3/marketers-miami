@@ -454,7 +454,7 @@
 <section style="border-bottom:var(--border)">
   <div class="sec-hdr">
     <h2><span class="t-es">SPEAKERS</span><span class="t-en">SPEAKERS</span></h2>
-    <span class="lbl"><span class="t-es">12 confirmados · Programa activo</span><span class="t-en">12 confirmed · Program actively filling</span></span>
+    <span class="lbl"><span class="t-es">16 confirmados · Programa activo</span><span class="t-en">16 confirmed · Program actively filling</span></span>
   </div>
   <div class="spk-grid">
     <div class="spk-card">
@@ -536,6 +536,20 @@
       <span class="spk-role-tag">Etherfuse</span>
       <span class="spk-name">Brandon Rodriguez</span>
       <span class="spk-co">VP of Growth</span>
+    </div>
+    <div class="spk-card">
+      <img class="spk-img" src="/cdmx/felix-pago.svg" alt="Felix Pago">
+      <span class="spk-role-tag">Company</span>
+      <span class="spk-name">Felix Pago</span>
+      <span class="spk-co">Official Account</span>
+      <a class="spk-social" href="https://x.com/Felixpago" target="_blank" rel="noopener">X / @Felixpago</a>
+    </div>
+    <div class="spk-card">
+      <img class="spk-img" src="/cdmx/binance-latam.png" alt="Binance LATAM">
+      <span class="spk-role-tag">Company</span>
+      <span class="spk-name">Binance</span>
+      <span class="spk-co">LATAM Official Account</span>
+      <a class="spk-social" href="https://x.com/BinanceLATAM" target="_blank" rel="noopener">X / @BinanceLATAM</a>
     </div>
   </div>
 </section>
@@ -870,7 +884,13 @@
           title: { es: 'Cómo las nuevas fintech están usando AI y Blockchain para crecer', en: 'Cómo las nuevas fintech están usando AI y Blockchain para crecer' },
           lines: [{ es: 'Carlos Cota · Tala', en: 'Carlos Cota · Tala' }]
         },
-        pecera: null,
+        pecera: {
+          variant: 'workshop',
+          rowSpan: 2,
+          eyebrow: { es: 'Ideación Workshop', en: 'Ideation Workshop' },
+          title: { es: 'AI Workflows for Startups', en: 'AI Workflows for Startups' },
+          lines: [{ es: 'Wendy López · 40 min', en: 'Wendy López · 40 min' }]
+        },
         salon: null
       }
     },
@@ -879,7 +899,7 @@
       cells: {
         network: networkingCanapesCell({ rowSpan: 4 }),
         stage: null,
-        pecera: null,
+        pecera: { hidden: true },
         salon: null
       }
     },
@@ -1026,6 +1046,8 @@
       'Lalo Garcia',
       'Carlos Cota',
       'Brandon Rodriguez',
+      'Felix Pago',
+      'Binance',
       'Luis Andres Enriquez',
       'Wendy López'
     ];
