@@ -15,6 +15,7 @@
   :root{--y:#E8EF5A;--bl:#6B7CC4;--bk:#0A0A0A;--gr:#FFFFFF;--wh:#FFFFFF;--border:2px solid #1e1e1e}
   html{scroll-behavior:smooth}
   body{font-family:'Barlow',sans-serif;background:var(--bk);color:var(--wh);overflow-x:hidden}
+  img{max-width:100%;height:auto}
 
   /* LANG TOGGLE */
   .lang-toggle{display:flex;align-items:center;background:#111;border:1px solid #2a2a2a;border-radius:999px;padding:3px;gap:2px}
@@ -128,7 +129,7 @@
   .agenda-cell.general{background:#f3f0dc;color:var(--bk)}
   .agenda-cell.empty{background:#f7f2e6}
   .agenda-badge{display:none}
-  .agenda-title{display:block;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:.96;text-transform:uppercase;color:inherit}
+  .agenda-title{display:block;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;line-height:.96;text-transform:uppercase;color:inherit;overflow-wrap:anywhere}
   .agenda-copy{display:flex;flex-direction:column;gap:5px;margin-top:10px;font-size:13px;line-height:1.45;color:inherit}
   .agenda-copy.compact{gap:3px}
   .agenda-mobile{display:none}
@@ -143,18 +144,12 @@
   .agenda-card-item.general{background:#f3f0dc;color:var(--bk)}
   .agenda-card-label{display:none}
   .agenda-card-body{font-size:13px;line-height:1.4}
-  .agenda-legend{display:flex;gap:12px;flex-wrap:wrap;padding:18px 20px;border-top:var(--border);background:#0d0d0d}
-  .agenda-key{display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,.65)}
-  .agenda-key-swatch{width:14px;height:14px;border-radius:3px;display:inline-block}
-  .agenda-key-swatch.network{background:var(--bl)}
-  .agenda-key-swatch.stage{background:var(--y)}
-  .agenda-key-swatch.workshop{background:#f3f0dc;border:1px solid rgba(255,255,255,.16)}
-  .agenda-key-swatch.lunch{background:var(--bk);border:1px solid rgba(232,239,90,.3)}
 
   /* SPEAKERS */
-  .spk-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+  .spk-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
   .spk-card{padding:28px 22px;border-right:var(--border);display:flex;flex-direction:column;gap:10px;cursor:pointer}
   .spk-card:hover .spk-name{color:var(--y)}
+  .spk-card:focus-visible{outline:2px solid var(--y);outline-offset:-2px}
   .spk-role-tag{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
   .spk-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;color:var(--wh)}
   .spk-co{font-size:12px;color:rgba(255,255,255,.4)}
@@ -243,22 +238,28 @@
     .venue-media img{min-height:220px}
     .reg-embed{padding:32px 20px}
     .reg-embed-frame{max-width:100%;height:520px}
-    .reg-l{border-right:none;border-bottom:var(--border);padding:32px 20px}
-    .reg-r{padding:32px 20px}
-
     .agenda-desktop{display:none}
     .agenda-mobile{display:block}
     .agenda-card-grid{grid-template-columns:1fr}
-    .agenda-legend{padding:14px 16px}
 
     .sec-hdr{padding:18px 20px 12px;flex-direction:column;align-items:flex-start;gap:4px}
     .sec-hdr h2{font-size:26px}
     .final-cta{padding:36px 20px}
     .final-cta h2{font-size:clamp(28px,8vw,44px)}
+    footer{flex-direction:column;align-items:flex-start;gap:12px;padding:18px 20px}
+    footer>div{flex-wrap:wrap;gap:14px!important}
   }
 
   @media(max-width:480px){
     .hero-title{font-size:clamp(38px,13vw,54px)}
+  }
+
+  @media(max-width:1200px){
+    .spk-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  }
+
+  @media(max-width:900px){
+    .spk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   }
 
   /* FOOTER */
@@ -437,7 +438,7 @@
 <section id="program" style="border-bottom:var(--border)">
   <div class="sec-hdr">
     <h2><span class="t-es">PROGRAMA <em>— 17 JUN</em></span><span class="t-en">PROGRAM <em>— JUN 17</em></span></h2>
-    <span class="lbl"><span class="t-es">CDMX · 17 de Junio 2026 · Agenda general</span><span class="t-en">CDMX · June 17, 2026 · General agenda</span></span>
+    <span class="lbl"><span class="t-es">CDMX · 17 DE JUNIO 2026 · Agenda general</span><span class="t-en">CDMX · June 17, 2026 · General agenda</span></span>
   </div>
   <div class="agenda-shell">
     <div id="agenda-root"></div>
@@ -448,14 +449,14 @@
 <section style="border-bottom:var(--border)">
   <div class="sec-hdr">
     <h2><span class="t-es">SPEAKERS</span><span class="t-en">SPEAKERS</span></h2>
-    <span class="lbl"><span class="t-es">16 confirmados · Programa activo</span><span class="t-en">16 confirmed · Program actively filling</span></span>
+    <span class="lbl" id="speakers-count"><span class="t-es">14 confirmados · Programa activo</span><span class="t-en">14 confirmed · Program active</span></span>
   </div>
   <div class="spk-grid">
     <div class="spk-card">
       <img class="spk-img" src="/cdmx/jorge-diaz-cuervo.jpg" alt="Jorge Díaz Cuervo">
       <span class="spk-role-tag">Universidad de la Libertad</span>
       <span class="spk-name">Jorge Díaz Cuervo</span>
-      <span class="spk-co">Rector UL, Director Catalaxia Ventures Hub</span>
+      <span class="spk-co">Rector Universidad de la Libertad</span>
     </div>
     <div class="spk-card">
       <img class="spk-img" src="/cdmx/roberto-salinas-leon.png" alt="Roberto Salinas León">
@@ -535,15 +536,15 @@
       <img class="spk-img" src="/cdmx/diego-villafuerte.jpg" alt="Diego Villafuerte">
       <span class="spk-role-tag">Félix</span>
       <span class="spk-name">Diego Villafuerte</span>
-      <span class="spk-co">New Products</span>
+      <span class="spk-co">New Products @ Félix</span>
       <a class="spk-social" href="https://x.com/Felixpago" target="_blank" rel="noopener">X / @Felixpago</a>
     </div>
     <div class="spk-card">
-      <img class="spk-img" src="/cdmx/binance-latam.png" alt="Binance LATAM">
-      <span class="spk-role-tag">Company</span>
-      <span class="spk-name">Binance</span>
-      <span class="spk-co">LATAM Official Account</span>
-      <a class="spk-social" href="https://x.com/BinanceLATAM" target="_blank" rel="noopener">X / @BinanceLATAM</a>
+      <div class="spk-img spk-img-fallback" aria-hidden="true"><span class="spk-img-initials">JO</span></div>
+      <span class="spk-role-tag">Binance Mexico</span>
+      <span class="spk-name">Jorge Oseguera</span>
+      <span class="spk-co">Head of Marketing &amp; Growth, Binance Mexico</span>
+      <a class="spk-social" href="https://www.linkedin.com/in/jorgeoseguera/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </section>
@@ -650,14 +651,14 @@
 <!-- TAGLINES -->
 <div class="taglines">
   <div class="tl bk"><span class="tl-label">CDMX</span><blockquote><span class="t-es">Donde construir también significa crecer.</span><span class="t-en">Where building also means growing.</span></blockquote></div>
-  <div class="tl y"><span class="tl-label"><span class="t-es">17 de Junio</span><span class="t-en">June 17th</span></span><blockquote><span class="t-es">El día después del main stage.</span><span class="t-en">The day after the main stage.</span></blockquote></div>
+  <div class="tl y"><span class="tl-label"><span class="t-es">17 DE JUNIO</span><span class="t-en">June 17</span></span><blockquote><span class="t-es">El día después del main stage.</span><span class="t-en">The day after the main stage.</span></blockquote></div>
   <div class="tl bl"><span class="tl-label">Marketers in the Arena</span><blockquote><span class="t-es">Feedback real. Trabajo real.</span><span class="t-en">Real feedback. Real work.</span></blockquote></div>
 </div>
 
 <!-- 13. FINAL CTA -->
 <div class="final-cta">
   <h2><span class="t-es">¿LISTO PARA<br>CRECER?</span><span class="t-en">READY TO<br>GROW?</span></h2>
-  <p><span class="t-es">Lugares limitados. Registro abierto ahora. Ciudad de México, 17 de Junio de 2026.</span><span class="t-en">Limited spots. Registration open now. Mexico City, June 17, 2026.</span></p>
+  <p><span class="t-es">Lugares limitados. Registro abierto ahora. CDMX, 17 de junio de 2026.</span><span class="t-en">Limited spots. Registration open now. CDMX, June 17, 2026.</span></p>
   <a href="https://luma.com/event/evt-QCtdTFSFmJA7EKc" class="luma-checkout--button btn-y" data-luma-action="checkout" data-luma-event-id="evt-QCtdTFSFmJA7EKc" style="background:var(--bk)!important;color:var(--wh)!important;font-size:14px!important;padding:16px 36px!important">
     <span class="t-es">Registrarse →</span><span class="t-en">Register →</span>
   </a>
@@ -742,7 +743,7 @@
         pecera: {
           variant: 'workshop',
           eyebrow: { es: 'Workshop', en: 'Workshop' },
-          title: { es: 'Manual de Supervivencia en Marketing', en: 'Marketing Survival Manual' },
+          title: { es: 'Workshop: Manual de Supervivencia en Marketing', en: 'Workshop: Marketing Survival Manual' },
           lines: [
             { es: 'Acid · Acid Labs', en: 'Acid · Acid Labs' },
             { es: '40 min', en: '40 min' }
@@ -758,7 +759,7 @@
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
           title: { es: 'Jorge Díaz Cuervo', en: 'Jorge Díaz Cuervo' },
-          lines: [{ es: 'Welcome remarks, Rector UL, Director Catalaxia Ventures Hub', en: 'Welcome remarks, Rector UL, Director Catalaxia Ventures Hub' }]
+          lines: [{ es: 'Palabras de bienvenida · Rector Universidad de la Libertad', en: 'Welcome remarks · Rector Universidad de la Libertad' }]
         },
         pecera: null
       }
@@ -771,7 +772,7 @@
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
           title: { es: 'Roberto Salinas León', en: 'Roberto Salinas León' },
-          lines: [{ es: 'Welcome remarks, Director of International Relations at Universidad de la Libertad, and Director of Catalaxia', en: 'Welcome remarks, Director of International Relations at Universidad de la Libertad, and Director of Catalaxia' }]
+          lines: [{ es: 'Palabras de bienvenida · Director de Relaciones Internacionales de la Universidad de la Libertad y Director de Catalaxia', en: 'Welcome remarks · Director of International Relations at Universidad de la Libertad and Director of Catalaxia' }]
         },
         pecera: null
       }
@@ -802,9 +803,9 @@
         pecera: {
           variant: 'workshop',
           eyebrow: { es: 'Workshop', en: 'Workshop' },
-          title: { es: 'Building Brands Through Content, the playbook.', en: 'Building Brands Through Content, the playbook.' },
+          title: { es: 'Workshop: Building Brands Through Content, the playbook.', en: 'Workshop: Building Brands Through Content, the playbook.' },
           lines: [
-            { es: 'Mariana Pedroza · Independent', en: 'Mariana Pedroza · Independent' },
+            { es: 'Mariana Pedroza · Industrias Pedroza', en: 'Mariana Pedroza · Industrias Pedroza' },
             { es: '40 min', en: '40 min' }
           ]
         }
@@ -817,7 +818,8 @@
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
-          title: { es: 'Fireside: Felix Pago', en: 'Fireside: Felix Pago' }
+          title: { es: 'Fireside: Felix Pago', en: 'Fireside: Felix Pago' },
+          lines: [{ es: 'Diego Villafuerte · Félix', en: 'Diego Villafuerte · Félix' }]
         },
         pecera: null
       }
@@ -829,7 +831,8 @@
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
-          title: { es: 'Fireside: Binance', en: 'Fireside: Binance' }
+          title: { es: 'Fireside: Cómo se transformó el marketing en Fintech y blockchain en la era de AI', en: 'Fireside: Cómo se transformó el marketing en Fintech y blockchain en la era de AI' },
+          lines: [{ es: 'Jorge Oseguera', en: 'Jorge Oseguera' }]
         },
         pecera: null
       }
@@ -837,7 +840,7 @@
     {
       time: '13:30',
       cells: {
-        network: lunchCell({ rowSpan: 2 }),
+        network: null,
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
@@ -848,9 +851,9 @@
       }
     },
     {
-      time: '14:30',
+      time: '14:00',
       cells: {
-        network: lunchCell({ hidden: true }),
+        network: lunchCell(),
         stage: null,
         pecera: null
       }
@@ -858,7 +861,7 @@
     {
       time: '15:00',
       cells: {
-        network: networkingCanapesCell({ rowSpan: 3 }),
+        network: networkingCanapesCell({ rowSpan: 2 }),
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
@@ -869,9 +872,9 @@
           variant: 'workshop',
           rowSpan: 2,
           eyebrow: { es: 'Workshop', en: 'Workshop' },
-          title: { es: 'AI Workflows for Startups', en: 'AI Workflows for Startups' },
+          title: { es: 'Workshop: AI Workflows for Startups', en: 'Workshop: AI Workflows for Startups' },
           lines: [
-            { es: 'Wendy López · 40 min', en: 'Wendy López · 40 min' },
+            { es: 'Wendy López · ByTheLab', en: 'Wendy López · ByTheLab' },
             { es: '40 min', en: '40 min' }
           ]
         }
@@ -884,7 +887,11 @@
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
-          title: { es: 'Shark Tank: Piggy Wallet', en: 'Shark Tank: Piggy Wallet' }
+          title: { es: 'Shark Tank: Piggy Wallet', en: 'Shark Tank: Piggy Wallet' },
+          lines: [
+            { es: 'Sofia · Piggy Wallet', en: 'Sofia · Piggy Wallet' },
+            { es: 'Sharks: Wendy López + Alexis Downey', en: 'Sharks: Wendy López + Alexis Downey' }
+          ]
         },
         pecera: { hidden: true }
       }
@@ -975,7 +982,11 @@
       button.classList.toggle('active', isActive);
       button.setAttribute('aria-pressed', String(isActive));
     });
-    localStorage.setItem('cdmx-lang', lang);
+    try {
+      localStorage.setItem('cdmx-lang', lang);
+    } catch (error) {
+      console.warn('Unable to persist language preference.', error);
+    }
   }
 
   function initLanguageToggle() {
@@ -1001,7 +1012,7 @@
       'Carlos Cota',
       'Brandon Rodriguez',
       'Diego Villafuerte',
-      'Binance',
+      'Jorge Oseguera',
       'Luis Andres Enriquez',
       'Wendy López'
     ];
@@ -1018,13 +1029,26 @@
       .forEach(card => speakerGrid.appendChild(card));
   }
 
+  function updateSpeakerCount() {
+    const speakerCountLabel = document.getElementById('speakers-count');
+    const speakerGrid = document.querySelector('.spk-grid');
+    if (!speakerCountLabel || !speakerGrid) return;
+
+    const count = speakerGrid.querySelectorAll('.spk-card').length;
+    speakerCountLabel.innerHTML = `<span class="t-es">${count} confirmados · Programa activo</span><span class="t-en">${count} confirmed · Program active</span>`;
+  }
+
   function initSpeakerCardLinks() {
     document.querySelectorAll('.spk-card').forEach(card => {
       const socialLink = card.querySelector('.spk-social');
       if (!socialLink) return;
 
+      const speakerName = card.querySelector('.spk-name')?.textContent?.trim();
+      const company = card.querySelector('.spk-role-tag')?.textContent?.trim();
+
       card.setAttribute('role', 'link');
       card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label', `Open ${speakerName || 'speaker'}${company ? ` from ${company}` : ''}`);
       card.addEventListener('click', () => {
         window.open(socialLink.href, '_blank', 'noopener');
       });
@@ -1040,9 +1064,16 @@
   document.addEventListener('DOMContentLoaded', function() {
     renderAgenda();
     initLanguageToggle();
-    setLang(localStorage.getItem('cdmx-lang') || 'es');
     orderSpeakerCards();
+    updateSpeakerCount();
     initSpeakerCardLinks();
+    let savedLang = 'es';
+    try {
+      savedLang = localStorage.getItem('cdmx-lang') || 'es';
+    } catch (error) {
+      console.warn('Unable to read language preference.', error);
+    }
+    setLang(savedLang);
   });
 </script>
 </body>
