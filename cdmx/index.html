@@ -441,12 +441,6 @@
   </div>
   <div class="agenda-shell">
     <div id="agenda-root"></div>
-    <div class="agenda-legend">
-      <div class="agenda-key"><span class="agenda-key-swatch network"></span><span><span class="t-es">Networking</span><span class="t-en">Networking</span></span></div>
-      <div class="agenda-key"><span class="agenda-key-swatch stage"></span><span><span class="t-es">Main Stage / Núcleo</span><span class="t-en">Main Stage / Nucleo</span></span></div>
-      <div class="agenda-key"><span class="agenda-key-swatch workshop"></span><span><span class="t-es">Workshops</span><span class="t-en">Workshops</span></span></div>
-      <div class="agenda-key"><span class="agenda-key-swatch lunch"></span><span><span class="t-es">Lunch</span><span class="t-en">Lunch</span></span></div>
-    </div>
   </div>
 </section>
 
@@ -690,8 +684,7 @@
   const agendaColumns = [
     { key: 'network', es: 'Río /<br>Networking Area', en: 'Rio /<br>Networking Area' },
     { key: 'stage', es: 'Main Stage', en: 'Main Stage' },
-    { key: 'pecera', es: 'Pecera', en: 'Pecera' },
-    { key: 'salon', es: 'Salón', en: 'Salon' }
+    { key: 'pecera', es: 'Ideación', en: 'Ideation' }
   ];
 
   function networkingCanapesCell(options = {}) {
@@ -732,25 +725,28 @@
           variant: 'network',
           eyebrow: { es: 'Río / Networking Area', en: 'Rio / Networking Area' },
           title: { es: 'Llegada de invitados / Registro', en: 'Guest Arrival / Registration' },
-          lines: [
-            { es: 'Café y snacks de bienvenida', en: 'Welcome coffee and snacks' }
-          ]
+          lines: [{ es: 'Café y snacks de bienvenida', en: 'Welcome coffee and snacks' }],
+          rowSpan: 2
         },
-        stage: null,
-        pecera: null,
-        salon: null
+        stage: {
+          hidden: true
+        },
+        pecera: null
       }
     },
     {
       time: '10:30',
       cells: {
-        network: null,
+        network: { hidden: true },
         stage: null,
-        pecera: null,
-        salon: {
+        pecera: {
           variant: 'workshop',
-          eyebrow: { es: 'W2 / Acid', en: 'W2 / Acid' },
-          title: { es: 'Manual de Supervivencia en Marketing', en: 'Marketing Survival Manual' }
+          eyebrow: { es: 'Workshop', en: 'Workshop' },
+          title: { es: 'Manual de Supervivencia en Marketing', en: 'Marketing Survival Manual' },
+          lines: [
+            { es: 'Acid · Acid Labs', en: 'Acid · Acid Labs' },
+            { es: '40 min', en: '40 min' }
+          ]
         }
       }
     },
@@ -758,13 +754,10 @@
       time: '10:45',
       cells: {
         network: null,
-        stage: null,
-        pecera: {
-          variant: 'workshop',
-          eyebrow: { es: 'W1 / Mariana', en: 'W1 / Mariana' },
-          title: { es: 'Building Brands Through Content, the playbook.', en: 'Building Brands Through Content, the playbook.' }
+        stage: {
+          hidden: true
         },
-        salon: null
+        pecera: null
       }
     },
     {
@@ -775,10 +768,9 @@
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
           title: { es: 'Jorge Díaz Cuervo', en: 'Jorge Díaz Cuervo' },
-          lines: [{ es: 'Palabras de bienvenida Rector UL, Director Catalaxia Ventures Hub', en: 'Welcome remarks, Rector UL, Director Catalaxia Ventures Hub' }]
+          lines: [{ es: 'Welcome remarks, Rector UL, Director Catalaxia Ventures Hub', en: 'Welcome remarks, Rector UL, Director Catalaxia Ventures Hub' }]
         },
-        pecera: null,
-        salon: null
+        pecera: null
       }
     },
     {
@@ -789,14 +781,13 @@
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
           title: { es: 'Roberto Salinas León', en: 'Roberto Salinas León' },
-          lines: [{ es: 'Palabras de bienvenida Director de Relaciones Internacionales de la Universidad de la Libertad, y Director de Catalaxia', en: 'Welcome remarks, Director of International Relations at Universidad de la Libertad, and Director of Catalaxia' }]
+          lines: [{ es: 'Welcome remarks, Director of International Relations at Universidad de la Libertad, and Director of Catalaxia', en: 'Welcome remarks, Director of International Relations at Universidad de la Libertad, and Director of Catalaxia' }]
         },
-        pecera: null,
-        salon: null
+        pecera: null
       }
     },
     {
-      time: '11:15',
+      time: '11:20',
       cells: {
         network: null,
         stage: {
@@ -805,8 +796,7 @@
           title: { es: 'Stellar x Myosin: Supporting Founder’s GTM', en: 'Stellar x Myosin: Supporting Founder’s GTM' },
           lines: [{ es: 'Alexis Downey + Estefania Ochoa', en: 'Alexis Downey + Estefania Ochoa' }]
         },
-        pecera: null,
-        salon: null
+        pecera: null
       }
     },
     {
@@ -819,40 +809,43 @@
           title: { es: 'Marketing 101', en: 'Marketing 101' },
           lines: [{ es: 'Brandon Rodriguez, VP of Growth @ Etherfuse', en: 'Brandon Rodriguez, VP of Growth @ Etherfuse' }]
         },
-        pecera: null,
-        salon: null
+        pecera: {
+          variant: 'workshop',
+          eyebrow: { es: 'Workshop', en: 'Workshop' },
+          title: { es: 'Building Brands Through Content, the playbook.', en: 'Building Brands Through Content, the playbook.' },
+          lines: [
+            { es: 'Mariana Pedroza · Independent', en: 'Mariana Pedroza · Independent' },
+            { es: '40 min', en: '40 min' }
+          ]
+        }
       }
     },
     {
-      time: '12:00',
+      time: '12:25',
       cells: {
         network: null,
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
-          title: { es: 'Fireside w/ Binance', en: 'Fireside w/ Binance' },
-          lines: [{ es: 'Fireside Chat', en: 'Fireside Chat' }]
+          title: { es: 'Fireside: Felix Pago', en: 'Fireside: Felix Pago' }
         },
-        pecera: null,
-        salon: null
-      }
-    },
-    {
-      time: '12:30',
-      cells: {
-        network: null,
-        stage: {
-          variant: 'stage',
-          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
-          title: { es: 'Binance + Espacio', en: 'Binance + Espacio' },
-          lines: [{ es: 'Fireside Chat', en: 'Fireside Chat' }]
-        },
-        pecera: null,
-        salon: null
+        pecera: null
       }
     },
     {
       time: '13:00',
+      cells: {
+        network: null,
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Fireside: Binance', en: 'Fireside: Binance' }
+        },
+        pecera: null
+      }
+    },
+    {
+      time: '13:30',
       cells: {
         network: lunchCell({ rowSpan: 2 }),
         stage: {
@@ -861,23 +854,21 @@
           title: { es: 'Qué buscan los VCs para invertir en una empresa en IA y Blockchain', en: 'Qué buscan los VCs para invertir en una empresa en IA y Blockchain' },
           lines: [{ es: 'Luis Andrés Enriquez · Nazca', en: 'Luis Andrés Enriquez · Nazca' }]
         },
-        pecera: null,
-        salon: null
+        pecera: null
       }
     },
     {
-      time: '13:30',
+      time: '14:30',
       cells: {
         network: lunchCell({ hidden: true }),
         stage: null,
-        pecera: null,
-        salon: null
+        pecera: null
       }
     },
     {
-      time: '14:00',
+      time: '15:00',
       cells: {
-        network: null,
+        network: networkingCanapesCell({ rowSpan: 3 }),
         stage: {
           variant: 'stage',
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
@@ -887,24 +878,17 @@
         pecera: {
           variant: 'workshop',
           rowSpan: 2,
-          eyebrow: { es: 'Ideación Workshop', en: 'Ideation Workshop' },
+          eyebrow: { es: 'Workshop', en: 'Workshop' },
           title: { es: 'AI Workflows for Startups', en: 'AI Workflows for Startups' },
-          lines: [{ es: 'Wendy López · 40 min', en: 'Wendy López · 40 min' }]
-        },
-        salon: null
+          lines: [
+            { es: 'Wendy López · 40 min', en: 'Wendy López · 40 min' },
+            { es: '40 min', en: '40 min' }
+          ]
+        }
       }
     },
     {
-      time: '14:30',
-      cells: {
-        network: networkingCanapesCell({ rowSpan: 4 }),
-        stage: null,
-        pecera: { hidden: true },
-        salon: null
-      }
-    },
-    {
-      time: '15:00',
+      time: '15:30',
       cells: {
         network: networkingCanapesCell({ hidden: true }),
         stage: {
@@ -912,33 +896,13 @@
           eyebrow: { es: 'Main Stage', en: 'Main Stage' },
           title: { es: 'Shark Tank: Piggy Wallet', en: 'Shark Tank: Piggy Wallet' }
         },
-        pecera: null,
-        salon: null
-      }
-    },
-    {
-      time: '15:30',
-      cells: {
-        network: networkingCanapesCell({ hidden: true }),
-        stage: null,
-        pecera: null,
-        salon: null
-      }
-    },
-    {
-      time: '15:30',
-      cells: {
-        network: networkingCanapesCell({ hidden: true }),
-        stage: null,
-        pecera: null,
-        salon: null
+        pecera: { hidden: true }
       }
     },
     {
       time: '16:00',
       full: {
         variant: 'general',
-        eyebrow: { es: 'General', en: 'General' },
         title: { es: 'Salida invitados / Transporte de regreso', en: 'Guest departure / Return transport' }
       }
     }
