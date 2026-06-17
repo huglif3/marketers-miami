@@ -854,10 +854,26 @@
       }
     },
     {
-      time: '13:30',
+      time: '13:35',
       cells: {
-        network: null,
+        network: lunchCell(),
         stage: null,
+        pecera: null
+      }
+    },
+    {
+      time: '14:10',
+      cells: {
+        network: networkingCanapesCell({ rowSpan: 2 }),
+        stage: {
+          variant: 'stage',
+          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
+          title: { es: 'Creating Intelligent LLMs for Marketers', en: 'Creating Intelligent LLMs for Marketers' },
+          lines: [{
+            es: 'Mitch Ozmun, Product Manager @ Myosin',
+            en: 'Mitch Ozmun, Product Manager @ Myosin'
+          }]
+        },
         pecera: {
           variant: 'workshop',
           eyebrow: { es: 'Workshop', en: 'Workshop' },
@@ -870,31 +886,7 @@
       }
     },
     {
-      time: '14:00',
-      cells: {
-        network: lunchCell(),
-        stage: null,
-        pecera: null
-      }
-    },
-    {
-      time: '15:00',
-      cells: {
-        network: networkingCanapesCell({ rowSpan: 2 }),
-        stage: {
-          variant: 'stage',
-          eyebrow: { es: 'Main Stage', en: 'Main Stage' },
-          title: { es: 'Creating Intelligent LLMs for Marketers', en: 'Creating Intelligent LLMs for Marketers' },
-          lines: [{
-            es: 'Mitch Ozmun, Product Manager @ Myosin',
-            en: 'Mitch Ozmun, Product Manager @ Myosin'
-          }]
-        },
-        pecera: null
-      }
-    },
-    {
-      time: '15:30',
+      time: '15:05',
       cells: {
         network: networkingCanapesCell({ hidden: true }),
         stage: {
@@ -910,10 +902,10 @@
       }
     },
     {
-      time: '16:00',
+      time: '15:40',
       full: {
         variant: 'general',
-        title: { es: 'Salida invitados / Transporte de regreso', en: 'Guest departure / Return transport' }
+        title: { es: 'Cierre / Closing remarks', en: 'Closing remarks' }
       }
     }
   ];
