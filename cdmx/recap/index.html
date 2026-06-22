@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDMX Internal Debrief — Marketers in the Arena</title>
+<meta name="description" content="Internal debrief for Marketers in the Arena CDMX — June 17, 2026 at Universidad de la Libertad.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--y:#E8EF5A;--bl:#6B7CC4;--bk:#0A0A0A;--gr:#B8B8B4;--wh:#FFFFFF;--muted:#171717;--line:#1e1e1e;--border:2px solid #1e1e1e}
+  html{scroll-behavior:smooth}
+  body{font-family:'Barlow',sans-serif;background:var(--bk);color:var(--wh);overflow-x:hidden}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+
+  .label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.32)}
+  .label-dark{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(0,0,0,.42)}
+  .sec-title{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;text-transform:uppercase;line-height:.9}
+  .mono{font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+
+  .ticker-wrap{background:var(--y);overflow:hidden;height:36px;display:flex;align-items:center;border-bottom:var(--border)}
+  .ticker{display:flex;animation:tick 30s linear infinite;white-space:nowrap}
+  .ticker span{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--bk);padding:0 24px}
+  .ticker .dot{opacity:.35;padding:0 6px}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  nav{display:grid;grid-template-columns:1fr 1fr;height:54px;border-bottom:var(--border)}
+  .nav-l{display:flex;align-items:center;padding:0 22px;gap:12px;border-right:var(--border)}
+  .nav-l a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
+  .nav-l span{color:rgba(255,255,255,.15)}
+  .nav-l strong{color:var(--wh)}
+  .nav-r{display:flex;align-items:center;justify-content:flex-end;padding:0 22px}
+  .nav-r span{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;border-bottom:var(--border)}
+  .hero-l{background:var(--y);padding:52px 42px;border-right:var(--border);display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+  .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(0,0,0,.44);margin-bottom:12px}
+  .hero-l h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(48px,6vw,72px);font-weight:900;line-height:.88;text-transform:uppercase;color:var(--bk)}
+  .hero-meta{display:flex;gap:28px;flex-wrap:wrap}
+  .hm-item{display:flex;flex-direction:column;gap:3px}
+  .hm-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;text-transform:uppercase;color:var(--bk)}
+  .hero-r{padding:42px;display:flex;flex-direction:column;justify-content:center;gap:18px}
+  .hero-r p{font-size:14px;line-height:1.8;color:var(--gr);max-width:520px}
+  .hero-tag{display:inline-block;background:#111;border:1px solid #2a2a2a;font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.42);padding:6px 12px;border-radius:3px}
+  .hero-note{padding:14px 16px;background:#101010;border:1px solid #202020;color:#cfcfc8;font-size:12px;line-height:1.7;max-width:520px}
+
+  .metrics-bar{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:var(--border)}
+  .metric{padding:30px 26px;border-right:var(--border);display:flex;flex-direction:column;gap:8px}
+  .metric:last-child{border-right:none}
+  .metric-num{font-family:'Barlow Condensed',sans-serif;font-size:clamp(34px,4vw,52px);font-weight:900;line-height:1;color:var(--y)}
+  .metric-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.42)}
+  .metric-sub{font-size:11px;line-height:1.5;color:rgba(255,255,255,.52)}
+
+  .sec{border-bottom:var(--border)}
+  .sec-header{background:var(--bk);padding:28px 38px 18px;border-bottom:var(--border);display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+  .sec-header h2{color:var(--wh)}
+  .sec-header h2 span{color:var(--y)}
+
+  .overview-grid{display:grid;grid-template-columns:1fr 1fr}
+  .overview-copy{padding:40px 38px;border-right:var(--border);display:flex;flex-direction:column;gap:14px}
+  .overview-copy p{font-size:13px;line-height:1.8;color:var(--gr)}
+  .overview-media{min-height:360px;background:#000}
+  .overview-media img{width:100%;height:100%;object-fit:cover}
+
+  .detail-grid{display:grid;grid-template-columns:1fr 1fr}
+  .detail-col{padding:34px 38px;display:flex;flex-direction:column;gap:14px}
+  .detail-col:first-child{border-right:var(--border)}
+  .detail-card{padding:16px 0;border-bottom:1px solid var(--line)}
+  .detail-card:last-child{border-bottom:none}
+  .detail-card h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;line-height:1;color:var(--wh);margin-bottom:8px}
+  .detail-card p{font-size:12.5px;line-height:1.75;color:var(--gr)}
+
+  .warm-grid{display:grid;grid-template-columns:repeat(2,1fr)}
+  .warm-card{padding:20px 22px;border-right:var(--border);border-bottom:var(--border);display:flex;flex-direction:column;gap:8px}
+  .warm-card:nth-child(2n){border-right:none}
+  .warm-card h3{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;line-height:1;color:var(--wh)}
+  .warm-meta{font-size:12px;line-height:1.7;color:var(--gr)}
+  .warm-meta strong{color:var(--wh);font-weight:700}
+
+  .proof-grid{display:grid;grid-template-columns:1fr 1fr 1fr}
+  .proof-card{padding:30px;border-right:var(--border);display:flex;flex-direction:column;gap:10px}
+  .proof-card:last-child{border-right:none}
+  .proof-card h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;line-height:1;color:var(--y)}
+  .proof-card p{font-size:12.5px;line-height:1.75;color:var(--gr)}
+
+  .next-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+  .next-card{padding:30px;border-right:var(--border);display:flex;flex-direction:column;gap:10px}
+  .next-card:last-child{border-right:none}
+  .next-card h3{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;line-height:1;color:var(--y)}
+  .next-card p{font-size:12.5px;line-height:1.75;color:var(--gr)}
+
+  footer{padding:20px 28px;display:flex;align-items:center;justify-content:space-between;border-top:2px solid #1e1e1e}
+  .footer-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--wh)}
+  .footer-right{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .footer-link{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none}
+  .footer-link:hover{color:var(--y)}
+
+  @media(max-width:900px){
+    nav,.hero,.overview-grid,.detail-grid{grid-template-columns:1fr}
+    .nav-l,.hero-l,.overview-copy,.detail-col:first-child{border-right:none}
+    .nav-l{padding:12px 18px}
+    .nav-r{justify-content:flex-start;padding:0 18px 12px}
+    .hero-l,.overview-copy,.detail-col:first-child{border-bottom:var(--border)}
+    .metrics-bar,.proof-grid,.next-grid{grid-template-columns:1fr 1fr}
+    .warm-grid{grid-template-columns:1fr}
+    .warm-card{border-right:none}
+    footer{flex-direction:column;align-items:flex-start;gap:12px}
+  }
+
+  @media(max-width:640px){
+    .metrics-bar,.proof-grid,.next-grid{grid-template-columns:1fr}
+    .metric,.proof-card,.next-card{border-right:none;border-bottom:var(--border)}
+    .metric:last-child,.proof-card:last-child,.next-card:last-child{border-bottom:none}
+    .hero-l,.hero-r,.overview-copy,.detail-col{padding:28px 20px}
+    .sec-header{padding:20px 20px 14px;flex-direction:column;align-items:flex-start}
+    .proof-card,.next-card,.warm-card{padding:22px 20px}
+  }
+</style>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>CDMX INTERNAL DEBRIEF</span><span class="dot">✦</span><span>JUNE 17TH 2026</span><span class="dot">✦</span><span>MYOSIN × STELLAR</span><span class="dot">✦</span><span>CONFIDENTIAL</span><span class="dot">✦</span><span>CDMX INTERNAL DEBRIEF</span><span class="dot">✦</span><span>JUNE 17TH 2026</span><span class="dot">✦</span><span>MYOSIN × STELLAR</span><span class="dot">✦</span><span>CONFIDENTIAL</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-l">
+    <a href="/">Marketers in the Arena</a>
+    <span>/</span>
+    <a href="/cdmx">CDMX</a>
+    <span>/</span>
+    <strong>Recap</strong>
+  </div>
+  <div class="nav-r">
+    <span>June 17, 2026 · Internal Debrief</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-l">
+    <div>
+      <div class="hero-eyebrow">Internal Debrief · Confidential</div>
+      <h1>MARKETERS<br>IN THE<br>ARENA<br>CDMX</h1>
+    </div>
+    <div class="hero-meta">
+      <div class="hm-item">
+        <span class="label-dark">Date</span>
+        <span class="hm-val">June 17th, 2026</span>
+      </div>
+      <div class="hm-item">
+        <span class="label-dark">Location</span>
+        <span class="hm-val">Universidad de la Libertad</span>
+      </div>
+      <div class="hm-item">
+        <span class="label-dark">Presented by</span>
+        <span class="hm-val">Myosin × Stellar</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <span class="hero-tag">Founder-heavy room · GTM operators · LATAM fintech</span>
+    <p>The CDMX edition was an experiment in collaboration with a local university, Mexico’s leading media team, and an emerging venture studio. It was built to connect and educate the next generation of founders, growth operators, and institutional fintech leaders, while creating strong post-event follow-up potential for Stellar and partner ecosystems.</p>
+    <p>The event worked best when it felt practical, operator-led, and distribution-aware. The main friction points were show rate, workshop language fit, and the need for even more execution-layer programming.</p>
+    <div class="hero-note">This page reflects the internal debrief notes for the June 17, 2026 CDMX event and includes strategic follow-up observations, warm intro candidates, and recommendations for the 2026 series.</div>
+  </div>
+</section>
+
+<section class="metrics-bar">
+  <div class="metric">
+    <span class="metric-num">279</span>
+    <span class="metric-label">Approved Registrations</span>
+    <span class="metric-sub">Top-of-funnel approved attendees</span>
+  </div>
+  <div class="metric">
+    <span class="metric-num">~60</span>
+    <span class="metric-label">Actual Attendance</span>
+    <span class="metric-sub">Onsite room estimate</span>
+  </div>
+  <div class="metric">
+    <span class="metric-num">~22%</span>
+    <span class="metric-label">Show Rate</span>
+    <span class="metric-sub">279 approved to roughly 60 in-room</span>
+  </div>
+  <div class="metric">
+    <span class="metric-num">50+</span>
+    <span class="metric-label">Companies Represented</span>
+    <span class="metric-sub">With ~23 founders in the room</span>
+  </div>
+  <div class="metric">
+    <span class="metric-num">195</span>
+    <span class="metric-label">Interested in Stellar</span>
+    <span class="metric-sub">39 already building · 10 warm intro targets</span>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-header">
+    <h2 class="sec-title">EXECUTIVE <span>SUMMARY</span></h2>
+    <span class="label">What happened</span>
+  </div>
+  <div class="overview-grid">
+    <div class="overview-copy">
+      <p>MARKETERS IN THE ARENA CDMX brought together a smaller but higher-quality room than raw registration volume suggested. The strongest signal was not scale, but density: founders, operators, institutional fintech teams, and ecosystem builders who were materially relevant to Stellar, stablecoins, and GTM in LATAM.</p>
+      <p>Timing mattered. Running the event the day after Stablecoin Conference helped capture people already in Mexico City, while Espacio Cripto content capture extended the event into a post-event distribution channel through interviews, clips, and organic social posts.</p>
+      <p>The room still exposed clear next-iteration needs: bilingual workshop design, stronger execution-layer content, tighter attendee filtering, and better speaker access before and after talks.</p>
+    </div>
+    <div class="overview-media">
+      <img src="/cdmx/universidad-banner.png" alt="Universidad de la Libertad venue during Marketers in the Arena CDMX">
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-header">
+    <h2 class="sec-title">WHAT <span>WORKED</span></h2>
+    <span class="label">Positive signal</span>
+  </div>
+  <div class="detail-grid">
+    <div class="detail-col">
+      <div class="detail-card">
+        <h3>Room Quality</h3>
+        <p>The room skewed founder-heavy and operator-centric, with strong representation from LATAM ecosystem builders and institutions including Grupo Salinas, BANORTE, and Mercado Pago.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Strategic Timing</h3>
+        <p>Holding CDMX immediately after Stablecoin Conference captured attendees who were already in-market and ready for a more curated operator room.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Content Capture</h3>
+        <p>Espacio Cripto interviews and speaker clips created a post-event content runway instead of leaving the event value trapped in the room.</p>
+      </div>
+    </div>
+    <div class="detail-col">
+      <div class="detail-card">
+        <h3>Organic Social Proof</h3>
+        <p>The <span class="mono">#EnLaArena</span> hashtag picked up organically across attendee posts, with real-time tags to <span class="mono">@StellarOrg</span> and <span class="mono">@myosin_xyz</span> that extended the event’s visibility beyond the room.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Satisfaction</h3>
+        <p>Among post-event responses, 13 of 18 attendees gave the event a 5/5 rating, representing roughly 72% top-box satisfaction among respondents.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Partner Discovery</h3>
+        <p>Partner networks including Espacio Media, BAF, and Universidad de la Libertad helped drive high-intent discovery rather than generic attendance inflation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-header">
+    <h2 class="sec-title">WHAT TO <span>IMPROVE</span></h2>
+    <span class="label">Operational learnings</span>
+  </div>
+  <div class="detail-grid">
+    <div class="detail-col">
+      <div class="detail-card">
+        <h3>Content Format</h3>
+        <p>The agenda leaned too heavily on keynotes and firesides. Attendees responded best to execution-layer signal and wanted more hands-on workshop output, not more top-down talking.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Workshop Language Fit</h3>
+        <p>Workshops were delivered in Spanish only, which reduced value for English-speaking attendees. Future editions should language-match workshops to local audience mix.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Speaker Access</h3>
+        <p>Attendees wanted speaker contacts and social handles shared during or immediately after sessions. That should be built into slides, event pages, and printed materials.</p>
+      </div>
+    </div>
+    <div class="detail-col">
+      <div class="detail-card">
+        <h3>Technical Production</h3>
+        <p>There was a technical issue during Wendy Lopez’s presentation. Future events should include mandatory AV checks for every speaker before doors open.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Show Rate</h3>
+        <p>Approved registrations outpaced attendance materially. Recommendation: tighten approvals, send a 48-hour confirmation nudge, and consider a more active waitlist flow.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Venue Fit</h3>
+        <p>Some feedback questioned whether Universidad de la Libertad was the best location given the distance, though many still pointed to its production quality as a strong upside. This is worth revisiting as the series sharpens its physical-world identity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-header">
+    <h2 class="sec-title">SDF WARM <span>INTRO LIST</span></h2>
+    <span class="label">10 priority candidates</span>
+  </div>
+  <div class="overview-copy" style="border-right:none;border-bottom:var(--border)">
+    <p>195 approved attendees were flagged as actively interested in Stellar opportunities, with 39 already building on Stellar. The list below highlights the highest-priority follow-up targets from the internal debrief.</p>
+  </div>
+  <div class="warm-grid">
+    <div class="warm-card">
+      <h3>Jensen Coonradt</h3>
+      <p class="warm-meta"><strong>Crebit Pay</strong> · Rate locking for stablecoin FX · Strong fit for payments follow-up.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Carlos Cota</h3>
+      <p class="warm-meta"><strong>Tala</strong> · Included for direct fintech operator follow-up.</p>
+    </div>
+    <div class="warm-card">
+      <h3>José Alejo Martínez</h3>
+      <p class="warm-meta"><strong>Trade E-fectivo</strong> · Rural payments use case on Stellar rails.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Jorge Oseguera</h3>
+      <p class="warm-meta"><strong>Binance Mexico</strong> · Included as Binance lead for ecosystem follow-up.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Vianey Alvarez</h3>
+      <p class="warm-meta"><strong>Accesly</strong> · AI agents for SMEs with Stellar relevance.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Matt Shroder</h3>
+      <p class="warm-meta"><strong>1Money</strong> · Full-stack stablecoin infrastructure.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Gamaliel Garcia</h3>
+      <p class="warm-meta"><strong>Mexsend</strong> · Cross-border digital dollar payments.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Martin Becerra</h3>
+      <p class="warm-meta"><strong>Tus Giros / Criptala</strong> · Remittances with stablecoin backend.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Jacob</h3>
+      <p class="warm-meta"><strong>Glacis Labs</strong> · Stablecoin / digital asset clearinghouse.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Hope Liu</h3>
+      <p class="warm-meta"><strong>Quantoz</strong> · Stablecoin partner potential.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Arturo Norona</h3>
+      <p class="warm-meta"><strong>BitGo</strong> · LATAM expansion relevance.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Aerhy Young</h3>
+      <p class="warm-meta"><strong>Pods Finance</strong> · DeFi yield API partnerships.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Daniel Bustamante</h3>
+      <p class="warm-meta"><strong>Accesly</strong> · Payment infrastructure for AI agents.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Adrian Diaz</h3>
+      <p class="warm-meta"><strong>Nebula Platform</strong> · Crypto credit card opportunity.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Amhed Herrera</h3>
+      <p class="warm-meta"><strong>Moni</strong> · Neobank for LATAM families.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Claudio Cossio</h3>
+      <p class="warm-meta"><strong>Mettal</strong> · Stablecoin ecosystem relevance.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Manuel Cosío</h3>
+      <p class="warm-meta"><strong>Mettal</strong> · FX and stablecoins for LATAM.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Axel Rodriguez</h3>
+      <p class="warm-meta"><strong>Vyn</strong> · Blockchain-based trust score for credit.</p>
+    </div>
+    <div class="warm-card">
+      <h3>Andrés Rodríguez</h3>
+      <p class="warm-meta"><strong>Seyfert Labs</strong> · Financial platform for wholesale business owners.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-header">
+    <h2 class="sec-title">SOCIAL <span>PROOF</span></h2>
+    <span class="label">Distribution runway</span>
+  </div>
+  <div class="proof-grid">
+    <div class="proof-card">
+      <h3>Organic Posts</h3>
+      <p>6+ confirmed organic social posts were captured during or immediately after the event, alongside early use of the <span class="mono">#EnLaArena</span> hashtag.</p>
+    </div>
+    <div class="proof-card">
+      <h3>Media Captured</h3>
+      <p>Speaker interviews and short-form clips were captured through Espacio Cripto, giving the team reusable footage for recap distribution and future market seeding.</p>
+    </div>
+    <div class="proof-card">
+      <h3>Links Needed</h3>
+      <p>Internal note from the debrief still applies here: insert links to the strongest X posts before sharing this page more broadly.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-header">
+    <h2 class="sec-title">2026 SERIES <span>NEXT</span></h2>
+    <span class="label">Market rollout</span>
+  </div>
+  <div class="next-grid">
+    <div class="next-card">
+      <h3>Rio de Janeiro</h3>
+      <p>August TBD · Portuguese + English · Build localized sessions for the Brazilian market with stronger workshop density from the start.</p>
+    </div>
+    <div class="next-card">
+      <h3>Singapore</h3>
+      <p>Early October · English · Align with Token2049 week and maintain the operator-first format with clearer qualification around attendance intent.</p>
+    </div>
+    <div class="next-card">
+      <h3>Lisbon</h3>
+      <p>October 26 · English · Run during Meridian and apply the CDMX learnings around workshop structure, AV checks, and speaker accessibility.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-header">
+    <h2 class="sec-title">FORMAT <span>CHANGES</span></h2>
+    <span class="label">Use for next editions</span>
+  </div>
+  <div class="detail-grid">
+    <div class="detail-col">
+      <div class="detail-card">
+        <h3>Increase Hands-on Workshops</h3>
+        <p>Set a minimum of two execution-layer workshops per event, each with a clear outcome or takeaway attendees can use immediately.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Share Speaker Contacts</h3>
+        <p>Publish speaker handles and contact pathways during sessions and on event pages instead of relying on informal post-event requests.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Language Match</h3>
+        <p>Workshop content should match the language profile of the room or provide bilingual support where needed.</p>
+      </div>
+    </div>
+    <div class="detail-col">
+      <div class="detail-card">
+        <h3>Mandatory AV Check</h3>
+        <p>Every presenter should complete a pre-event technical check. This should become standard operating procedure, not a nice-to-have.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Tighter Approval Flow</h3>
+        <p>Tighten the approval list, add a 48-hour confirmation nudge, and manage a real waitlist to improve show rate.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Protect the Editorial Feel</h3>
+        <p>Future venue choices should reinforce the event’s editorial identity as strongly as the speaker lineup and partner mix do.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-title">Marketers in the Arena — CDMX Internal Debrief</span>
+  <div class="footer-right">
+    <a href="/recap" class="footer-link">← All Case Studies</a>
+    <a href="/cdmx" class="footer-link">Event Page</a>
+    <a href="mailto:stef@growwithguava.com" class="footer-link">Partner with us →</a>
+  </div>
+</footer>
+
+</body>
+</html>
